@@ -4,11 +4,11 @@ plugins {
     signing
     kotlin("jvm") version "1.4.31"
     kotlin("plugin.serialization") version "1.4.31"
-    id("io.codearte.nexus-staging") version "0.22.0"
+    id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
 }
 
 group = "io.github.detekt.${rootProject.name}"
-version = "1.0.0"
+version = "0.0.1"
 
 repositories {
     mavenCentral()
@@ -36,58 +36,34 @@ tasks.withType(Javadoc::class).configureEach {
     options.optionFiles?.add(customArgs)
 }
 
-val sonatypeUsername: String? =
-        findProperty("sonatypeUsername")?.toString()
-                ?: System.getenv("MAVEN_CENTRAL_USER")
-
-val sonatypePassword: String? =
-        findProperty("sonatypePassword")?.toString()
-                ?: System.getenv("MAVEN_CENTRAL_PW")
-
 publishing {
-    repositories {
-        maven {
-            name = "mavenCentral"
-            url = uri("https://oss.sonatype.org/service/local/staging/deploy/maven2")
-            credentials {
-                username = sonatypeUsername
-                password = sonatypePassword
-            }
-        }
-        maven {
-            name = "mavenSnapshot"
-            url = uri("https://oss.sonatype.org/content/repositories/snapshots")
-            credentials {
-                username = sonatypeUsername
-                password = sonatypePassword
-            }
-        }
-    }
-    publications.register<MavenPublication>(rootProject.name) {
-        groupId = project.group as? String
-        artifactId = project.name
-        version = project.version as? String
-        from(components["java"])
-        pom {
-            description.set("SARIF data models for Kotlinx serialization")
-            name.set(rootProject.name)
-            url.set("https://detekt.github.io/detekt")
-            licenses {
-                license {
-                    name.set("The Apache Software License, Version 2.0")
-                    url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                    distribution.set("repo")
+    publications {
+        register<MavenPublication>(rootProject.name) {
+            groupId = project.group as? String
+            artifactId = project.name
+            version = project.version as? String
+            from(components["java"])
+            pom {
+                description.set("SARIF data models for Kotlinx serialization")
+                name.set(rootProject.name)
+                url.set("https://detekt.github.io/detekt")
+                licenses {
+                    license {
+                        name.set("The Apache Software License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        distribution.set("repo")
+                    }
                 }
-            }
-            developers {
-                developer {
-                    id.set("Chao Zhang")
-                    name.set("Chao Zhang")
-                    email.set("zhangchao6865@gmail.com")
+                developers {
+                    developer {
+                        id.set("Chao Zhang")
+                        name.set("Chao Zhang")
+                        email.set("zhangchao6865@gmail.com")
+                    }
                 }
-            }
-            scm {
-                url.set("https://github.com/detekt/sarif4k")
+                scm {
+                    url.set("https://github.com/detekt/sarif4k")
+                }
             }
         }
     }
@@ -97,11 +73,15 @@ if (findProperty("signing.keyId") != null) {
     signing {
         sign(publishing.publications[rootProject.name])
     }
+} else {
+    logger.lifecycle("Signing Disabled as the PGP key was not found")
 }
 
-nexusStaging {
-    packageGroup = "io.github.detekt"
-    stagingProfileId = "117c7a00a4d531"
-    username = sonatypeUsername
-    password = sonatypePassword
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+        }
+    }
 }
