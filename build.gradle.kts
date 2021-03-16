@@ -7,8 +7,8 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
 }
 
-group = "io.github.detekt.${rootProject.name}"
-version = "0.0.1"
+group = property("GROUP")
+version = property("VERSION")
 
 repositories {
     mavenCentral()
@@ -30,8 +30,7 @@ java {
 
 tasks.withType(Javadoc::class).configureEach {
     val customArgs = projectDir.resolve("javadoc-silence.txt")
-    customArgs.writeText("""
-        -Xdoclint:none
+    customArgs.writeText("""-Xdoclint:none
     """.trimIndent())
     options.optionFiles?.add(customArgs)
 }
@@ -79,9 +78,6 @@ if (findProperty("signing.keyId") != null) {
 
 nexusPublishing {
     repositories {
-        sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
-        }
+        sonatype()
     }
 }
