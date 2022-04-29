@@ -27,4 +27,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
       - name: Run Gradle tasks
-        run: ./gradlew build
+        run: ./gradlew build dependencyCheckAnalyze
