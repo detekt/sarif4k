@@ -5,6 +5,7 @@ plugins {
     kotlin("jvm") version "1.4.31"
     kotlin("plugin.serialization") version "1.4.31"
     id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
+    id("org.owasp.dependencycheck") version "6.5.3"
 }
 
 group = property("GROUP")
@@ -33,6 +34,10 @@ tasks.withType(Javadoc::class).configureEach {
     customArgs.writeText("""-Xdoclint:none
     """.trimIndent())
     options.optionFiles?.add(customArgs)
+}
+
+dependencyCheck {
+    analyzers.assemblyEnabled = false
 }
 
 publishing {
