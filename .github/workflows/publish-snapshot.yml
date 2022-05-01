@@ -27,9 +27,6 @@ jobs:
       - name: Build
         run: ./gradlew build
 
-      - name: Dependency Check
-        run: ./gradlew dependencyCheckAnalyze
-
       - name: Publish package
         run: ./gradlew publishToSonatype
         env:
