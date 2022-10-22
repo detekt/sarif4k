@@ -1,25 +1,28 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     `java-library`
     `maven-publish`
     signing
-    kotlin("jvm") version "1.6.20"
-    kotlin("plugin.serialization") version "1.6.20"
-    id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
-    id("org.owasp.dependencycheck") version "6.5.3"
+    kotlin("jvm") version "1.7.20"
+    kotlin("plugin.serialization") version "1.7.20"
+    id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
+    id("org.owasp.dependencycheck") version "7.3.0"
 }
 
-group = property("GROUP")
-version = property("VERSION")
+group = property("GROUP")!!
+version = property("VERSION")!!
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
+    api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
     testImplementation(kotlin("stdlib"))
     testImplementation(kotlin("test"))
-    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
 }
 
 java {
@@ -29,11 +32,26 @@ java {
     withSourcesJar()
 }
 
-tasks.withType(Javadoc::class).configureEach {
-    val customArgs = projectDir.resolve("javadoc-silence.txt")
-    customArgs.writeText("""-Xdoclint:none
-    """.trimIndent())
-    options.optionFiles?.add(customArgs)
+tasks {
+    withType<KotlinCompile> {
+        this.kotlinOptions {
+            jvmTarget = "1.8"
+            freeCompilerArgs = listOf("-opt-in=kotlinx.serialization.ExperimentalSerializationApi")
+        }
+    }
+
+    withType<Javadoc> {
+        val customArgs = projectDir.resolve("javadoc-silence.txt")
+        customArgs.writeText(
+            """-Xdoclint:none
+            """.trimIndent()
+        )
+        options.optionFiles?.add(customArgs)
+    }
+
+    withType<Test> {
+        useJUnitPlatform()
+    }
 }
 
 dependencyCheck {
