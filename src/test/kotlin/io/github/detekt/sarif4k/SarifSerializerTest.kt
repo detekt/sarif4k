@@ -1,6 +1,6 @@
 package io.github.detekt.sarif4k
 
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import java.io.File
 import kotlin.test.assertEquals
 
