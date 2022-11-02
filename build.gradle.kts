@@ -33,14 +33,14 @@ java {
 }
 
 tasks {
-    withType<KotlinCompile> {
+    withType<KotlinCompile>().configureEach {
         this.kotlinOptions {
             jvmTarget = "1.8"
             freeCompilerArgs = listOf("-opt-in=kotlinx.serialization.ExperimentalSerializationApi")
         }
     }
 
-    withType<Javadoc> {
+    withType<Javadoc>().configureEach {
         val customArgs = projectDir.resolve("javadoc-silence.txt")
         customArgs.writeText(
             """-Xdoclint:none
@@ -49,7 +49,7 @@ tasks {
         options.optionFiles?.add(customArgs)
     }
 
-    withType<Test> {
+    withType<Test>().configureEach {
         useJUnitPlatform()
     }
 }
