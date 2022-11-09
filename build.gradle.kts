@@ -64,12 +64,8 @@ dependencyCheck {
 
 publishing {
     publications {
-        register<MavenPublication>(rootProject.name) {
+        withType<MavenPublication> {
             artifact(tasks.findByName("dokkaJar"))
-            groupId = project.group as? String
-            artifactId = project.name
-            version = project.version as? String
-            from(components["kotlin"])
             pom {
                 description.set("SARIF data models for Kotlinx serialization")
                 name.set(rootProject.name)
