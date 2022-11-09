@@ -48,17 +48,13 @@ kotlin {
 }
 
 tasks {
-    withType<Javadoc>().configureEach {
-        val customArgs = projectDir.resolve("javadoc-silence.txt")
-        customArgs.writeText(
-            """-Xdoclint:none
-            """.trimIndent()
-        )
-        options.optionFiles?.add(customArgs)
-    }
-
     withType<Test>().configureEach {
         useJUnitPlatform()
+    }
+    create<Jar>("dokkaJar") {
+        group = "documentation"
+        archiveClassifier.set("javadoc")
+        from(findByName("dokkaHtml"))
     }
 }
 
@@ -69,6 +65,7 @@ dependencyCheck {
 publishing {
     publications {
         register<MavenPublication>(rootProject.name) {
+            artifact(tasks.findByName("dokkaJar"))
             groupId = project.group as? String
             artifactId = project.name
             version = project.version as? String
