@@ -52,9 +52,9 @@ tasks {
         useJUnitPlatform()
     }
     create<Jar>("dokkaJar") {
-        group = "documentation"
+        group = JavaBasePlugin.DOCUMENTATION_GROUP
         archiveClassifier.set("javadoc")
-        from(findByName("dokkaHtml"))
+        from(dokkaHtml)
     }
 }
 
