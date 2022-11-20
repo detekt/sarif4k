@@ -1,0 +1,7 @@
+{
+  "labels": ["dependencies"],
+  "extends": [
+    "config:base",
+    "helpers:pinGitHubActionDigests"
+  ]
+}
