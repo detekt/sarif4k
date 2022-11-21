@@ -15,4 +15,4 @@
   - `gradle.properties` to the next SNAPSHOT version (X.Y.Z)
   - `git commit -am "Prepare next development version."`
   - `git push && git push --tags`
-- Wait for the [publish-release.yml](.github/workflows/publish-release.yml) action to complete.
+- Wait for the [publish-snapshot.yml](.github/workflows/publish-snapshot.yml) action to complete.

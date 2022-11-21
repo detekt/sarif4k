@@ -1,11 +1,9 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    `java-library`
     `maven-publish`
     signing
-    kotlin("jvm") version "1.7.21"
+    kotlin("multiplatform") version "1.7.21"
     kotlin("plugin.serialization") version "1.7.21"
+    id("org.jetbrains.dokka") version "1.7.20"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
     id("org.owasp.dependencycheck") version "7.3.2"
 }
@@ -17,40 +15,46 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
-    testImplementation(kotlin("stdlib"))
-    testImplementation(kotlin("test"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.1")
-}
+kotlin {
+    jvm {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = JavaVersion.VERSION_1_8.toString()
+            }
+        }
+    }
+    linuxX64()
+    mingwX64()
+    macosX64()
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-    withJavadocJar()
-    withSourcesJar()
+    sourceSets {
+        all {
+            languageSettings.optIn("kotlinx.serialization.ExperimentalSerializationApi")
+        }
+        val commonMain by getting {
+            dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
+            }
+        }
+        val jvmTest by getting {
+            dependencies {
+                implementation(kotlin("stdlib"))
+                implementation(kotlin("test"))
+                implementation("org.junit.jupiter:junit-jupiter-api:5.9.1")
+                runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.1")
+            }
+        }
+    }
 }
 
 tasks {
-    withType<KotlinCompile>().configureEach {
-        this.kotlinOptions {
-            jvmTarget = "1.8"
-            freeCompilerArgs = listOf("-opt-in=kotlinx.serialization.ExperimentalSerializationApi")
-        }
-    }
-
-    withType<Javadoc>().configureEach {
-        val customArgs = projectDir.resolve("javadoc-silence.txt")
-        customArgs.writeText(
-            """-Xdoclint:none
-            """.trimIndent()
-        )
-        options.optionFiles?.add(customArgs)
-    }
-
     withType<Test>().configureEach {
         useJUnitPlatform()
+    }
+    create<Jar>("dokkaJar") {
+        group = JavaBasePlugin.DOCUMENTATION_GROUP
+        archiveClassifier.set("javadoc")
+        from(dokkaHtml)
     }
 }
 
@@ -60,11 +64,8 @@ dependencyCheck {
 
 publishing {
     publications {
-        register<MavenPublication>(rootProject.name) {
-            groupId = project.group as? String
-            artifactId = project.name
-            version = project.version as? String
-            from(components["java"])
+        withType<MavenPublication> {
+            artifact(tasks.findByName("dokkaJar"))
             pom {
                 description.set("SARIF data models for Kotlinx serialization")
                 name.set(rootProject.name)
