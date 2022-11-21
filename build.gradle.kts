@@ -4,8 +4,8 @@ plugins {
     `java-library`
     `maven-publish`
     signing
-    kotlin("jvm") version "1.7.20"
-    kotlin("plugin.serialization") version "1.7.20"
+    kotlin("jvm") version "1.7.21"
+    kotlin("plugin.serialization") version "1.7.21"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
     id("org.owasp.dependencycheck") version "7.3.2"
 }
