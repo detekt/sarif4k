@@ -94,7 +94,9 @@ publishing {
 
 if (findProperty("signing.keyId") != null) {
     signing {
-        sign(publishing.publications[rootProject.name])
+        publishing.publications.withType(MavenPublication::class).configureEach {
+            sign(this)
+        }
     }
 } else {
     logger.lifecycle("Signing Disabled as the PGP key was not found")
