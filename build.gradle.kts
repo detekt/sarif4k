@@ -1,8 +1,8 @@
 plugins {
     `maven-publish`
     signing
-    kotlin("multiplatform") version "1.7.21"
-    kotlin("plugin.serialization") version "1.7.21"
+    kotlin("multiplatform") version "1.8.0"
+    kotlin("plugin.serialization") version "1.8.0"
     id("org.jetbrains.dokka") version "1.7.20"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
     id("org.owasp.dependencycheck") version "7.4.0"
