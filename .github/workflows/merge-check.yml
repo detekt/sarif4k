@@ -46,5 +46,21 @@ jobs:
       - name: Run Gradle tasks
         run: ./gradlew build 
 
+      - name: Upload 'Test Report' artifact
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3
+        if: success() || failure()
+        with:
+          name: Test Report
+          path: |
+            build/reports/tests/allTests/
+
       - name: Dependency Check
         run: ./gradlew dependencyCheckAnalyze
+
+      - name: Upload 'Dependency Check Report' artifact
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3
+        if: success() || failure()
+        with:
+          name: Dependency Check Report
+          path: |
+            build/reports/dependency-check-report.html
