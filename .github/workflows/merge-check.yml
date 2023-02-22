@@ -30,6 +30,19 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
+
+      - name: Cache CVE database Files
+        uses: actions/cache@69d9d449aced6a2ede0bc19182fadc3a0a42d2b0 # v3
+        with:
+          path: |
+            ~/.gradle/dependency-check-data/
+          # Use the hash of the gradle files as the key for now,
+          # which contains the `org.owasp.dependencycheck` plugin version.
+          # The database might depend on other things as well, like date, but this is good enough.
+          key: dependency-check-${{ hashFiles('build.gradle.kts') }}
+          restore-keys: |
+            dependency-check-
+
       - name: Run Gradle tasks
         run: ./gradlew build 
 
