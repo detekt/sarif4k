@@ -4,7 +4,7 @@ plugins {
     kotlin("multiplatform") version "1.8.10"
     kotlin("plugin.serialization") version "1.8.10"
     id("org.jetbrains.dokka") version "1.8.10"
-    id("io.github.gradle-nexus.publish-plugin") version "1.2.0"
+    id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
     id("org.owasp.dependencycheck") version "8.1.2"
 }
 
