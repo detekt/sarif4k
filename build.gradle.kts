@@ -102,6 +102,11 @@ if (findProperty("signing.keyId") != null) {
     logger.lifecycle("Signing Disabled as the PGP key was not found")
 }
 
+val signingTasks: TaskCollection<Sign> = tasks.withType<Sign>()
+tasks.withType<PublishToMavenRepository>().configureEach {
+    mustRunAfter(signingTasks)
+}
+
 nexusPublishing {
     repositories {
         sonatype()
