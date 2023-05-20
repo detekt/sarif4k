@@ -102,6 +102,7 @@ if (findProperty("signing.keyId") != null) {
     logger.lifecycle("Signing Disabled as the PGP key was not found")
 }
 
+// https://github.com/gradle-nexus/publish-plugin/issues/208
 val signingTasks: TaskCollection<Sign> = tasks.withType<Sign>()
 tasks.withType<PublishToMavenRepository>().configureEach {
     mustRunAfter(signingTasks)
