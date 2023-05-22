@@ -1,8 +1,8 @@
 plugins {
     `maven-publish`
     signing
-    kotlin("multiplatform") version "1.8.10"
-    kotlin("plugin.serialization") version "1.8.10"
+    kotlin("multiplatform") version "1.8.21"
+    kotlin("plugin.serialization") version "1.8.21"
     id("org.jetbrains.dokka") version "1.8.10"
     id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
     id("org.owasp.dependencycheck") version "8.2.1"
@@ -33,7 +33,7 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
+                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
             }
         }
         val jvmTest by getting {
@@ -100,6 +100,12 @@ if (findProperty("signing.keyId") != null) {
     }
 } else {
     logger.lifecycle("Signing Disabled as the PGP key was not found")
+}
+
+// https://github.com/gradle-nexus/publish-plugin/issues/208
+val signingTasks: TaskCollection<Sign> = tasks.withType<Sign>()
+tasks.withType<PublishToMavenRepository>().configureEach {
+    mustRunAfter(signingTasks)
 }
 
 nexusPublishing {

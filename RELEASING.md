@@ -9,8 +9,10 @@
 - Publish the version
   - Run`./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository` locally
   - Create a new release in the releases tab on GitHub
-  - Verify [Maven repository](https://repo1.maven.org/maven2/io/github/detekt/sarif4k/sarif4k/) that the version is
-    published. Visit [Sonatype Nexus](https://oss.sonatype.org/) to debug if there is anything wrong.
+  - Verify the version is published
+    - https://repo.maven.apache.org/maven2/io/github/detekt/sarif4k/sarif4k/
+    - https://repo1.maven.org/maven2/io/github/detekt/sarif4k/sarif4k/
+  - Visit [Sonatype Nexus](https://oss.sonatype.org/) to debug if there is anything wrong.
 - Update 
   - `gradle.properties` to the next SNAPSHOT version (X.Y.Z)
   - `git commit -am "Prepare next development version."`
