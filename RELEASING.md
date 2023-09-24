@@ -4,7 +4,7 @@
   - the version in `gradle.properties` to a non-SNAPSHOT version. 
   - `CHANGELOG.md` for the upcoming release.
   - `README.md` with the new version.
-  - `git commit -am "Prepare for release X.Y.Z."` (where X.Y.Z is the new version)
+  - `git commit -am "Prepare for release X.Y.Z"` (where X.Y.Z is the new version)
   - `git tag -a X.Y.Z -m "Version X.Y.Z"` (where X.Y.Z is the new version)
 - Publish the version
   - Run`./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository` locally
