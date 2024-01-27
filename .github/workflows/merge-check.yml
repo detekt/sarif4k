@@ -46,21 +46,21 @@ jobs:
       - name: Run Gradle tasks
         run: ./gradlew build 
 
-      - name: Upload 'Test Report' artifact
+      - name: Upload 'Test Report (${{ matrix.os }})' artifact
         uses: actions/upload-artifact@26f96dfa697d77e81fd5907df203aa23a56210a8 # v4
         if: success() || failure()
         with:
-          name: Test Report
+          name: Test Report (${{ matrix.os }})
           path: |
             build/reports/tests/allTests/
 
       - name: Dependency Check
         run: ./gradlew dependencyCheckAnalyze
 
-      - name: Upload 'Dependency Check Report' artifact
+      - name: Upload 'Dependency Check Report (${{ matrix.os }})' artifact
         uses: actions/upload-artifact@26f96dfa697d77e81fd5907df203aa23a56210a8 # v4
         if: success() || failure()
         with:
-          name: Dependency Check Report
+          name: Dependency Check Report (${{ matrix.os }})
           path: |
             build/reports/dependency-check-report.html
