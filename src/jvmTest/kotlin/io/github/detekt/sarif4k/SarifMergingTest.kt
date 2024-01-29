@@ -25,8 +25,8 @@ class SarifMergingTest {
             SarifSerializer.fromJson(resourceAsTextContent(it))
         }
 
-        val actual = SarifSerializer.toMinifiedJson(inputs.reduce(SarifSchema210::merge))
-        val expected = resourceAsTextContent(expectedOutputFile)
-        assertEquals(expected.replace("\\s".toRegex(), ""), actual)
+        val actual = inputs.reduce(SarifSchema210::merge)
+        val expected = SarifSerializer.fromJson(resourceAsTextContent(expectedOutputFile))
+        assertEquals(expected, actual)
     }
 }
