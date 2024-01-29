@@ -1,3 +1,4 @@
+@file:JvmName("Merging")
 package io.github.detekt.sarif4k
 
 fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
