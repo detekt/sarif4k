@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4
         with:
           distribution: 'temurin'
-          java-version: 8
+          java-version-file: '.java-version'
 
       - name: Build
         run: ./gradlew build
