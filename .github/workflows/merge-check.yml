@@ -37,18 +37,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Cache CVE database Files
-        uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2 # v4
-        with:
-          path: |
-            ~/.gradle/dependency-check-data/
-          # Use the hash of the gradle files as the key for now,
-          # which contains the `org.owasp.dependencycheck` plugin version.
-          # The database might depend on other things as well, like date, but this is good enough.
-          key: dependency-check-${{ hashFiles('build.gradle.kts') }}
-          restore-keys: |
-            dependency-check-
-
       - name: Run Gradle tasks
         run: ./gradlew build 
 
@@ -59,14 +47,3 @@ jobs:
           name: Test Report (${{ matrix.os }})
           path: |
             build/reports/tests/allTests/
-
-      - name: Dependency Check
-        run: ./gradlew dependencyCheckAnalyze
-
-      - name: Upload 'Dependency Check Report (${{ matrix.os }})' artifact
-        uses: actions/upload-artifact@26f96dfa697d77e81fd5907df203aa23a56210a8 # v4
-        if: success() || failure()
-        with:
-          name: Dependency Check Report (${{ matrix.os }})
-          path: |
-            build/reports/dependency-check-report.html
