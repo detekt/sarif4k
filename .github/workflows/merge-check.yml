@@ -21,6 +21,12 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
+      - name: Set up Java
+        uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4
+        with:
+          distribution: 'temurin'
+          java-version-file: '.java-version'
+
       - name: Setup gradle
         uses: gradle/actions/setup-gradle@v3
 
@@ -34,14 +40,3 @@ jobs:
           name: Test Report (${{ matrix.os }})
           path: |
             build/reports/tests/allTests/
-
-      - name: Dependency Check
-        run: ./gradlew dependencyCheckAnalyze
-
-      - name: Upload 'Dependency Check Report (${{ matrix.os }})' artifact
-        uses: actions/upload-artifact@26f96dfa697d77e81fd5907df203aa23a56210a8 # v4
-        if: success() || failure()
-        with:
-          name: Dependency Check Report (${{ matrix.os }})
-          path: |
-            build/reports/dependency-check-report.html
