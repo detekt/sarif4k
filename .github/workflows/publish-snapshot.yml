@@ -16,7 +16,7 @@ jobs:
           java-version-file: '.java-version'
 
       - name: Setup gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@ec92e829475ac0c2315ea8f9eced72db85bb337a # v3
 
       - name: Build
         run: ./gradlew build
