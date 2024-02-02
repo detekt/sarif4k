@@ -1,4 +1,4 @@
-name: "Merge checks"
+name: "Merge Checks"
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: "Build project"
+    name: "Build Project"
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
