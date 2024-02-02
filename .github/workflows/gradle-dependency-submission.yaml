@@ -1,4 +1,4 @@
-name: Dependency Submission
+name: "Dependency Submission"
 
 on:
   push:
@@ -12,17 +12,18 @@ jobs:
   dependency-submission:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout sources
+
+      - name: "Checkout sources"
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
-      - name: Set up Java
+      - name: "Set up Java"
         uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4
         with:
           distribution: 'temurin'
           java-version-file: '.java-version'
 
-      - name: Setup gradle
+      - name: "Setup gradle"
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Generate and submit dependency graph
+      - name: "Generate and submit dependency graph"
         uses: gradle/actions/dependency-submission@ec92e829475ac0c2315ea8f9eced72db85bb337a # v3
