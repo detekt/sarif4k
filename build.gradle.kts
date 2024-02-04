@@ -40,8 +40,8 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
-                implementation("org.junit.jupiter:junit-jupiter-api:5.10.1")
-                runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.1")
+                implementation("org.junit.jupiter:junit-jupiter-api:5.10.2")
+                runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.2")
             }
         }
     }
