@@ -8,7 +8,11 @@ import kotlin.test.assertEquals
 class SarifMergingTest {
     @Test
     fun `merge output from sarifs of the same tool`() {
-        testMerge("/output.sarif.json", "/input_1.sarif.json", "/input_2.sarif.json")
+        testMerge(
+            "output.sarif.json",
+            "input_1.sarif.json",
+            "input_2.sarif.json"
+        )
     }
 
     @Test
