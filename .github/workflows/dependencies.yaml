@@ -1,0 +1,31 @@
+name: "Dependencies"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  dependency-submission:
+    name: "Submit Dependency Graph"
+    runs-on: ubuntu-latest
+
+    permissions:
+      # The Dependency Submission API requires write permission.
+      contents: write
+
+    steps:
+
+      - name: "Checkout sources"
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+
+      - name: "Set up Java"
+        uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4
+        with:
+          distribution: 'temurin'
+          java-version-file: '.java-version'
+
+      - name: "Generate and submit dependency graph"
+        # Note: this `uses: gradle/actions/setup-gradle@v3` under the hood.
+        uses: gradle/actions/dependency-submission@ec92e829475ac0c2315ea8f9eced72db85bb337a # v3

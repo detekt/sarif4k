@@ -5,7 +5,6 @@ plugins {
     kotlin("plugin.serialization") version "1.9.22"
     id("org.jetbrains.dokka") version "1.9.10"
     id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
-    id("org.owasp.dependencycheck") version "8.4.3"
 }
 
 group = property("GROUP")!!
@@ -41,8 +40,8 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
-                implementation("org.junit.jupiter:junit-jupiter-api:5.10.1")
-                runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.1")
+                implementation("org.junit.jupiter:junit-jupiter-api:5.10.2")
+                runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.2")
             }
         }
     }
@@ -57,10 +56,6 @@ tasks {
         archiveClassifier.set("javadoc")
         from(dokkaHtml)
     }
-}
-
-dependencyCheck {
-    analyzers.assemblyEnabled = false
 }
 
 publishing {

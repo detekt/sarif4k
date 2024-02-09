@@ -1,4 +1,4 @@
-name: Merge checks
+name: "Merge Checks"
 
 on:
   push:
@@ -10,57 +10,38 @@ on:
 
 jobs:
   build:
-    name: Build project
+    name: "Build Project"
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [ macos-latest, ubuntu-latest ]
     if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
+
+    permissions:
+      contents: read
+
     steps:
-      - name: Checkout Repo
+
+      - name: "Checkout sources"
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
-      - name: Cache Gradle Files
-        uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2 # v4
+      - name: "Set up Java"
+        uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4
         with:
-          path: |
-            ~/.gradle/caches/
-            ~/.gradle/wrapper/
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
+          distribution: 'temurin'
+          java-version-file: '.java-version'
 
-      - name: Cache CVE database Files
-        uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2 # v4
-        with:
-          path: |
-            ~/.gradle/dependency-check-data/
-          # Use the hash of the gradle files as the key for now,
-          # which contains the `org.owasp.dependencycheck` plugin version.
-          # The database might depend on other things as well, like date, but this is good enough.
-          key: dependency-check-${{ hashFiles('build.gradle.kts') }}
-          restore-keys: |
-            dependency-check-
+      - name: "Setup gradle"
+        uses: gradle/actions/setup-gradle@ec92e829475ac0c2315ea8f9eced72db85bb337a # v3
 
-      - name: Run Gradle tasks
-        run: ./gradlew build 
+      - name: "Run Gradle tasks"
+        run: ./gradlew build
 
-      - name: Upload 'Test Report (${{ matrix.os }})' artifact
-        uses: actions/upload-artifact@26f96dfa697d77e81fd5907df203aa23a56210a8 # v4
+      - name: "Upload 'Test Report (${{ matrix.os }})' artifact"
+        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4
         if: success() || failure()
         with:
-          name: Test Report (${{ matrix.os }})
+          name: 'Test Report (${{ matrix.os }})'
           path: |
             build/reports/tests/allTests/
-
-      - name: Dependency Check
-        run: ./gradlew dependencyCheckAnalyze
-
-      - name: Upload 'Dependency Check Report (${{ matrix.os }})' artifact
-        uses: actions/upload-artifact@26f96dfa697d77e81fd5907df203aa23a56210a8 # v4
-        if: success() || failure()
-        with:
-          name: Dependency Check Report (${{ matrix.os }})
-          path: |
-            build/reports/dependency-check-report.html
