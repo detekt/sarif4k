@@ -95,7 +95,7 @@ data class ExternalProperties (
     val graphs: List<Graph>? = null,
 
     /**
-     * A stable, unique identifer for this external properties object, in the form of a GUID.
+     * A stable, unique identifier for this external properties object, in the form of a GUID.
      */
     val guid: String? = null,
 
@@ -126,7 +126,7 @@ data class ExternalProperties (
     val results: List<Result>? = null,
 
     /**
-     * A stable, unique identifer for the run associated with this external properties object,
+     * A stable, unique identifier for the run associated with this external properties object,
      * in the form of a GUID.
      */
     @SerialName("runGuid")
@@ -1241,14 +1241,14 @@ data class Location (
 )
 
 /**
- * A region within an artifact where a result was detected.
- *
  * Specifies a portion of the artifact that encloses the region. Allows a viewer to display
  * additional context around the region.
  *
  * Specifies a portion of the artifact.
  *
  * The region of the artifact to delete.
+ *
+ * A region within an artifact where a result was detected.
  */
 @Serializable
 data class Region (
@@ -1510,7 +1510,7 @@ data class ToolComponent (
     val globalMessageStrings: Map<String, MultiformatMessageString>? = null,
 
     /**
-     * A unique identifer for the tool component in the form of a GUID.
+     * A unique identifier for the tool component in the form of a GUID.
      */
     val guid: String? = null,
 
@@ -1687,7 +1687,7 @@ data class ReportingDescriptor (
     val fullDescription: MultiformatMessageString? = null,
 
     /**
-     * A unique identifer for the reporting descriptor in the form of a GUID.
+     * A unique identifier for the reporting descriptor in the form of a GUID.
      */
     val guid: String? = null,
 
@@ -1962,7 +1962,7 @@ data class Result (
     val graphTraversals: List<GraphTraversal>? = null,
 
     /**
-     * A stable, unique identifer for the result in the form of a GUID.
+     * A stable, unique identifier for the result in the form of a GUID.
      */
     val guid: String? = null,
 
@@ -2692,7 +2692,7 @@ data class ResultProvenance (
 @Serializable
 data class Suppression (
     /**
-     * A stable, unique identifer for the suprression in the form of a GUID.
+     * A stable, unique identifier for the suprression in the form of a GUID.
      */
     val guid: String? = null,
 
@@ -2980,7 +2980,7 @@ data class RunAutomationDetails (
     val description: Message? = null,
 
     /**
-     * A stable, unique identifer for this object's containing run object in the form of a GUID.
+     * A stable, unique identifier for this object's containing run object in the form of a GUID.
      */
     val guid: String? = null,
 
@@ -3142,7 +3142,7 @@ data class ExternalPropertyFileReferences (
 @Serializable
 data class ExternalPropertyFileReference (
     /**
-     * A stable, unique identifer for the external property file in the form of a GUID.
+     * A stable, unique identifier for the external property file in the form of a GUID.
      */
     val guid: String? = null,
 
