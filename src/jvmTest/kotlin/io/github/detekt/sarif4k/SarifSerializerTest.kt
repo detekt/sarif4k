@@ -1,5 +1,10 @@
 package io.github.detekt.sarif4k
 
+import kotlinx.serialization.json.add
+import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.put
+import kotlinx.serialization.json.putJsonArray
+import kotlinx.serialization.json.putJsonObject
 import org.junit.jupiter.api.Test
 import java.io.File
 import kotlin.test.assertEquals
@@ -45,8 +50,15 @@ class SarifSerializerTest {
                                     )
                                 ),
                                 properties = PropertyBag(
-                                    tags = listOf("tag")
-                                )
+                                    buildJsonObject {
+                                        putJsonArray("tags") {
+                                            add("tag")
+                                        }
+                                        putJsonObject("foo") {
+                                            put("bar", "buz")
+                                        }
+                                    }
+                                ),
                             )
                         )
                     ),

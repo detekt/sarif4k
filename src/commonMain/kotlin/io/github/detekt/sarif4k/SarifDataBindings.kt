@@ -8,6 +8,11 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.decodeFromJsonElement
+import kotlin.jvm.JvmInline
 
 /*
  * Using https://app.quicktype.io/ to generate from schema
@@ -339,13 +344,28 @@ data class Address (
  *
  * Key/value pairs that provide additional information about the version control details.
  */
-@Serializable
-data class PropertyBag (
-    /**
-     * A set of distinct strings that provide additional information.
-     */
-    val tags: List<String>? = null
-)
+@Serializable(with = PropertyBagSerializer::class)
+@JvmInline
+value class PropertyBag(private val value: JsonObject) : Map<String, JsonElement> by value {
+    constructor(value: Map<String, JsonElement>) : this(JsonObject(value))
+}
+
+/**
+ * A set of distinct strings that provide additional information.
+ */
+val PropertyBag.tags: List<String>? get() = this["tags"]?.let { Json.decodeFromJsonElement(it) }
+
+object PropertyBagSerializer : KSerializer<PropertyBag> {
+    override val descriptor: SerialDescriptor = JsonObject.serializer().descriptor
+
+    override fun deserialize(decoder: Decoder): PropertyBag {
+        return PropertyBag(decoder.decodeSerializableValue(JsonObject.serializer()))
+    }
+
+    override fun serialize(encoder: Encoder, value: PropertyBag) {
+        encoder.encodeSerializableValue(JsonObject.serializer(), JsonObject(value))
+    }
+}
 
 /**
  * A single artifact. In some cases, this artifact might be nested within another artifact.
