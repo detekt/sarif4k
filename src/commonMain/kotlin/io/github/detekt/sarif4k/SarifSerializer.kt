@@ -62,7 +62,10 @@ private fun JsonElement.toMap(): Any? {
         is JsonArray -> this.map { it.toMap() }
         is JsonObject -> this.toMap()
         is JsonPrimitive -> if (isString) content else {
-            content.toBooleanStrictOrNull() ?: content.toDoubleOrNull() ?: content.toLongOrNull()
+            content
+                .toBooleanStrictOrNull()
+                ?: content.toDoubleOrNull()
+                ?: content.toLongOrNull()
             ?: error("Unknown primitive type")
         }
     }
