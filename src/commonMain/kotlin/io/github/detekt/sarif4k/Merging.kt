@@ -2,7 +2,6 @@
 
 package io.github.detekt.sarif4k
 
-import kotlinx.serialization.json.JsonArray
 import kotlin.jvm.JvmName
 
 fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
@@ -32,12 +31,12 @@ fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
 
 fun PropertyBag.merge(other: PropertyBag): PropertyBag {
     var merge = this + other
-    val aTags = this["tags"] as? JsonArray
-    val bTags = other["tags"] as? JsonArray
+    val aTags = this["tags"] as? Collection<*>
+    val bTags = other["tags"] as? Collection<*>
 
     if (aTags != null && bTags != null) {
         merge = merge.toMutableMap().also {
-            it["tags"] = JsonArray((aTags + bTags).distinct())
+            it["tags"] = (aTags + bTags).distinct()
         }
     }
 
