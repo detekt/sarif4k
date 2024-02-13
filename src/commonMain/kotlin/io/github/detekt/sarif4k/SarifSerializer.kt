@@ -12,7 +12,7 @@ object SarifSerializer {
 
     fun toMinifiedJson(sarif: SarifSchema210): String = Json.encodeToString(sarif)
 
-    fun toJson(sarif: SarifSchema210): String = json.encodeToString(sarif)
+    fun toJson(sarif: SarifSchema210): String = json.encodeToString(sarif) + "\n"
 
     fun fromJson(json: String): SarifSchema210 = Json.decodeFromString(json)
 }

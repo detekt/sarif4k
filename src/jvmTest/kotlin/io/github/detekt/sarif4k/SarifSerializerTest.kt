@@ -82,8 +82,8 @@ class SarifSerializerTest {
 
     @Test
     fun `serialize kotlin data class to json`() {
-        val actual = SarifSerializer.toJson(sarifSchema210).lines()
-        val expected = getResource("/test.sarif.json").readLines()
+        val actual = SarifSerializer.toJson(sarifSchema210)
+        val expected = getResource("/test.sarif.json").readText()
         assertEquals(expected, actual)
     }
 
