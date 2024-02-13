@@ -43,6 +43,9 @@ class SarifSerializerTest {
                                         startLine = 1,
                                         startColumn = 1
                                     )
+                                ),
+                                properties = PropertyBag(
+                                    tags = listOf("tag")
                                 )
                             )
                         )

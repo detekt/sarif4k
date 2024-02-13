@@ -21,6 +21,11 @@
                   "startColumn": 1,
                   "startLine": 1
                 }
+              },
+              "properties": {
+                "tags": [
+                  "tag"
+                ]
               }
             }
           ],
