@@ -25,6 +25,7 @@ fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
 
 fun PropertyBag?.merge(other: PropertyBag?): PropertyBag? {
     return (this?.tags.orEmpty() + other?.tags.orEmpty())
+        .distinct()
         .takeIf { it.isNotEmpty() }
         ?.let { PropertyBag(it) }
 }
