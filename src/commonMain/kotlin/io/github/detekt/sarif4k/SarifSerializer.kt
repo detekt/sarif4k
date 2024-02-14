@@ -64,8 +64,8 @@ private fun JsonElement.toMap(): Any? {
         is JsonPrimitive -> if (isString) content else {
             content
                 .toBooleanStrictOrNull()
-                ?: content.toDoubleOrNull()
                 ?: content.toLongOrNull()
+                ?: content.toDoubleOrNull()
                 ?: error("Unknown primitive: $content")
         }
     }
