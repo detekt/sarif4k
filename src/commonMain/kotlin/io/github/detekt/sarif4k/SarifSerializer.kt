@@ -66,7 +66,7 @@ private fun JsonElement.toMap(): Any? {
                 .toBooleanStrictOrNull()
                 ?: content.toDoubleOrNull()
                 ?: content.toLongOrNull()
-            ?: error("Unknown primitive type")
+                ?: error("Unknown primitive: $content")
         }
     }
 }
