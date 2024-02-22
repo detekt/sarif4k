@@ -344,24 +344,24 @@ data class Address (
  *
  * Key/value pairs that provide additional information about the version control details.
  */
-@Serializable(with = PropertyBagSerializer::class)
+@Serializable(with = PropertyBag.Companion::class)
 @JvmInline
 value class PropertyBag(private val value: Map<String, Any?>) : Map<String, Any?> by value {
     /**
      * A set of distinct strings that provide additional information.
      */
     val tags: List<String>? get() = (value["tags"] as Collection<*>?)?.map { it as String }
-}
 
-object PropertyBagSerializer : KSerializer<PropertyBag> {
-    override val descriptor: SerialDescriptor = JsonObject.serializer().descriptor
+    companion object : KSerializer<PropertyBag> {
+        override val descriptor: SerialDescriptor = JsonObject.serializer().descriptor
 
-    override fun deserialize(decoder: Decoder): PropertyBag {
-        return PropertyBag(decoder.decodeSerializableValue(JsonObject.serializer()).toMap())
-    }
+        override fun deserialize(decoder: Decoder): PropertyBag {
+            return PropertyBag(decoder.decodeSerializableValue(JsonObject.serializer()).toMap())
+        }
 
-    override fun serialize(encoder: Encoder, value: PropertyBag) {
-        encoder.encodeSerializableValue(JsonObject.serializer(), value.toJsonElement())
+        override fun serialize(encoder: Encoder, value: PropertyBag) {
+            encoder.encodeSerializableValue(JsonObject.serializer(), value.toJsonElement())
+        }
     }
 }
 
