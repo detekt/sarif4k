@@ -94,4 +94,5 @@ class SarifSerializerTest {
     }
 }
 
-private fun getResource(path: String): Reader = SarifSerializerTest::class.java.getResourceAsStream(path)!!.reader()
+private fun getResource(path: String): Reader =
+    SarifSerializerTest::class.java.getResourceAsStream(path)!!.reader()
