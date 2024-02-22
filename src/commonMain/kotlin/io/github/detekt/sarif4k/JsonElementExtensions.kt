@@ -29,7 +29,11 @@ private fun Any?.toJsonElement(): JsonElement = when (this) {
 }
 
 internal fun Map<*, *>.toJsonElement(): JsonObject {
-    return JsonObject(this.map { (key, value) -> key as String to value.toJsonElement() }.toMap())
+    val map = this.map { (key, value) ->
+        key as? String ?: error("$key is not allowed as JSON key, please use a String!")
+        key to value.toJsonElement()
+    }
+    return JsonObject(map.toMap())
 }
 
 private fun Collection<*>.toJsonElement(): JsonArray {
