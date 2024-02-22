@@ -1,7 +1,7 @@
 package io.github.detekt.sarif4k
 
 import org.junit.jupiter.api.Test
-import java.io.File
+import java.io.Reader
 import kotlin.test.assertEquals
 
 class SarifSerializerTest {
@@ -94,4 +94,4 @@ class SarifSerializerTest {
     }
 }
 
-private fun getResource(path: String) = File(SarifSerializerTest::class.java.getResource(path)!!.path)
+private fun getResource(path: String): Reader = SarifSerializerTest::class.java.getResourceAsStream(path)!!.reader()
