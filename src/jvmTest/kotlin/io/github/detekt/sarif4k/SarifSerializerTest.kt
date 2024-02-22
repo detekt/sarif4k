@@ -1,12 +1,12 @@
 package io.github.detekt.sarif4k
 
 import org.junit.jupiter.api.Test
-import java.io.File
+import java.io.Reader
 import kotlin.test.assertEquals
 
 class SarifSerializerTest {
 
-    val sarifSchema210 = SarifSchema210(
+    private val sarifSchema210 = SarifSchema210(
         schema = "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
         version = Version.The210,
         runs = listOf(
@@ -76,22 +76,23 @@ class SarifSerializerTest {
     @Test
     fun `serialize kotlin data class to minified json`() {
         val actual = SarifSerializer.toMinifiedJson(sarifSchema210)
-        val expected = File(SarifSerializerTest::class.java.getResource("/test.sarif.json").path).readText()
+        val expected = getResource("/test.sarif.json").readText()
         assertEquals(expected.replace("\\s".toRegex(), ""), actual)
     }
 
     @Test
     fun `serialize kotlin data class to json`() {
-        val actual = SarifSerializer.toJson(sarifSchema210).lines()
-        val expected = File(SarifSerializerTest::class.java.getResource("/test.sarif.json").path).readLines()
+        val actual = SarifSerializer.toJson(sarifSchema210)
+        val expected = getResource("/test.sarif.json").readText()
         assertEquals(expected, actual)
     }
 
     @Test
     fun `deserialize json into kotlin data class`() {
-        val actual = SarifSerializer.fromJson(
-            File(SarifSerializerTest::class.java.getResource("/test.sarif.json").path).readText()
-        )
+        val actual = SarifSerializer.fromJson(getResource("/test.sarif.json").readText())
         assertEquals(sarifSchema210, actual)
     }
 }
+
+private fun getResource(path: String): Reader =
+    SarifSerializerTest::class.java.getResourceAsStream(path)!!.reader()
