@@ -12,6 +12,10 @@ private fun Any?.toJsonElement(): JsonElement = when (this) {
     is JsonElement -> this
     is Map<*, *> -> toJsonElement()
     is Collection<*> -> toJsonElement()
+    is Boolean -> JsonPrimitive(this)
+    is Number -> JsonPrimitive(this)
+    is String -> JsonPrimitive(this)
+    is Enum<*> -> JsonPrimitive(this.toString())
     is ByteArray -> this.toList().toJsonElement()
     is CharArray -> this.toList().toJsonElement()
     is ShortArray -> this.toList().toJsonElement()
@@ -21,10 +25,6 @@ private fun Any?.toJsonElement(): JsonElement = when (this) {
     is DoubleArray -> this.toList().toJsonElement()
     is BooleanArray -> this.toList().toJsonElement()
     is Array<*> -> toJsonElement()
-    is Boolean -> JsonPrimitive(this)
-    is Number -> JsonPrimitive(this)
-    is String -> JsonPrimitive(this)
-    is Enum<*> -> JsonPrimitive(this.toString())
     else -> error("Can't serialize unknown type: $this")
 }
 
