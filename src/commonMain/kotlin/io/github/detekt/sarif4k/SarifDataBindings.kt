@@ -355,7 +355,8 @@ value class PropertyBag(
         override val descriptor: SerialDescriptor = JsonObject.serializer().descriptor
 
         override fun deserialize(decoder: Decoder): PropertyBag {
-            return PropertyBag(decoder.decodeSerializableValue(JsonObject.serializer()).toNativeObject())
+            val jsonObject = decoder.decodeSerializableValue(JsonObject.serializer())
+            return PropertyBag(jsonObject.toNativeObject())
         }
 
         override fun serialize(encoder: Encoder, value: PropertyBag) {
