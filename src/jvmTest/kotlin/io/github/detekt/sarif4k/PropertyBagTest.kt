@@ -43,7 +43,14 @@ class PropertyBagTest {
     }
 
     @Test
-    fun incorrectTags() {
+    fun incorrectTags_noList() {
+        assertThrows<ClassCastException> {
+            PropertyBag(mapOf("tags" to 1)).tags
+        }
+    }
+
+    @Test
+    fun incorrectTags_noString() {
         assertThrows<ClassCastException> {
             PropertyBag(mapOf("tags" to listOf(1))).tags
         }
