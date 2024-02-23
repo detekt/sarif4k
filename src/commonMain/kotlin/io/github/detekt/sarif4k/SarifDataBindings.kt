@@ -343,7 +343,9 @@ data class Address (
  */
 @Serializable(with = PropertyBag.Companion::class)
 @JvmInline
-value class PropertyBag(private val value: Map<String, Any?>) : Map<String, Any?> by value {
+value class PropertyBag(
+    private val value: Map<String, Any?>,
+) : Map<String, Any?> by value {
     /**
      * A set of distinct strings that provide additional information.
      */
