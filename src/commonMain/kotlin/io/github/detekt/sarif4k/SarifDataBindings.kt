@@ -8,10 +8,7 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.decodeFromJsonElement
 import kotlin.jvm.JvmInline
 
 /*
@@ -356,7 +353,7 @@ value class PropertyBag(private val value: Map<String, Any?>) : Map<String, Any?
         override val descriptor: SerialDescriptor = JsonObject.serializer().descriptor
 
         override fun deserialize(decoder: Decoder): PropertyBag {
-            return PropertyBag(decoder.decodeSerializableValue(JsonObject.serializer()).toMap())
+            return PropertyBag(decoder.decodeSerializableValue(JsonObject.serializer()).toNativeObject())
         }
 
         override fun serialize(encoder: Encoder, value: PropertyBag) {

@@ -44,11 +44,11 @@ private fun Array<*>.toJsonElement(): JsonArray {
     return JsonArray(this.map { it.toJsonElement() })
 }
 
-private fun JsonElement.toMap(): Any? {
+private fun JsonElement.toNativeObject(): Any? {
     return when (this) {
         JsonNull -> null
-        is JsonArray -> this.map { it.toMap() }
-        is JsonObject -> this.toMap()
+        is JsonArray -> this.map { it.toNativeObject() }
+        is JsonObject -> this.toNativeObject()
         is JsonPrimitive -> if (isString) content else {
             content
                 .toBooleanStrictOrNull()
@@ -59,6 +59,6 @@ private fun JsonElement.toMap(): Any? {
     }
 }
 
-internal fun JsonObject.toMap(): Map<String, Any?> {
-    return this.map { (key, value) -> key to value.toMap() }.toMap()
+internal fun JsonObject.toNativeObject(): Map<String, Any?> {
+    return this.map { (key, value) -> key to value.toNativeObject() }.toMap()
 }
