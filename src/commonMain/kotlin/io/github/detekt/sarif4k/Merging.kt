@@ -30,17 +30,15 @@ fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
 }
 
 private fun PropertyBag.merge(other: PropertyBag): PropertyBag {
-    var merge = this + other
     val aTags = this["tags"] as? Collection<*>
     val bTags = other["tags"] as? Collection<*>
-
-    if (aTags != null && bTags != null) {
-        merge = merge.toMutableMap().also {
-            it["tags"] = (aTags + bTags).distinct()
-        }
+    val tags = if (aTags != null && bTags != null) {
+        mapOf("tags" to (aTags + bTags).distinct())
+    } else {
+        emptyMap()
     }
 
-    return PropertyBag(merge)
+    return PropertyBag(this + other + tags)
 }
 
 private fun List<Run>.merge(other: List<Run>): List<Run> {
