@@ -29,7 +29,7 @@ fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
     )
 }
 
-fun PropertyBag.merge(other: PropertyBag): PropertyBag {
+private fun PropertyBag.merge(other: PropertyBag): PropertyBag {
     var merge = this + other
     val aTags = this["tags"] as? Collection<*>
     val bTags = other["tags"] as? Collection<*>
@@ -43,7 +43,7 @@ fun PropertyBag.merge(other: PropertyBag): PropertyBag {
     return PropertyBag(merge)
 }
 
-fun List<Run>.merge(other: List<Run>): List<Run> {
+private fun List<Run>.merge(other: List<Run>): List<Run> {
     val runsByTool = (this + other).groupBy { it.tool.driver.fullName }
 
     return runsByTool.mapValues { (_, runs) ->
