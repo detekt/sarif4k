@@ -349,7 +349,19 @@ value class PropertyBag(
     /**
      * A set of distinct strings that provide additional information.
      */
-    val tags: List<String>? get() = (value["tags"] as Collection<*>?)?.map { it as String }
+    val tags: List<String>?
+        get() = try {
+            val tagList = value["tags"] as Collection<*>?
+            tagList?.mapIndexed { position, it ->
+                try {
+                    it as String
+                } catch (e: ClassCastException) {
+                    throw IllegalStateException("the tag \"$it\" at the position $position is not a String", e)
+                }
+            }
+        } catch (e: ClassCastException) {
+            throw IllegalStateException("tags should be a collection", e)
+        }
 
     companion object : KSerializer<PropertyBag> {
         override val descriptor: SerialDescriptor = JsonObject.serializer().descriptor

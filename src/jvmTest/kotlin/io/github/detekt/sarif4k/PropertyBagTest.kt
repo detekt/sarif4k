@@ -1,12 +1,13 @@
 package io.github.detekt.sarif4k
 
 import kotlinx.serialization.json.Json
-import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.fail
 
 class PropertyBagTest {
 
@@ -44,15 +45,23 @@ class PropertyBagTest {
 
     @Test
     fun incorrectTags_noList() {
-        assertThrows<ClassCastException> {
+        try {
             PropertyBag(mapOf("tags" to 1)).tags
+            fail()
+        } catch (e: IllegalStateException) {
+            assertEquals("tags should be a collection", e.message)
+            assertNotNull(e.cause)
         }
     }
 
     @Test
     fun incorrectTags_noString() {
-        assertThrows<ClassCastException> {
-            PropertyBag(mapOf("tags" to listOf(1))).tags
+        try {
+            PropertyBag(mapOf("tags" to listOf("foo", true, "bar"))).tags
+            fail()
+        } catch (e: IllegalStateException) {
+            assertEquals("the tag \"true\" at the position 1 is not a String", e.message)
+            assertNotNull(e.cause)
         }
     }
 
