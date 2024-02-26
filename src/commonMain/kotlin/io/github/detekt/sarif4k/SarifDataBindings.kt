@@ -360,7 +360,7 @@ value class PropertyBag(
                 }
             }
         } catch (e: ClassCastException) {
-            throw IllegalStateException("tags should be a collection", e)
+            throw IllegalStateException("Expected a Collection for the value of tags property: ${value["tags"]}.", e)
         }
 
     companion object : KSerializer<PropertyBag> {
