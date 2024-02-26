@@ -2,7 +2,7 @@ package io.github.detekt.sarif4k
 
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.MethodSource
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -49,7 +49,7 @@ class PropertyBagTest {
             PropertyBag(mapOf("tags" to 1)).tags
             fail()
         } catch (e: IllegalStateException) {
-            assertEquals("tags should be a collection", e.message)
+            assertEquals("Expected a Collection for the value of tags property: 1.", e.message)
             assertNotNull(e.cause)
         }
     }
@@ -60,21 +60,22 @@ class PropertyBagTest {
             PropertyBag(mapOf("tags" to listOf("foo", true, "bar"))).tags
             fail()
         } catch (e: IllegalStateException) {
-            assertEquals("the tag \"true\" at the position 1 is not a String", e.message)
+            assertEquals("Expected a String tag at index 1: true.", e.message)
             assertNotNull(e.cause)
         }
     }
 
     companion object {
         @JvmStatic
-        fun data(): List<Arguments> {
-            return listOf(
-                mapOf<String, Any?>() to """{}""",
-                mapOf("foo" to null) to """{"foo":null}""",
-                mapOf("foo" to mapOf("bar" to listOf("1", 2L, false, 3.5))) to """{"foo":{"bar":["1",2,false,3.5]}}""",
-                mapOf("tags" to null) to """{"tags":null}""",
-                mapOf("tags" to emptyList<Nothing>()) to """{"tags":[]}""",
-            ).map { (first, second) -> Arguments.of(first, second) }
-        }
+        fun data() = listOf(
+            arguments(mapOf<String, Any?>(), """{}"""),
+            arguments(mapOf("foo" to null), """{"foo":null}"""),
+            arguments(
+                mapOf("foo" to mapOf("bar" to listOf("1", 2L, false, 3.5))),
+                """{"foo":{"bar":["1",2,false,3.5]}}""",
+            ),
+            arguments(mapOf("tags" to null), """{"tags":null}"""),
+            arguments(mapOf("tags" to emptyList<Nothing>()), """{"tags":[]}"""),
+        )
     }
 }

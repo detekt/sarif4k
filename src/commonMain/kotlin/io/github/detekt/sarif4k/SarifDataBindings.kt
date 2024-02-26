@@ -346,6 +346,8 @@ data class Address (
 value class PropertyBag(
     private val value: Map<String, Any?>,
 ) : Map<String, Any?> by value {
+    constructor(tags: Set<String>, map: Map<String, Any?>) : this(map + mapOf("tags" to tags))
+
     /**
      * A set of distinct strings that provide additional information.
      */

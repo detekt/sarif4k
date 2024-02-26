@@ -11,7 +11,7 @@ private fun Any?.toJsonElement(): JsonElement = when (this) {
     null -> JsonNull
     is JsonElement -> this
     is Map<*, *> -> toJsonElement()
-    is Collection<*> -> toJsonElement()
+    is Iterable<*> -> toJsonElement()
     is Boolean -> JsonPrimitive(this)
     is Number -> JsonPrimitive(this)
     is String -> JsonPrimitive(this)
@@ -36,7 +36,7 @@ internal fun Map<*, *>.toJsonElement(): JsonObject {
     return JsonObject(map.toMap())
 }
 
-private fun Collection<*>.toJsonElement(): JsonArray {
+private fun Iterable<*>.toJsonElement(): JsonArray {
     return JsonArray(this.map { it.toJsonElement() })
 }
 
