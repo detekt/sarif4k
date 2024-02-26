@@ -15,7 +15,7 @@ private fun Any?.toJsonElement(): JsonElement = when (this) {
     is Boolean -> JsonPrimitive(this)
     is Number -> JsonPrimitive(this)
     is String -> JsonPrimitive(this)
-    is Enum<*> -> JsonPrimitive(this.toString())
+    is Enum<*> -> JsonPrimitive(this.name)
     is ByteArray -> this.toList().toJsonElement()
     is CharArray -> this.toList().toJsonElement()
     is ShortArray -> this.toList().toJsonElement()
