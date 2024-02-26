@@ -352,11 +352,11 @@ value class PropertyBag(
     val tags: List<String>?
         get() = try {
             val tagList = value["tags"] as Collection<*>?
-            tagList?.mapIndexed { position, it ->
+            tagList?.mapIndexed { index, it ->
                 try {
                     it as String
                 } catch (e: ClassCastException) {
-                    throw IllegalStateException("the tag \"$it\" at the position $position is not a String", e)
+                    throw IllegalStateException("Expected a String tag at index $index: ${it}.", e)
                 }
             }
         } catch (e: ClassCastException) {
