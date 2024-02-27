@@ -21,6 +21,8 @@ import kotlin.jvm.JvmInline
  * Manually modified the version to be immediately after schema based on the recommendation for
  * consumers to sniff the version before parsing the entire file.
  * https://github.com/detekt/detekt/issues/3045#issuecomment-711071231
+ *
+ * Manually modified `PropertyBag` to accept arbitrary values.
  */
 /**
  * Static Analysis Results Format (SARIF) Version 2.1.0 JSON Schema: a standard format for
