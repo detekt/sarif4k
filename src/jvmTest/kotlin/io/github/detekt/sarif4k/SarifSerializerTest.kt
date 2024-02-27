@@ -45,8 +45,11 @@ class SarifSerializerTest {
                                     )
                                 ),
                                 properties = PropertyBag(
-                                    tags = listOf("tag")
-                                )
+                                    mapOf(
+                                        "tags" to listOf("tag"),
+                                        "foo" to mapOf("bar" to "buz")
+                                    )
+                                ),
                             )
                         )
                     ),

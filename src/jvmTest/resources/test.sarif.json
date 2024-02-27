@@ -25,7 +25,10 @@
               "properties": {
                 "tags": [
                   "tag"
-                ]
+                ],
+                "foo": {
+                  "bar": "buz"
+                }
               }
             }
           ],

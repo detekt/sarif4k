@@ -8,6 +8,8 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import kotlinx.serialization.json.JsonObject
+import kotlin.jvm.JvmInline
 
 /*
  * Using https://app.quicktype.io/ to generate from schema
@@ -19,6 +21,8 @@ import kotlinx.serialization.encoding.Encoder
  * Manually modified the version to be immediately after schema based on the recommendation for
  * consumers to sniff the version before parsing the entire file.
  * https://github.com/detekt/detekt/issues/3045#issuecomment-711071231
+ *
+ * Manually modified `PropertyBag` to accept arbitrary values.
  */
 /**
  * Static Analysis Results Format (SARIF) Version 2.1.0 JSON Schema: a standard format for
@@ -339,13 +343,43 @@ data class Address (
  *
  * Key/value pairs that provide additional information about the version control details.
  */
-@Serializable
-data class PropertyBag (
+@Serializable(with = PropertyBag.Companion::class)
+@JvmInline
+value class PropertyBag(
+    private val value: Map<String, Any?>,
+) : Map<String, Any?> by value {
+    constructor(tags: Set<String>, map: Map<String, Any?>) : this(map + mapOf("tags" to tags))
+
     /**
      * A set of distinct strings that provide additional information.
      */
-    val tags: List<String>? = null
-)
+    val tags: List<String>?
+        get() = try {
+            val tagList = value["tags"] as Collection<*>?
+            tagList?.mapIndexed { index, it ->
+                try {
+                    it as String
+                } catch (e: ClassCastException) {
+                    throw IllegalStateException("Expected a String tag at index $index: ${it}.", e)
+                }
+            }
+        } catch (e: ClassCastException) {
+            throw IllegalStateException("Expected a Collection for the value of tags property: ${value["tags"]}.", e)
+        }
+
+    companion object : KSerializer<PropertyBag> {
+        override val descriptor: SerialDescriptor = JsonObject.serializer().descriptor
+
+        override fun deserialize(decoder: Decoder): PropertyBag {
+            val jsonObject = decoder.decodeSerializableValue(JsonObject.serializer())
+            return PropertyBag(jsonObject.toNativeObject())
+        }
+
+        override fun serialize(encoder: Encoder, value: PropertyBag) {
+            encoder.encodeSerializableValue(JsonObject.serializer(), value.toJsonElement())
+        }
+    }
+}
 
 /**
  * A single artifact. In some cases, this artifact might be nested within another artifact.

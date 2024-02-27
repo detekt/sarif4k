@@ -1,4 +1,5 @@
 @file:JvmName("Merging")
+
 package io.github.detekt.sarif4k
 
 import kotlin.jvm.JvmName
@@ -10,7 +11,12 @@ fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
     val mergedExternalProperties = (inlineExternalProperties.orEmpty() + other.inlineExternalProperties.orEmpty())
         .takeIf { it.isNotEmpty() }
 
-    val mergedProperties = properties.merge(other.properties)
+    val mergedProperties = when {
+        properties != null && other.properties != null -> properties.merge(other.properties)
+        properties != null -> properties
+        other.properties != null -> other.properties
+        else -> null
+    }
 
     val mergedRuns = runs.merge(other.runs)
 
@@ -23,14 +29,19 @@ fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
     )
 }
 
-fun PropertyBag?.merge(other: PropertyBag?): PropertyBag? {
-    return (this?.tags.orEmpty() + other?.tags.orEmpty())
-        .distinct()
-        .takeIf { it.isNotEmpty() }
-        ?.let { PropertyBag(it) }
+private fun PropertyBag.merge(other: PropertyBag): PropertyBag {
+    val aTags = this["tags"] as? Collection<*>
+    val bTags = other["tags"] as? Collection<*>
+    val tags = if (aTags != null && bTags != null) {
+        mapOf("tags" to (aTags + bTags).distinct())
+    } else {
+        emptyMap()
+    }
+
+    return PropertyBag(this + other + tags)
 }
 
-fun List<Run>.merge(other: List<Run>): List<Run> {
+private fun List<Run>.merge(other: List<Run>): List<Run> {
     val runsByTool = (this + other).groupBy { it.tool.driver.fullName }
 
     return runsByTool.mapValues { (_, runs) ->
