@@ -9,6 +9,7 @@
   - Run`./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository` locally
   - Create a new release in the releases tab on GitHub
   - Verify the version is published
+    - https://oss.sonatype.org/content/groups/public/io/github/detekt/sarif4k/sarif4k
     - https://repo.maven.apache.org/maven2/io/github/detekt/sarif4k/sarif4k/
     - https://repo1.maven.org/maven2/io/github/detekt/sarif4k/sarif4k/
   - Visit [Sonatype Nexus](https://oss.sonatype.org/) to debug if there is anything wrong.
