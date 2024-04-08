@@ -28,4 +28,4 @@ jobs:
 
       - name: "Generate and submit dependency graph"
         # Note: this `uses: gradle/actions/setup-gradle@v3` under the hood.
-        uses: gradle/actions/dependency-submission@e24011a3b5db78bd5ab798036042d9312002f252 # v3
+        uses: gradle/actions/dependency-submission@1168cd3d07c1876a65e1724114de42ccbdfa7b78 # v3
