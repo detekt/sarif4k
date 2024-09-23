@@ -7,7 +7,7 @@ import kotlin.test.assertEquals
 class SarifSerializerTest {
 
     private val sarifSchema210 = SarifSchema210(
-        schema = "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+        schema = "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
         version = Version.The210,
         runs = listOf(
             Run(
