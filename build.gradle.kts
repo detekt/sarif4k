@@ -40,9 +40,9 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
-                implementation("org.junit.jupiter:junit-jupiter-api:5.11.2")
-                implementation("org.junit.jupiter:junit-jupiter-params:5.11.2")
-                runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.11.2")
+                implementation("org.junit.jupiter:junit-jupiter-api:5.11.3")
+                implementation("org.junit.jupiter:junit-jupiter-params:5.11.3")
+                runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.11.3")
             }
         }
     }
