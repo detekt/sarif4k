@@ -3,7 +3,7 @@ plugins {
     signing
     kotlin("multiplatform") version "1.9.25"
     kotlin("plugin.serialization") version "1.9.25"
-    id("org.jetbrains.dokka") version "1.9.20"
+    id("org.jetbrains.dokka") version "2.0.0"
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
 }
 
