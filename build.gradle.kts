@@ -40,7 +40,7 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
-                implementation("org.junit.jupiter:junit-jupiter:5.13.3")
+                implementation("org.junit.jupiter:junit-jupiter:5.13.4")
             }
         }
     }
