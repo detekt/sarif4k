@@ -47,10 +47,19 @@ private fun List<Run>.merge(other: List<Run>): List<Run> {
     return runsByTool.mapValues { (_, runs) ->
         val baseRun = runs.firstOrNull() ?: return@mapValues null
 
-        val mergedResults = runs.flatMap { it.results.orEmpty() }
         val mergedRules = runs.flatMap { it.tool.driver.rules.orEmpty() }.distinctBy { it.id }
 
+        val (mergedOriginalURIBaseIDs, runKeyMappings) = mergeOriginalURIBaseIDs(runs)
+
+        val mergedResults = runs.flatMapIndexed { runIndex, run ->
+            run.results.orEmpty().map { result ->
+                val keyMappings = runKeyMappings.getOrNull(runIndex) ?: emptyMap()
+                result.updateArtifactLocationBaseIds(keyMappings)
+            }
+        }
+
         baseRun.copy(
+            originalURIBaseIDS = mergedOriginalURIBaseIDs.takeIf { it.isNotEmpty() },
             results = mergedResults,
             tool = baseRun.tool.copy(
                 driver = baseRun.tool.driver.copy(
@@ -59,4 +68,52 @@ private fun List<Run>.merge(other: List<Run>): List<Run> {
             )
         )
     }.values.filterNotNull().toList()
+}
+
+private fun mergeOriginalURIBaseIDs(runs: List<Run>): Pair<Map<String, ArtifactLocation>, List<Map<String, String>>> {
+    if (runs.isEmpty()) return emptyMap<String, ArtifactLocation>() to emptyList()
+
+    val mergedMap = mutableMapOf<String, ArtifactLocation>()
+    var keyCounter = 1
+
+    val runKeyMappings = runs.map { run ->
+        run.originalURIBaseIDS?.mapValues { (key, artifactLocation) ->
+            when (mergedMap[key]) {
+                null -> {
+                    mergedMap[key] = artifactLocation
+                    key
+                }
+                artifactLocation -> key
+                else -> {
+                    val newKey = generateSequence("${key}_${keyCounter}") { "${key}_${++keyCounter}" }
+                        .first { !mergedMap.containsKey(it) }
+                    mergedMap[newKey] = artifactLocation
+                    newKey
+                }
+            }
+        }.orEmpty()
+    }
+
+    return mergedMap to runKeyMappings
+}
+
+private fun Result.updateArtifactLocationBaseIds(keyMappings: Map<String, String>): Result {
+    if (keyMappings.isEmpty()) return this
+
+    val updatedLocations = locations?.map { location ->
+        val updatedPhysicalLocation = location.physicalLocation?.let { physicalLocation ->
+            val updatedArtifactLocation = physicalLocation.artifactLocation?.let { artifactLocation ->
+                val uriBaseId = artifactLocation.uriBaseID
+                if (uriBaseId != null && keyMappings.containsKey(uriBaseId) && keyMappings[uriBaseId] != uriBaseId) {
+                    artifactLocation.copy(uriBaseID = keyMappings[uriBaseId])
+                } else {
+                    artifactLocation
+                }
+            }
+            physicalLocation.copy(artifactLocation = updatedArtifactLocation)
+        }
+        location.copy(physicalLocation = updatedPhysicalLocation)
+    }
+
+    return copy(locations = updatedLocations)
 }
