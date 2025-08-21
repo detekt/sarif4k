@@ -1,7 +1,9 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     `maven-publish`
     signing
-    kotlin("multiplatform") version "1.9.25"
+    kotlin("multiplatform") version "2.2.10"
     kotlin("plugin.serialization") version "1.9.25"
     id("org.jetbrains.dokka") version "2.0.0"
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
@@ -16,10 +18,8 @@ repositories {
 
 kotlin {
     jvm {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = JavaVersion.VERSION_1_8.toString()
-            }
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_1_8
         }
     }
     linuxX64()
