@@ -50,7 +50,7 @@ tasks {
     withType<Test>().configureEach {
         useJUnitPlatform()
     }
-    create<Jar>("dokkaJar") {
+    register<Jar>("dokkaJar") {
         group = JavaBasePlugin.DOCUMENTATION_GROUP
         archiveClassifier.set("javadoc")
         from(dokkaHtml)
