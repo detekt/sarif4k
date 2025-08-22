@@ -23,6 +23,15 @@ class SarifMergingTest {
         )
     }
 
+    @Test
+    fun `merge output from sarifs of the same tool with different uriBaseIds`() {
+        testMerge(
+            "output_other_uribaseid.sarif.json",
+            "input_1.sarif.json",
+            "input_1_other_uribaseid.sarif.json"
+        )
+    }
+
     private fun testMerge(expectedOutputFile: String, vararg inputFiles: String) {
         val inputs = inputFiles.map {
             SarifSerializer.fromJson(resourceAsTextContent(it))
