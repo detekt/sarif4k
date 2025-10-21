@@ -54,7 +54,7 @@ tasks {
     register<Jar>("dokkaJar") {
         group = JavaBasePlugin.DOCUMENTATION_GROUP
         archiveClassifier.set("javadoc")
-        from(dokkaHtml)
+        from(dokka.dokkaPublications.named("html").map { it.outputDirectory })
     }
 }
 
