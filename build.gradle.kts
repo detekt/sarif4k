@@ -5,7 +5,7 @@ plugins {
     signing
     kotlin("multiplatform") version "2.2.20"
     kotlin("plugin.serialization") version "2.2.20"
-    id("org.jetbrains.dokka") version "2.0.0"
+    id("org.jetbrains.dokka") version "2.1.0"
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
 }
 
@@ -54,7 +54,7 @@ tasks {
     register<Jar>("dokkaJar") {
         group = JavaBasePlugin.DOCUMENTATION_GROUP
         archiveClassifier.set("javadoc")
-        from(dokkaHtml)
+        from(dokka.dokkaPublications.named("html").map { it.outputDirectory })
     }
 }
 
