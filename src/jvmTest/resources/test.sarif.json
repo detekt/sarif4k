@@ -67,8 +67,7 @@
           "language": "en",
           "name": "detekt",
           "organization": "detekt",
-          "rules": [
-          ],
+          "rules": [],
           "semanticVersion": "1.0.0",
           "version": "1.0.0"
         }
