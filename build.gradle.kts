@@ -41,7 +41,7 @@ kotlin {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
                 implementation("org.junit.platform:junit-platform-launcher")
-                implementation("org.junit.jupiter:junit-jupiter:5.14.0")
+                implementation("org.junit.jupiter:junit-jupiter:5.14.1")
             }
         }
     }
