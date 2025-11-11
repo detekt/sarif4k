@@ -27,6 +27,10 @@ kotlin {
         languageVersion = KotlinVersion.KOTLIN_2_2
     }
     jvmToolchain(21)
+    @OptIn(org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation::class)
+    abiValidation {
+        enabled = true
+    }
     jvm {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_1_8
