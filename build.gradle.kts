@@ -17,9 +17,11 @@ repositories {
 }
 
 kotlin {
+    jvmToolchain(21)
     jvm {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_1_8
+            freeCompilerArgs.add("-Xjdk-release=8")
         }
     }
     linuxX64()
