@@ -18,6 +18,7 @@ repositories {
 }
 
 kotlin {
+    coreLibrariesVersion = "2.2.0"
     compilerOptions {
         apiVersion = KotlinVersion.KOTLIN_2_2
         languageVersion = KotlinVersion.KOTLIN_2_2
