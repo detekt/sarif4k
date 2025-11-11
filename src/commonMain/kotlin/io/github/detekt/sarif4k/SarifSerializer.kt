@@ -4,15 +4,15 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
-object SarifSerializer {
+public object SarifSerializer {
     private val json = Json {
         prettyPrint = true
         prettyPrintIndent = "  "
     }
 
-    fun toMinifiedJson(sarif: SarifSchema210): String = Json.encodeToString(sarif)
+    public fun toMinifiedJson(sarif: SarifSchema210): String = Json.encodeToString(sarif)
 
-    fun toJson(sarif: SarifSchema210): String = json.encodeToString(sarif) + "\n"
+    public fun toJson(sarif: SarifSchema210): String = json.encodeToString(sarif) + "\n"
 
-    fun fromJson(json: String): SarifSchema210 = Json.decodeFromString(json)
+    public fun fromJson(json: String): SarifSchema210 = Json.decodeFromString(json)
 }
