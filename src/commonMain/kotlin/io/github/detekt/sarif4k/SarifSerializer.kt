@@ -1,7 +1,5 @@
 package io.github.detekt.sarif4k
 
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
 object SarifSerializer {
