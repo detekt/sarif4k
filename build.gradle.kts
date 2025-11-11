@@ -71,6 +71,9 @@ tasks {
         archiveClassifier.set("javadoc")
         from(dokka.dokkaPublications.named("html").map { it.outputDirectory })
     }
+    named("check") {
+        dependsOn("checkLegacyAbi")
+    }
 }
 
 publishing {
