@@ -29,7 +29,7 @@ import kotlin.jvm.JvmInline
  * the output of static analysis tools.
  */
 @Serializable
-data class SarifSchema210 (
+public data class SarifSchema210 (
     /**
      * The URI of the JSON schema corresponding to the version.
      */
@@ -61,7 +61,7 @@ data class SarifSchema210 (
  * The top-level element of an external property file.
  */
 @Serializable
-data class ExternalProperties (
+public data class ExternalProperties (
     /**
      * Addresses that will be merged with a separate run.
      */
@@ -180,7 +180,7 @@ data class ExternalProperties (
  * The address of the location.
  */
 @Serializable
-data class Address (
+public data class Address (
     /**
      * The address expressed as a byte offset from the start of the addressable region.
      */
@@ -345,15 +345,15 @@ data class Address (
  */
 @Serializable(with = PropertyBag.Companion::class)
 @JvmInline
-value class PropertyBag(
+public value class PropertyBag(
     private val value: Map<String, Any?>,
 ) : Map<String, Any?> by value {
-    constructor(tags: Set<String>, map: Map<String, Any?>) : this(map + mapOf("tags" to tags))
+    public constructor(tags: Set<String>, map: Map<String, Any?>) : this(map + mapOf("tags" to tags))
 
     /**
      * A set of distinct strings that provide additional information.
      */
-    val tags: List<String>?
+    public val tags: List<String>?
         get() = try {
             val tagList = value["tags"] as Collection<*>?
             tagList?.mapIndexed { index, it ->
@@ -367,7 +367,7 @@ value class PropertyBag(
             throw IllegalStateException("Expected a Collection for the value of tags property: ${value["tags"]}.", e)
         }
 
-    companion object : KSerializer<PropertyBag> {
+    public companion object : KSerializer<PropertyBag> {
         override val descriptor: SerialDescriptor = JsonObject.serializer().descriptor
 
         override fun deserialize(decoder: Decoder): PropertyBag {
@@ -385,7 +385,7 @@ value class PropertyBag(
  * A single artifact. In some cases, this artifact might be nested within another artifact.
  */
 @Serializable
-data class Artifact (
+public data class Artifact (
     /**
      * The contents of the artifact.
      */
@@ -470,7 +470,7 @@ data class Artifact (
  * The content to insert at the location specified by the 'deletedRegion' property.
  */
 @Serializable
-data class ArtifactContent (
+public data class ArtifactContent (
     /**
      * MIME Base64-encoded content from a binary artifact, or from a text artifact in its
      * original encoding.
@@ -518,7 +518,7 @@ data class ArtifactContent (
  * A brief description of the translation metadata.
  */
 @Serializable
-data class MultiformatMessageString (
+public data class MultiformatMessageString (
     /**
      * A Markdown message string or format string.
      */
@@ -582,7 +582,7 @@ data class MultiformatMessageString (
  * Encapsulates a message intended to be read by the end user.
  */
 @Serializable
-data class Message (
+public data class Message (
     /**
      * An array of strings to substitute into the message string.
      */
@@ -643,7 +643,7 @@ data class Message (
  * the time of the analysis.
  */
 @Serializable
-data class ArtifactLocation (
+public data class ArtifactLocation (
     /**
      * A short description of the artifact location.
      */
@@ -674,7 +674,9 @@ data class ArtifactLocation (
 )
 
 @Serializable(with = Role.Companion::class)
-enum class Role(val value: String) {
+public enum class Role(
+    public val value: String,
+) {
     Added("added"),
     AnalysisTarget("analysisTarget"),
     Attachment("attachment"),
@@ -699,7 +701,7 @@ enum class Role(val value: String) {
     Unmodified("unmodified"),
     UserSpecifiedConfiguration("userSpecifiedConfiguration");
 
-    companion object : KSerializer<Role> {
+    public companion object : KSerializer<Role> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.Role", PrimitiveKind.STRING)
         }
@@ -745,7 +747,7 @@ enum class Role(val value: String) {
  * reporting format into the SARIF format.
  */
 @Serializable
-data class Conversion (
+public data class Conversion (
     /**
      * The locations of the analysis tool's per-run log files.
      */
@@ -773,7 +775,7 @@ data class Conversion (
  * The runtime environment of the analysis tool run.
  */
 @Serializable
-data class Invocation (
+public data class Invocation (
     /**
      * The account under which the invocation occurred.
      */
@@ -918,7 +920,7 @@ data class Invocation (
  * Information about how a specific rule or notification was reconfigured at runtime.
  */
 @Serializable
-data class ConfigurationOverride (
+public data class ConfigurationOverride (
     /**
      * Specifies how the rule or notification was configured during the scan.
      */
@@ -943,7 +945,7 @@ data class ConfigurationOverride (
  * Default reporting configuration information.
  */
 @Serializable
-data class ReportingConfiguration (
+public data class ReportingConfiguration (
     /**
      * Specifies whether the report may be produced during the scan.
      */
@@ -978,13 +980,15 @@ data class ReportingConfiguration (
  * A value specifying the severity level of the result.
  */
 @Serializable(with = Level.Companion::class)
-enum class Level(val value: String) {
+public enum class Level(
+    public val value: String,
+) {
     Error("error"),
     None("none"),
     Note("note"),
     Warning("warning");
 
-    companion object : KSerializer<Level> {
+    public companion object : KSerializer<Level> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.Level", PrimitiveKind.STRING)
         }
@@ -1015,7 +1019,7 @@ enum class Level(val value: String) {
  * Information about how to locate a relevant reporting descriptor.
  */
 @Serializable
-data class ReportingDescriptorReference (
+public data class ReportingDescriptorReference (
     /**
      * A guid that uniquely identifies the descriptor.
      */
@@ -1055,7 +1059,7 @@ data class ReportingDescriptorReference (
  * that provides the extension's plugin model.
  */
 @Serializable
-data class ToolComponentReference (
+public data class ToolComponentReference (
     /**
      * The 'guid' property of the referenced toolComponent.
      */
@@ -1082,7 +1086,7 @@ data class ToolComponentReference (
  * target being analyzed by the tool.
  */
 @Serializable
-data class Notification (
+public data class Notification (
     /**
      * A reference used to locate the rule descriptor associated with this notification.
      */
@@ -1138,7 +1142,7 @@ data class Notification (
  * Describes a runtime exception encountered during the execution of an analysis tool.
  */
 @Serializable
-data class Exception (
+public data class Exception (
     /**
      * An array of exception objects each of which is considered a cause of this exception.
      */
@@ -1174,7 +1178,7 @@ data class Exception (
  * The call stack leading to this location.
  */
 @Serializable
-data class Stack (
+public data class Stack (
     /**
      * An array of stack frames that represents a sequence of calls, rendered in reverse
      * chronological order, that comprise the call stack.
@@ -1196,7 +1200,7 @@ data class Stack (
  * A function call within a stack trace.
  */
 @Serializable
-data class StackFrame (
+public data class StackFrame (
     /**
      * The location to which this stack frame refers.
      */
@@ -1236,7 +1240,7 @@ data class StackFrame (
  * Identifies the location associated with the suppression.
  */
 @Serializable
-data class Location (
+public data class Location (
     /**
      * A set of regions relevant to the location.
      */
@@ -1285,7 +1289,7 @@ data class Location (
  * A region within an artifact where a result was detected.
  */
 @Serializable
-data class Region (
+public data class Region (
     /**
      * The length of the region in bytes.
      */
@@ -1353,7 +1357,7 @@ data class Region (
  * A logical location of a construct that produced a result.
  */
 @Serializable
-data class LogicalLocation (
+public data class LogicalLocation (
     /**
      * The machine-readable name for the logical location, such as a mangled function name
      * provided by a C++ compiler that encodes calling convention, return type and other details
@@ -1406,7 +1410,7 @@ data class LogicalLocation (
  * together with a range of bytes or characters within that artifact.
  */
 @Serializable
-data class PhysicalLocation (
+public data class PhysicalLocation (
     /**
      * The address of the location.
      */
@@ -1438,7 +1442,7 @@ data class PhysicalLocation (
  * Information about the relation of one location to another.
  */
 @Serializable
-data class LocationRelationship (
+public data class LocationRelationship (
     /**
      * A description of the location relationship.
      */
@@ -1472,7 +1476,7 @@ data class LocationRelationship (
  * command-line arguments and the like) is identical for all aggregated files.
  */
 @Serializable
-data class Tool (
+public data class Tool (
     /**
      * The analysis tool that was run.
      */
@@ -1497,7 +1501,7 @@ data class Tool (
  * The analysis tool object that will be merged with a separate run.
  */
 @Serializable
-data class ToolComponent (
+public data class ToolComponent (
     /**
      * The component which is strongly associated with this component. For a translation, this
      * refers to the component which has been translated. For an extension, this is the driver
@@ -1665,11 +1669,13 @@ data class ToolComponent (
 )
 
 @Serializable(with = Content.Companion::class)
-enum class Content(val value: String) {
+public enum class Content(
+    public val value: String,
+) {
     LocalizedData("localizedData"),
     NonLocalizedData("nonLocalizedData");
 
-    companion object : KSerializer<Content> {
+    public companion object : KSerializer<Content> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.Content", PrimitiveKind.STRING)
         }
@@ -1689,7 +1695,7 @@ enum class Content(val value: String) {
  * it provides or its runtime reporting.
  */
 @Serializable
-data class ReportingDescriptor (
+public data class ReportingDescriptor (
     /**
      * Default reporting configuration information.
      */
@@ -1777,7 +1783,7 @@ data class ReportingDescriptor (
  * Information about the relation of one reporting descriptor to another.
  */
 @Serializable
-data class ReportingDescriptorRelationship (
+public data class ReportingDescriptorRelationship (
     /**
      * A description of the reporting descriptor relationship.
      */
@@ -1809,7 +1815,7 @@ data class ReportingDescriptorRelationship (
  * Provides additional metadata related to translation.
  */
 @Serializable
-data class TranslationMetadata (
+public data class TranslationMetadata (
     /**
      * The absolute URI from which the translation metadata can be downloaded.
      */
@@ -1854,7 +1860,7 @@ data class TranslationMetadata (
  * code (for example, a call graph).
  */
 @Serializable
-data class Graph (
+public data class Graph (
     /**
      * A description of the graph.
      */
@@ -1880,7 +1886,7 @@ data class Graph (
  * Represents a directed edge in a graph.
  */
 @Serializable
-data class Edge (
+public data class Edge (
     /**
      * A string that uniquely identifies the edge within its graph.
      */
@@ -1913,7 +1919,7 @@ data class Edge (
  * Represents a node in a graph.
  */
 @Serializable
-data class Node (
+public data class Node (
     /**
      * Array of child nodes.
      */
@@ -1944,7 +1950,7 @@ data class Node (
  * A result produced by an analysis tool.
  */
 @Serializable
-data class Result (
+public data class Result (
     /**
      * Identifies the artifact that the analysis tool was instructed to scan. This need not be
      * the same as the artifact where the result actually occurred.
@@ -2113,7 +2119,7 @@ data class Result (
  * An artifact relevant to a result.
  */
 @Serializable
-data class Attachment (
+public data class Attachment (
     /**
      * The location of the attachment.
      */
@@ -2144,7 +2150,7 @@ data class Attachment (
  * An area within an image.
  */
 @Serializable
-data class Rectangle (
+public data class Rectangle (
     /**
      * The Y coordinate of the bottom edge of the rectangle, measured in the image's natural
      * units.
@@ -2182,13 +2188,15 @@ data class Rectangle (
  * The state of a result relative to a baseline of a previous run.
  */
 @Serializable(with = BaselineState.Companion::class)
-enum class BaselineState(val value: String) {
+public enum class BaselineState(
+    public val value: String, 
+) {
     Absent("absent"),
     New("new"),
     Unchanged("unchanged"),
     Updated("updated");
 
-    companion object : KSerializer<BaselineState> {
+    public companion object : KSerializer<BaselineState> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.BaselineState", PrimitiveKind.STRING)
         }
@@ -2210,7 +2218,7 @@ enum class BaselineState(val value: String) {
  * detecting a result.
  */
 @Serializable
-data class CodeFlow (
+public data class CodeFlow (
     /**
      * A message relevant to the code flow.
      */
@@ -2233,7 +2241,7 @@ data class CodeFlow (
  * execution such as an operating system or fiber.
  */
 @Serializable
-data class ThreadFlow (
+public data class ThreadFlow (
     /**
      * An string that uniquely identifies the threadFlow within the codeFlow in which it occurs.
      */
@@ -2272,7 +2280,7 @@ data class ThreadFlow (
  * program.
  */
 @Serializable
-data class ThreadFlowLocation (
+public data class ThreadFlowLocation (
     /**
      * An integer representing the temporal order in which execution reached this location.
      */
@@ -2360,12 +2368,14 @@ data class ThreadFlowLocation (
  * "unimportant". Default: "important".
  */
 @Serializable(with = Importance.Companion::class)
-enum class Importance(val value: String) {
+public enum class Importance(
+    public val value: String,
+) {
     Essential("essential"),
     Important("important"),
     Unimportant("unimportant");
 
-    companion object : KSerializer<Importance> {
+    public companion object : KSerializer<Importance> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.Importance", PrimitiveKind.STRING)
         }
@@ -2389,7 +2399,7 @@ enum class Importance(val value: String) {
  * A web request associated with this result.
  */
 @Serializable
-data class WebRequest (
+public data class WebRequest (
     /**
      * The body of the request.
      */
@@ -2446,7 +2456,7 @@ data class WebRequest (
  * A web response associated with this result.
  */
 @Serializable
-data class WebResponse (
+public data class WebResponse (
     /**
      * The body of the response.
      */
@@ -2500,7 +2510,7 @@ data class WebResponse (
  * provides a set of new bytes to replace them.
  */
 @Serializable
-data class Fix (
+public data class Fix (
     /**
      * One or more artifact changes that comprise a fix for a result.
      */
@@ -2522,7 +2532,7 @@ data class Fix (
  * A change to a single artifact.
  */
 @Serializable
-data class ArtifactChange (
+public data class ArtifactChange (
     /**
      * The location of the artifact to change.
      */
@@ -2544,7 +2554,7 @@ data class ArtifactChange (
  * The replacement of a single region of an artifact.
  */
 @Serializable
-data class Replacement (
+public data class Replacement (
     /**
      * The region of the artifact to delete.
      */
@@ -2565,7 +2575,7 @@ data class Replacement (
  * Represents a path through a graph.
  */
 @Serializable
-data class GraphTraversal (
+public data class GraphTraversal (
     /**
      * A description of this graph traversal.
      */
@@ -2608,7 +2618,7 @@ data class GraphTraversal (
  * Represents the traversal of a single edge during a graph traversal.
  */
 @Serializable
-data class EdgeTraversal (
+public data class EdgeTraversal (
     /**
      * Identifies the edge being traversed.
      */
@@ -2640,7 +2650,9 @@ data class EdgeTraversal (
  * A value that categorizes results by evaluation state.
  */
 @Serializable(with = ResultKind.Companion::class)
-enum class ResultKind(val value: String) {
+public enum class ResultKind(
+    public val value: String,
+) {
     Fail("fail"),
     Informational("informational"),
     NotApplicable("notApplicable"),
@@ -2648,7 +2660,7 @@ enum class ResultKind(val value: String) {
     Pass("pass"),
     Review("review");
 
-    companion object : KSerializer<ResultKind> {
+    public companion object : KSerializer<ResultKind> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.ResultKind", PrimitiveKind.STRING)
         }
@@ -2673,7 +2685,7 @@ enum class ResultKind(val value: String) {
  * Contains information about how and when a result was detected.
  */
 @Serializable
-data class ResultProvenance (
+public data class ResultProvenance (
     /**
      * An array of physicalLocation objects which specify the portions of an analysis tool's
      * output that a converter transformed into the result.
@@ -2724,7 +2736,7 @@ data class ResultProvenance (
  * A suppression that is relevant to a result.
  */
 @Serializable
-data class Suppression (
+public data class Suppression (
     /**
      * A stable, unique identifier for the suprression in the form of a GUID.
      */
@@ -2760,11 +2772,13 @@ data class Suppression (
  * A string that indicates where the suppression is persisted.
  */
 @Serializable(with = SuppressionKind.Companion::class)
-enum class SuppressionKind(val value: String) {
+public enum class SuppressionKind(
+    public val value: String,
+) {
     External("external"),
     InSource("inSource");
 
-    companion object : KSerializer<SuppressionKind> {
+    public companion object : KSerializer<SuppressionKind> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.SuppressionKind", PrimitiveKind.STRING)
         }
@@ -2783,12 +2797,14 @@ enum class SuppressionKind(val value: String) {
  * A string that indicates the review status of the suppression.
  */
 @Serializable(with = Status.Companion::class)
-enum class Status(val value: String) {
+public enum class Status(
+    public val value: String,
+) {
     Accepted("accepted"),
     Rejected("rejected"),
     UnderReview("underReview");
 
-    companion object : KSerializer<Status> {
+    public companion object : KSerializer<Status> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.Status", PrimitiveKind.STRING)
         }
@@ -2810,10 +2826,12 @@ enum class Status(val value: String) {
  * The SARIF format version of this log file.
  */
 @Serializable(with = Version.Companion::class)
-enum class Version(val value: String) {
+public enum class Version(
+    public val value: String,
+) {
     The210("2.1.0");
 
-    companion object : KSerializer<Version> {
+    public companion object : KSerializer<Version> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.Version", PrimitiveKind.STRING)
         }
@@ -2831,7 +2849,7 @@ enum class Version(val value: String) {
  * Describes a single run of an analysis tool, and contains the reported output of that run.
  */
 @Serializable
-data class Run (
+public data class Run (
     /**
      * Addresses associated with this run instance, if any.
      */
@@ -2999,7 +3017,7 @@ data class Run (
  * Information that describes a run's identity and role within an engineering system process.
  */
 @Serializable
-data class RunAutomationDetails (
+public data class RunAutomationDetails (
     /**
      * A stable, unique identifier for the equivalence class of runs to which this object's
      * containing run object belongs in the form of a GUID.
@@ -3033,11 +3051,13 @@ data class RunAutomationDetails (
  * Specifies the unit in which the tool measures columns.
  */
 @Serializable(with = ColumnKind.Companion::class)
-enum class ColumnKind(val value: String) {
+public enum class ColumnKind(
+    public val value: String,
+) {
     UnicodeCodePoints("unicodeCodePoints"),
     Utf16CodeUnits("utf16CodeUnits");
 
-    companion object : KSerializer<ColumnKind> {
+    public companion object : KSerializer<ColumnKind> {
         override val descriptor: SerialDescriptor get() {
             return PrimitiveSerialDescriptor("quicktype.ColumnKind", PrimitiveKind.STRING)
         }
@@ -3057,7 +3077,7 @@ enum class ColumnKind(val value: String) {
  * log file.
  */
 @Serializable
-data class ExternalPropertyFileReferences (
+public data class ExternalPropertyFileReferences (
     /**
      * An array of external property files containing run.addresses arrays to be merged with the
      * root log file.
@@ -3174,7 +3194,7 @@ data class ExternalPropertyFileReferences (
  * that contains the value of an externalized property associated with the run.
  */
 @Serializable
-data class ExternalPropertyFileReference (
+public data class ExternalPropertyFileReference (
     /**
      * A stable, unique identifier for the external property file in the form of a GUID.
      */
@@ -3204,7 +3224,7 @@ data class ExternalPropertyFileReference (
  * Defines locations of special significance to SARIF consumers.
  */
 @Serializable
-data class SpecialLocations (
+public data class SpecialLocations (
     /**
      * Provides a suggestion to SARIF consumers to display file paths relative to the specified
      * location.
@@ -3222,7 +3242,7 @@ data class SpecialLocations (
  * system.
  */
 @Serializable
-data class VersionControlDetails (
+public data class VersionControlDetails (
     /**
      * A Coordinated Universal Time (UTC) date and time that can be used to synchronize an
      * enlistment to the state of the repository at that time.

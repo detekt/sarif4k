@@ -1,0 +1,2489 @@
+public final class io/github/detekt/sarif4k/Address {
+	public static final field Companion Lio/github/detekt/sarif4k/Address$Companion;
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;Ljava/lang/Long;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Long;
+	public final fun component10 ()Ljava/lang/Long;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/Long;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/Long;
+	public final fun component8 ()Ljava/lang/Long;
+	public final fun component9-yl8_laI ()Ljava/util/Map;
+	public final fun copy-pqSVQPg (Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;Ljava/lang/Long;)Lio/github/detekt/sarif4k/Address;
+	public static synthetic fun copy-pqSVQPg$default (Lio/github/detekt/sarif4k/Address;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;Ljava/lang/Long;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Address;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAbsoluteAddress ()Ljava/lang/Long;
+	public final fun getFullyQualifiedName ()Ljava/lang/String;
+	public final fun getIndex ()Ljava/lang/Long;
+	public final fun getKind ()Ljava/lang/String;
+	public final fun getLength ()Ljava/lang/Long;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getOffsetFromParent ()Ljava/lang/Long;
+	public final fun getParentIndex ()Ljava/lang/Long;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRelativeAddress ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Address$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Address$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Address;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Address;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Address$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Artifact {
+	public static final field Companion Lio/github/detekt/sarif4k/Artifact$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactContent;Lio/github/detekt/sarif4k/Message;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/Long;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactContent;Lio/github/detekt/sarif4k/Message;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/Long;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun component10 ()Ljava/lang/Long;
+	public final fun component11-yl8_laI ()Ljava/util/Map;
+	public final fun component12 ()Ljava/util/List;
+	public final fun component13 ()Ljava/lang/String;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/util/Map;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun component7 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/Long;
+	public final fun copy-faJpS2w (Lio/github/detekt/sarif4k/ArtifactContent;Lio/github/detekt/sarif4k/Message;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/Long;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;)Lio/github/detekt/sarif4k/Artifact;
+	public static synthetic fun copy-faJpS2w$default (Lio/github/detekt/sarif4k/Artifact;Lio/github/detekt/sarif4k/ArtifactContent;Lio/github/detekt/sarif4k/Message;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/Long;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Artifact;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContents ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getEncoding ()Ljava/lang/String;
+	public final fun getHashes ()Ljava/util/Map;
+	public final fun getLastModifiedTimeUTC ()Ljava/lang/String;
+	public final fun getLength ()Ljava/lang/Long;
+	public final fun getLocation ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getMimeType ()Ljava/lang/String;
+	public final fun getOffset ()Ljava/lang/Long;
+	public final fun getParentIndex ()Ljava/lang/Long;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRoles ()Ljava/util/List;
+	public final fun getSourceLanguage ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Artifact$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Artifact$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Artifact;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Artifact;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Artifact$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ArtifactChange {
+	public static final field Companion Lio/github/detekt/sarif4k/ArtifactChange$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component2-yl8_laI ()Ljava/util/Map;
+	public final fun component3 ()Ljava/util/List;
+	public final fun copy-nlvPCms (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Ljava/util/List;)Lio/github/detekt/sarif4k/ArtifactChange;
+	public static synthetic fun copy-nlvPCms$default (Lio/github/detekt/sarif4k/ArtifactChange;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ArtifactChange;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArtifactLocation ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getReplacements ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ArtifactChange$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ArtifactChange$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ArtifactChange;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ArtifactChange;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ArtifactChange$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ArtifactContent {
+	public static final field Companion Lio/github/detekt/sarif4k/ArtifactContent$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2-yl8_laI ()Ljava/util/Map;
+	public final fun component3 ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy-lM1i4-c (Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;)Lio/github/detekt/sarif4k/ArtifactContent;
+	public static synthetic fun copy-lM1i4-c$default (Lio/github/detekt/sarif4k/ArtifactContent;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ArtifactContent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBinary ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRendered ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ArtifactContent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ArtifactContent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ArtifactContent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ArtifactContent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ArtifactContent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ArtifactLocation {
+	public static final field Companion Lio/github/detekt/sarif4k/ArtifactLocation$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/lang/Long;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/lang/Long;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy-MSrMWYM (Lio/github/detekt/sarif4k/Message;Ljava/lang/Long;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Lio/github/detekt/sarif4k/ArtifactLocation;
+	public static synthetic fun copy-MSrMWYM$default (Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Message;Ljava/lang/Long;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ArtifactLocation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getIndex ()Ljava/lang/Long;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getUri ()Ljava/lang/String;
+	public final fun getUriBaseID ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ArtifactLocation$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ArtifactLocation$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ArtifactLocation;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ArtifactLocation;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ArtifactLocation$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Attachment {
+	public static final field Companion Lio/github/detekt/sarif4k/Attachment$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Ljava/util/List;
+	public final fun copy-MSrMWYM (Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/util/List;Ljava/util/List;)Lio/github/detekt/sarif4k/Attachment;
+	public static synthetic fun copy-MSrMWYM$default (Lio/github/detekt/sarif4k/Attachment;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Attachment;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArtifactLocation ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRectangles ()Ljava/util/List;
+	public final fun getRegions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Attachment$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Attachment$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Attachment;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Attachment;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Attachment$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/BaselineState : java/lang/Enum {
+	public static final field Absent Lio/github/detekt/sarif4k/BaselineState;
+	public static final field Companion Lio/github/detekt/sarif4k/BaselineState$Companion;
+	public static final field New Lio/github/detekt/sarif4k/BaselineState;
+	public static final field Unchanged Lio/github/detekt/sarif4k/BaselineState;
+	public static final field Updated Lio/github/detekt/sarif4k/BaselineState;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/BaselineState;
+	public static fun values ()[Lio/github/detekt/sarif4k/BaselineState;
+}
+
+public final class io/github/detekt/sarif4k/BaselineState$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/BaselineState;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/BaselineState;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/CodeFlow {
+	public static final field Companion Lio/github/detekt/sarif4k/CodeFlow$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component2-yl8_laI ()Ljava/util/Map;
+	public final fun component3 ()Ljava/util/List;
+	public final fun copy-nlvPCms (Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/util/List;)Lio/github/detekt/sarif4k/CodeFlow;
+	public static synthetic fun copy-nlvPCms$default (Lio/github/detekt/sarif4k/CodeFlow;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/CodeFlow;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getThreadFlows ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/CodeFlow$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/CodeFlow$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/CodeFlow;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/CodeFlow;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/CodeFlow$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ColumnKind : java/lang/Enum {
+	public static final field Companion Lio/github/detekt/sarif4k/ColumnKind$Companion;
+	public static final field UnicodeCodePoints Lio/github/detekt/sarif4k/ColumnKind;
+	public static final field Utf16CodeUnits Lio/github/detekt/sarif4k/ColumnKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/ColumnKind;
+	public static fun values ()[Lio/github/detekt/sarif4k/ColumnKind;
+}
+
+public final class io/github/detekt/sarif4k/ColumnKind$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ColumnKind;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ColumnKind;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ConfigurationOverride {
+	public static final field Companion Lio/github/detekt/sarif4k/ConfigurationOverride$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ReportingConfiguration;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ReportingConfiguration;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ReportingConfiguration;
+	public final fun component2 ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun copy-OGo8m-k (Lio/github/detekt/sarif4k/ReportingConfiguration;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/util/Map;)Lio/github/detekt/sarif4k/ConfigurationOverride;
+	public static synthetic fun copy-OGo8m-k$default (Lio/github/detekt/sarif4k/ConfigurationOverride;Lio/github/detekt/sarif4k/ReportingConfiguration;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ConfigurationOverride;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getConfiguration ()Lio/github/detekt/sarif4k/ReportingConfiguration;
+	public final fun getDescriptor ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ConfigurationOverride$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ConfigurationOverride$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ConfigurationOverride;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ConfigurationOverride;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ConfigurationOverride$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Content : java/lang/Enum {
+	public static final field Companion Lio/github/detekt/sarif4k/Content$Companion;
+	public static final field LocalizedData Lio/github/detekt/sarif4k/Content;
+	public static final field NonLocalizedData Lio/github/detekt/sarif4k/Content;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/Content;
+	public static fun values ()[Lio/github/detekt/sarif4k/Content;
+}
+
+public final class io/github/detekt/sarif4k/Content$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Content;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Content;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Conversion {
+	public static final field Companion Lio/github/detekt/sarif4k/Conversion$Companion;
+	public synthetic fun <init> (Ljava/util/List;Lio/github/detekt/sarif4k/Invocation;Ljava/util/Map;Lio/github/detekt/sarif4k/Tool;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Lio/github/detekt/sarif4k/Invocation;Ljava/util/Map;Lio/github/detekt/sarif4k/Tool;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Invocation;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun component4 ()Lio/github/detekt/sarif4k/Tool;
+	public final fun copy-CEu22fA (Ljava/util/List;Lio/github/detekt/sarif4k/Invocation;Ljava/util/Map;Lio/github/detekt/sarif4k/Tool;)Lio/github/detekt/sarif4k/Conversion;
+	public static synthetic fun copy-CEu22fA$default (Lio/github/detekt/sarif4k/Conversion;Ljava/util/List;Lio/github/detekt/sarif4k/Invocation;Ljava/util/Map;Lio/github/detekt/sarif4k/Tool;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Conversion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAnalysisToolLogFiles ()Ljava/util/List;
+	public final fun getInvocation ()Lio/github/detekt/sarif4k/Invocation;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getTool ()Lio/github/detekt/sarif4k/Tool;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Conversion$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Conversion$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Conversion;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Conversion;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Conversion$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Edge {
+	public static final field Companion Lio/github/detekt/sarif4k/Edge$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy-MSrMWYM (Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Lio/github/detekt/sarif4k/Edge;
+	public static synthetic fun copy-MSrMWYM$default (Lio/github/detekt/sarif4k/Edge;Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Edge;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLabel ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getSourceNodeID ()Ljava/lang/String;
+	public final fun getTargetNodeID ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Edge$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Edge$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Edge;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Edge;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Edge$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/EdgeTraversal {
+	public static final field Companion Lio/github/detekt/sarif4k/EdgeTraversal$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Long;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Ljava/lang/Long;
+	public final fun copy-hEJh_74 (Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Long;)Lio/github/detekt/sarif4k/EdgeTraversal;
+	public static synthetic fun copy-hEJh_74$default (Lio/github/detekt/sarif4k/EdgeTraversal;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Long;ILjava/lang/Object;)Lio/github/detekt/sarif4k/EdgeTraversal;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEdgeID ()Ljava/lang/String;
+	public final fun getFinalState ()Ljava/util/Map;
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getStepOverEdgeCount ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/EdgeTraversal$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/EdgeTraversal$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/EdgeTraversal;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/EdgeTraversal;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/EdgeTraversal$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Exception {
+	public static final field Companion Lio/github/detekt/sarif4k/Exception$Companion;
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/Stack;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/Stack;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Lio/github/detekt/sarif4k/Stack;
+	public final fun copy-hEJh_74 (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/Stack;)Lio/github/detekt/sarif4k/Exception;
+	public static synthetic fun copy-hEJh_74$default (Lio/github/detekt/sarif4k/Exception;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/Stack;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Exception;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getInnerExceptions ()Ljava/util/List;
+	public final fun getKind ()Ljava/lang/String;
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getStack ()Lio/github/detekt/sarif4k/Stack;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Exception$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Exception$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Exception;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Exception;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Exception$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ExternalProperties {
+	public static final field Companion Lio/github/detekt/sarif4k/ExternalProperties$Companion;
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Conversion;Lio/github/detekt/sarif4k/ToolComponent;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Version;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Conversion;Lio/github/detekt/sarif4k/ToolComponent;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Version;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component11 ()Ljava/util/List;
+	public final fun component12-yl8_laI ()Ljava/util/Map;
+	public final fun component13 ()Ljava/util/List;
+	public final fun component14 ()Ljava/lang/String;
+	public final fun component15 ()Ljava/lang/String;
+	public final fun component16 ()Ljava/util/List;
+	public final fun component17 ()Ljava/util/List;
+	public final fun component18 ()Ljava/util/List;
+	public final fun component19 ()Lio/github/detekt/sarif4k/Version;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component20 ()Ljava/util/List;
+	public final fun component21 ()Ljava/util/List;
+	public final fun component3 ()Lio/github/detekt/sarif4k/Conversion;
+	public final fun component4 ()Lio/github/detekt/sarif4k/ToolComponent;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6-yl8_laI ()Ljava/util/Map;
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/util/List;
+	public final fun copy-oYsrTg8 (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Conversion;Lio/github/detekt/sarif4k/ToolComponent;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Version;Ljava/util/List;Ljava/util/List;)Lio/github/detekt/sarif4k/ExternalProperties;
+	public static synthetic fun copy-oYsrTg8$default (Lio/github/detekt/sarif4k/ExternalProperties;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Conversion;Lio/github/detekt/sarif4k/ToolComponent;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Version;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ExternalProperties;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAddresses ()Ljava/util/List;
+	public final fun getArtifacts ()Ljava/util/List;
+	public final fun getConversion ()Lio/github/detekt/sarif4k/Conversion;
+	public final fun getDriver ()Lio/github/detekt/sarif4k/ToolComponent;
+	public final fun getExtensions ()Ljava/util/List;
+	public final fun getExternalizedProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getGraphs ()Ljava/util/List;
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getInvocations ()Ljava/util/List;
+	public final fun getLogicalLocations ()Ljava/util/List;
+	public final fun getPolicies ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getResults ()Ljava/util/List;
+	public final fun getRunGUID ()Ljava/lang/String;
+	public final fun getSchema ()Ljava/lang/String;
+	public final fun getTaxonomies ()Ljava/util/List;
+	public final fun getThreadFlowLocations ()Ljava/util/List;
+	public final fun getTranslations ()Ljava/util/List;
+	public final fun getVersion ()Lio/github/detekt/sarif4k/Version;
+	public final fun getWebRequests ()Ljava/util/List;
+	public final fun getWebResponses ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ExternalProperties$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ExternalProperties$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ExternalProperties;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ExternalProperties;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ExternalProperties$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ExternalPropertyFileReference {
+	public static final field Companion Lio/github/detekt/sarif4k/ExternalPropertyFileReference$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Long;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Long;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun copy-FRlh2n4 (Ljava/lang/String;Ljava/lang/Long;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;)Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public static synthetic fun copy-FRlh2n4$default (Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/lang/String;Ljava/lang/Long;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getItemCount ()Ljava/lang/Long;
+	public final fun getLocation ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ExternalPropertyFileReference$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ExternalPropertyFileReference$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ExternalPropertyFileReference$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ExternalPropertyFileReferences {
+	public static final field Companion Lio/github/detekt/sarif4k/ExternalPropertyFileReferences$Companion;
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/util/List;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/util/List;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component11-yl8_laI ()Ljava/util/Map;
+	public final fun component12 ()Ljava/util/List;
+	public final fun component13 ()Ljava/util/List;
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Ljava/util/List;
+	public final fun component16 ()Ljava/util/List;
+	public final fun component17 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public final fun component4 ()Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8 ()Ljava/util/List;
+	public final fun component9 ()Ljava/util/List;
+	public final fun copy-ikqp9Ck (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/util/List;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;
+	public static synthetic fun copy-ikqp9Ck$default (Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/util/List;Lio/github/detekt/sarif4k/ExternalPropertyFileReference;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAddresses ()Ljava/util/List;
+	public final fun getArtifacts ()Ljava/util/List;
+	public final fun getConversion ()Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public final fun getDriver ()Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public final fun getExtensions ()Ljava/util/List;
+	public final fun getExternalizedProperties ()Lio/github/detekt/sarif4k/ExternalPropertyFileReference;
+	public final fun getGraphs ()Ljava/util/List;
+	public final fun getInvocations ()Ljava/util/List;
+	public final fun getLogicalLocations ()Ljava/util/List;
+	public final fun getPolicies ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getResults ()Ljava/util/List;
+	public final fun getTaxonomies ()Ljava/util/List;
+	public final fun getThreadFlowLocations ()Ljava/util/List;
+	public final fun getTranslations ()Ljava/util/List;
+	public final fun getWebRequests ()Ljava/util/List;
+	public final fun getWebResponses ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ExternalPropertyFileReferences$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ExternalPropertyFileReferences$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ExternalPropertyFileReferences$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Fix {
+	public static final field Companion Lio/github/detekt/sarif4k/Fix$Companion;
+	public synthetic fun <init> (Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun copy-OGo8m-k (Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;)Lio/github/detekt/sarif4k/Fix;
+	public static synthetic fun copy-OGo8m-k$default (Lio/github/detekt/sarif4k/Fix;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Fix;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArtifactChanges ()Ljava/util/List;
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Fix$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Fix$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Fix;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Fix;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Fix$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Graph {
+	public static final field Companion Lio/github/detekt/sarif4k/Graph$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/List;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun copy-FRlh2n4 (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Lio/github/detekt/sarif4k/Graph;
+	public static synthetic fun copy-FRlh2n4$default (Lio/github/detekt/sarif4k/Graph;Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/List;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Graph;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getEdges ()Ljava/util/List;
+	public final fun getNodes ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Graph$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Graph$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Graph;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Graph;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Graph$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/GraphTraversal {
+	public static final field Companion Lio/github/detekt/sarif4k/GraphTraversal$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/Long;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/util/Map;
+	public final fun component4 ()Ljava/util/Map;
+	public final fun component5-yl8_laI ()Ljava/util/Map;
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun component7 ()Ljava/lang/Long;
+	public final fun copy-U29z9wg (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/Long;)Lio/github/detekt/sarif4k/GraphTraversal;
+	public static synthetic fun copy-U29z9wg$default (Lio/github/detekt/sarif4k/GraphTraversal;Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/Long;ILjava/lang/Object;)Lio/github/detekt/sarif4k/GraphTraversal;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getEdgeTraversals ()Ljava/util/List;
+	public final fun getImmutableState ()Ljava/util/Map;
+	public final fun getInitialState ()Ljava/util/Map;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getResultGraphIndex ()Ljava/lang/Long;
+	public final fun getRunGraphIndex ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/GraphTraversal$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/GraphTraversal$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/GraphTraversal;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/GraphTraversal;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/GraphTraversal$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Importance : java/lang/Enum {
+	public static final field Companion Lio/github/detekt/sarif4k/Importance$Companion;
+	public static final field Essential Lio/github/detekt/sarif4k/Importance;
+	public static final field Important Lio/github/detekt/sarif4k/Importance;
+	public static final field Unimportant Lio/github/detekt/sarif4k/Importance;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/Importance;
+	public static fun values ()[Lio/github/detekt/sarif4k/Importance;
+}
+
+public final class io/github/detekt/sarif4k/Importance$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Importance;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Importance;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Invocation {
+	public static final field Companion Lio/github/detekt/sarif4k/Invocation$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/ArtifactLocation;ZLjava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/util/List;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/ArtifactLocation;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/ArtifactLocation;ZLjava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/util/List;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/ArtifactLocation;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/lang/Long;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Ljava/util/List;
+	public final fun component14 ()Ljava/lang/Long;
+	public final fun component15 ()Ljava/lang/String;
+	public final fun component16-yl8_laI ()Ljava/util/Map;
+	public final fun component17 ()Ljava/util/List;
+	public final fun component18 ()Ljava/util/List;
+	public final fun component19 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component20 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component21 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component22 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component23 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component24 ()Ljava/util/List;
+	public final fun component25 ()Ljava/util/List;
+	public final fun component26 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/util/Map;
+	public final fun component6 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component7 ()Z
+	public final fun component8 ()Ljava/lang/Long;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy-xkWHuJQ (Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/ArtifactLocation;ZLjava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/util/List;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/ArtifactLocation;)Lio/github/detekt/sarif4k/Invocation;
+	public static synthetic fun copy-xkWHuJQ$default (Lio/github/detekt/sarif4k/Invocation;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/ArtifactLocation;ZLjava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/util/List;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/ArtifactLocation;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Invocation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAccount ()Ljava/lang/String;
+	public final fun getArguments ()Ljava/util/List;
+	public final fun getCommandLine ()Ljava/lang/String;
+	public final fun getEndTimeUTC ()Ljava/lang/String;
+	public final fun getEnvironmentVariables ()Ljava/util/Map;
+	public final fun getExecutableLocation ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getExecutionSuccessful ()Z
+	public final fun getExitCode ()Ljava/lang/Long;
+	public final fun getExitCodeDescription ()Ljava/lang/String;
+	public final fun getExitSignalName ()Ljava/lang/String;
+	public final fun getExitSignalNumber ()Ljava/lang/Long;
+	public final fun getMachine ()Ljava/lang/String;
+	public final fun getNotificationConfigurationOverrides ()Ljava/util/List;
+	public final fun getProcessID ()Ljava/lang/Long;
+	public final fun getProcessStartFailureMessage ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getResponseFiles ()Ljava/util/List;
+	public final fun getRuleConfigurationOverrides ()Ljava/util/List;
+	public final fun getStartTimeUTC ()Ljava/lang/String;
+	public final fun getStderr ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getStdin ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getStdout ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getStdoutStderr ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getToolConfigurationNotifications ()Ljava/util/List;
+	public final fun getToolExecutionNotifications ()Ljava/util/List;
+	public final fun getWorkingDirectory ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Invocation$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Invocation$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Invocation;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Invocation;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Invocation$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Level : java/lang/Enum {
+	public static final field Companion Lio/github/detekt/sarif4k/Level$Companion;
+	public static final field Error Lio/github/detekt/sarif4k/Level;
+	public static final field None Lio/github/detekt/sarif4k/Level;
+	public static final field Note Lio/github/detekt/sarif4k/Level;
+	public static final field Warning Lio/github/detekt/sarif4k/Level;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/Level;
+	public static fun values ()[Lio/github/detekt/sarif4k/Level;
+}
+
+public final class io/github/detekt/sarif4k/Level$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Level;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Level;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Location {
+	public static final field Companion Lio/github/detekt/sarif4k/Location$Companion;
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/Long;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Lio/github/detekt/sarif4k/PhysicalLocation;Ljava/util/Map;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/Long;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Lio/github/detekt/sarif4k/PhysicalLocation;Ljava/util/Map;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component5 ()Lio/github/detekt/sarif4k/PhysicalLocation;
+	public final fun component6-yl8_laI ()Ljava/util/Map;
+	public final fun component7 ()Ljava/util/List;
+	public final fun copy-fA15J0Y (Ljava/util/List;Ljava/lang/Long;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Lio/github/detekt/sarif4k/PhysicalLocation;Ljava/util/Map;Ljava/util/List;)Lio/github/detekt/sarif4k/Location;
+	public static synthetic fun copy-fA15J0Y$default (Lio/github/detekt/sarif4k/Location;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Lio/github/detekt/sarif4k/PhysicalLocation;Ljava/util/Map;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Location;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAnnotations ()Ljava/util/List;
+	public final fun getId ()Ljava/lang/Long;
+	public final fun getLogicalLocations ()Ljava/util/List;
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getPhysicalLocation ()Lio/github/detekt/sarif4k/PhysicalLocation;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRelationships ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Location$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Location$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Location;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Location;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Location$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/LocationRelationship {
+	public static final field Companion Lio/github/detekt/sarif4k/LocationRelationship$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun component4 ()J
+	public final fun copy-CEu22fA (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;J)Lio/github/detekt/sarif4k/LocationRelationship;
+	public static synthetic fun copy-CEu22fA$default (Lio/github/detekt/sarif4k/LocationRelationship;Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;JILjava/lang/Object;)Lio/github/detekt/sarif4k/LocationRelationship;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getKinds ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getTarget ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/LocationRelationship$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/LocationRelationship$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/LocationRelationship;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/LocationRelationship;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/LocationRelationship$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/LogicalLocation {
+	public static final field Companion Lio/github/detekt/sarif4k/LogicalLocation$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun component7-yl8_laI ()Ljava/util/Map;
+	public final fun copy-MnbIK2Q (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;)Lio/github/detekt/sarif4k/LogicalLocation;
+	public static synthetic fun copy-MnbIK2Q$default (Lio/github/detekt/sarif4k/LogicalLocation;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/LogicalLocation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDecoratedName ()Ljava/lang/String;
+	public final fun getFullyQualifiedName ()Ljava/lang/String;
+	public final fun getIndex ()Ljava/lang/Long;
+	public final fun getKind ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getParentIndex ()Ljava/lang/Long;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/LogicalLocation$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/LogicalLocation$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/LogicalLocation;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/LogicalLocation;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/LogicalLocation$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Merging {
+	public static final fun merge (Lio/github/detekt/sarif4k/SarifSchema210;Lio/github/detekt/sarif4k/SarifSchema210;)Lio/github/detekt/sarif4k/SarifSchema210;
+}
+
+public final class io/github/detekt/sarif4k/Message {
+	public static final field Companion Lio/github/detekt/sarif4k/Message$Companion;
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy-hEJh_74 (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;)Lio/github/detekt/sarif4k/Message;
+	public static synthetic fun copy-hEJh_74$default (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Message;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArguments ()Ljava/util/List;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMarkdown ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Message$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Message$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Message;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Message;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Message$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/MultiformatMessageString {
+	public static final field Companion Lio/github/detekt/sarif4k/MultiformatMessageString$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2-yl8_laI ()Ljava/util/Map;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy-nlvPCms (Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;)Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public static synthetic fun copy-nlvPCms$default (Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMarkdown ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/MultiformatMessageString$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/MultiformatMessageString$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/MultiformatMessageString;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/MultiformatMessageString$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Node {
+	public static final field Companion Lio/github/detekt/sarif4k/Node$Companion;
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Lio/github/detekt/sarif4k/Location;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Lio/github/detekt/sarif4k/Location;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component4 ()Lio/github/detekt/sarif4k/Location;
+	public final fun component5-yl8_laI ()Ljava/util/Map;
+	public final fun copy-1hSoAdM (Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Lio/github/detekt/sarif4k/Location;Ljava/util/Map;)Lio/github/detekt/sarif4k/Node;
+	public static synthetic fun copy-1hSoAdM$default (Lio/github/detekt/sarif4k/Node;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Lio/github/detekt/sarif4k/Location;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Node;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChildren ()Ljava/util/List;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLabel ()Lio/github/detekt/sarif4k/Message;
+	public final fun getLocation ()Lio/github/detekt/sarif4k/Location;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Node$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Node$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Node;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Node;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Node$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Notification {
+	public static final field Companion Lio/github/detekt/sarif4k/Notification$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lio/github/detekt/sarif4k/Exception;Lio/github/detekt/sarif4k/Level;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lio/github/detekt/sarif4k/Exception;Lio/github/detekt/sarif4k/Level;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun component2 ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun component3 ()Lio/github/detekt/sarif4k/Exception;
+	public final fun component4 ()Lio/github/detekt/sarif4k/Level;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component7-yl8_laI ()Ljava/util/Map;
+	public final fun component8 ()Ljava/lang/Long;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy-ohpxDFU (Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lio/github/detekt/sarif4k/Exception;Lio/github/detekt/sarif4k/Level;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/String;)Lio/github/detekt/sarif4k/Notification;
+	public static synthetic fun copy-ohpxDFU$default (Lio/github/detekt/sarif4k/Notification;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lio/github/detekt/sarif4k/Exception;Lio/github/detekt/sarif4k/Level;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Notification;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAssociatedRule ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun getDescriptor ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun getException ()Lio/github/detekt/sarif4k/Exception;
+	public final fun getLevel ()Lio/github/detekt/sarif4k/Level;
+	public final fun getLocations ()Ljava/util/List;
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getThreadID ()Ljava/lang/Long;
+	public final fun getTimeUTC ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Notification$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Notification$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Notification;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Notification;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Notification$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/PhysicalLocation {
+	public static final field Companion Lio/github/detekt/sarif4k/PhysicalLocation$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Address;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Region;Ljava/util/Map;Lio/github/detekt/sarif4k/Region;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Address;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Region;Ljava/util/Map;Lio/github/detekt/sarif4k/Region;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Address;
+	public final fun component2 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component3 ()Lio/github/detekt/sarif4k/Region;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Lio/github/detekt/sarif4k/Region;
+	public final fun copy-hEJh_74 (Lio/github/detekt/sarif4k/Address;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Region;Ljava/util/Map;Lio/github/detekt/sarif4k/Region;)Lio/github/detekt/sarif4k/PhysicalLocation;
+	public static synthetic fun copy-hEJh_74$default (Lio/github/detekt/sarif4k/PhysicalLocation;Lio/github/detekt/sarif4k/Address;Lio/github/detekt/sarif4k/ArtifactLocation;Lio/github/detekt/sarif4k/Region;Ljava/util/Map;Lio/github/detekt/sarif4k/Region;ILjava/lang/Object;)Lio/github/detekt/sarif4k/PhysicalLocation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAddress ()Lio/github/detekt/sarif4k/Address;
+	public final fun getArtifactLocation ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getContextRegion ()Lio/github/detekt/sarif4k/Region;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRegion ()Lio/github/detekt/sarif4k/Region;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/PhysicalLocation$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/PhysicalLocation$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/PhysicalLocation;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/PhysicalLocation;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/PhysicalLocation$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/PropertyBag : java/util/Map, kotlin/jvm/internal/markers/KMappedMarker {
+	public static final field Companion Lio/github/detekt/sarif4k/PropertyBag$Companion;
+	public static final synthetic fun box-impl (Ljava/util/Map;)Lio/github/detekt/sarif4k/PropertyBag;
+	public fun clear ()V
+	public synthetic fun compute (Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+	public fun compute (Ljava/lang/String;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+	public synthetic fun computeIfAbsent (Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+	public fun computeIfAbsent (Ljava/lang/String;Ljava/util/function/Function;)Ljava/lang/Object;
+	public synthetic fun computeIfPresent (Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+	public fun computeIfPresent (Ljava/lang/String;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+	public static fun constructor-impl (Ljava/util/Map;)Ljava/util/Map;
+	public static fun constructor-impl (Ljava/util/Set;Ljava/util/Map;)Ljava/util/Map;
+	public final fun containsKey (Ljava/lang/Object;)Z
+	public fun containsKey (Ljava/lang/String;)Z
+	public static fun containsKey-impl (Ljava/util/Map;Ljava/lang/String;)Z
+	public fun containsValue (Ljava/lang/Object;)Z
+	public static fun containsValue-impl (Ljava/util/Map;Ljava/lang/Object;)Z
+	public synthetic fun entrySet ()Ljava/util/Set;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/util/Map;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/util/Map;Ljava/util/Map;)Z
+	public final fun get (Ljava/lang/Object;)Ljava/lang/Object;
+	public fun get (Ljava/lang/String;)Ljava/lang/Object;
+	public static fun get-impl (Ljava/util/Map;Ljava/lang/String;)Ljava/lang/Object;
+	public fun getEntries ()Ljava/util/Set;
+	public static fun getEntries-impl (Ljava/util/Map;)Ljava/util/Set;
+	public fun getKeys ()Ljava/util/Set;
+	public static fun getKeys-impl (Ljava/util/Map;)Ljava/util/Set;
+	public fun getSize ()I
+	public static fun getSize-impl (Ljava/util/Map;)I
+	public static final fun getTags-impl (Ljava/util/Map;)Ljava/util/List;
+	public fun getValues ()Ljava/util/Collection;
+	public static fun getValues-impl (Ljava/util/Map;)Ljava/util/Collection;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/util/Map;)I
+	public fun isEmpty ()Z
+	public static fun isEmpty-impl (Ljava/util/Map;)Z
+	public synthetic fun keySet ()Ljava/util/Set;
+	public synthetic fun merge (Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+	public fun merge (Ljava/lang/String;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+	public synthetic fun put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+	public fun put (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+	public fun putAll (Ljava/util/Map;)V
+	public synthetic fun putIfAbsent (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+	public fun putIfAbsent (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+	public fun remove (Ljava/lang/Object;)Ljava/lang/Object;
+	public fun remove (Ljava/lang/Object;Ljava/lang/Object;)Z
+	public synthetic fun replace (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+	public synthetic fun replace (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+	public fun replace (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+	public fun replace (Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Z
+	public fun replaceAll (Ljava/util/function/BiFunction;)V
+	public synthetic fun size ()I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/util/Map;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/util/Map;
+	public synthetic fun values ()Ljava/util/Collection;
+}
+
+public final class io/github/detekt/sarif4k/PropertyBag$Companion : kotlinx/serialization/KSerializer {
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize-VdtiLsU (Lkotlinx/serialization/encoding/Decoder;)Ljava/util/Map;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize-TUe5gI4 (Lkotlinx/serialization/encoding/Encoder;Ljava/util/Map;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Rectangle {
+	public static final field Companion Lio/github/detekt/sarif4k/Rectangle$Companion;
+	public synthetic fun <init> (Ljava/lang/Double;Ljava/lang/Double;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Double;Ljava/lang/Double;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/Double;Ljava/lang/Double;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Double;Ljava/lang/Double;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Double;
+	public final fun component2 ()Ljava/lang/Double;
+	public final fun component3 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Ljava/lang/Double;
+	public final fun component6 ()Ljava/lang/Double;
+	public final fun copy-yy0iyds (Ljava/lang/Double;Ljava/lang/Double;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Double;Ljava/lang/Double;)Lio/github/detekt/sarif4k/Rectangle;
+	public static synthetic fun copy-yy0iyds$default (Lio/github/detekt/sarif4k/Rectangle;Ljava/lang/Double;Ljava/lang/Double;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Ljava/lang/Double;Ljava/lang/Double;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Rectangle;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBottom ()Ljava/lang/Double;
+	public final fun getLeft ()Ljava/lang/Double;
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRight ()Ljava/lang/Double;
+	public final fun getTop ()Ljava/lang/Double;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Rectangle$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Rectangle$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Rectangle;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Rectangle;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Rectangle$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Region {
+	public static final field Companion Lio/github/detekt/sarif4k/Region$Companion;
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Long;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/lang/Long;
+	public final fun component12 ()Ljava/lang/Long;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Ljava/lang/Long;
+	public final fun component5 ()Ljava/lang/Long;
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun component7 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component8-yl8_laI ()Ljava/util/Map;
+	public final fun component9 ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun copy-fTzPYJA (Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;)Lio/github/detekt/sarif4k/Region;
+	public static synthetic fun copy-fTzPYJA$default (Lio/github/detekt/sarif4k/Region;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Region;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getByteLength ()Ljava/lang/Long;
+	public final fun getByteOffset ()Ljava/lang/Long;
+	public final fun getCharLength ()Ljava/lang/Long;
+	public final fun getCharOffset ()Ljava/lang/Long;
+	public final fun getEndColumn ()Ljava/lang/Long;
+	public final fun getEndLine ()Ljava/lang/Long;
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getSnippet ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun getSourceLanguage ()Ljava/lang/String;
+	public final fun getStartColumn ()Ljava/lang/Long;
+	public final fun getStartLine ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Region$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Region$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Region;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Region;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Region$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Replacement {
+	public static final field Companion Lio/github/detekt/sarif4k/Replacement$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Region;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Region;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Region;
+	public final fun component2 ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun copy-OGo8m-k (Lio/github/detekt/sarif4k/Region;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;)Lio/github/detekt/sarif4k/Replacement;
+	public static synthetic fun copy-OGo8m-k$default (Lio/github/detekt/sarif4k/Replacement;Lio/github/detekt/sarif4k/Region;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Replacement;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDeletedRegion ()Lio/github/detekt/sarif4k/Region;
+	public final fun getInsertedContent ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Replacement$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Replacement$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Replacement;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Replacement;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Replacement$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ReportingConfiguration {
+	public static final field Companion Lio/github/detekt/sarif4k/ReportingConfiguration$Companion;
+	public synthetic fun <init> (Ljava/lang/Boolean;Lio/github/detekt/sarif4k/Level;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Double;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/Boolean;Lio/github/detekt/sarif4k/Level;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Double;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Boolean;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Level;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Ljava/lang/Double;
+	public final fun copy-fAMfrW4 (Ljava/lang/Boolean;Lio/github/detekt/sarif4k/Level;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Double;)Lio/github/detekt/sarif4k/ReportingConfiguration;
+	public static synthetic fun copy-fAMfrW4$default (Lio/github/detekt/sarif4k/ReportingConfiguration;Ljava/lang/Boolean;Lio/github/detekt/sarif4k/Level;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Double;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ReportingConfiguration;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEnabled ()Ljava/lang/Boolean;
+	public final fun getLevel ()Lio/github/detekt/sarif4k/Level;
+	public final fun getParameters-yl8_laI ()Ljava/util/Map;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRank ()Ljava/lang/Double;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ReportingConfiguration$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ReportingConfiguration$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ReportingConfiguration;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ReportingConfiguration;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ReportingConfiguration$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ReportingDescriptor {
+	public static final field Companion Lio/github/detekt/sarif4k/ReportingDescriptor$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ReportingConfiguration;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/MultiformatMessageString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ReportingConfiguration;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/MultiformatMessageString;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ReportingConfiguration;
+	public final fun component10 ()Ljava/util/Map;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component12-yl8_laI ()Ljava/util/Map;
+	public final fun component13 ()Ljava/util/List;
+	public final fun component14 ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy-kIRVtvo (Lio/github/detekt/sarif4k/ReportingConfiguration;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/MultiformatMessageString;)Lio/github/detekt/sarif4k/ReportingDescriptor;
+	public static synthetic fun copy-kIRVtvo$default (Lio/github/detekt/sarif4k/ReportingDescriptor;Lio/github/detekt/sarif4k/ReportingConfiguration;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/MultiformatMessageString;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ReportingDescriptor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDefaultConfiguration ()Lio/github/detekt/sarif4k/ReportingConfiguration;
+	public final fun getDeprecatedGuids ()Ljava/util/List;
+	public final fun getDeprecatedIDS ()Ljava/util/List;
+	public final fun getDeprecatedNames ()Ljava/util/List;
+	public final fun getFullDescription ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getHelp ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun getHelpURI ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMessageStrings ()Ljava/util/Map;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRelationships ()Ljava/util/List;
+	public final fun getShortDescription ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ReportingDescriptor$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ReportingDescriptor$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ReportingDescriptor;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ReportingDescriptor;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ReportingDescriptor$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ReportingDescriptorReference {
+	public static final field Companion Lio/github/detekt/sarif4k/ReportingDescriptorReference$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lio/github/detekt/sarif4k/ToolComponentReference;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lio/github/detekt/sarif4k/ToolComponentReference;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Lio/github/detekt/sarif4k/ToolComponentReference;
+	public final fun copy-hEJh_74 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lio/github/detekt/sarif4k/ToolComponentReference;)Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public static synthetic fun copy-hEJh_74$default (Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lio/github/detekt/sarif4k/ToolComponentReference;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getIndex ()Ljava/lang/Long;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getToolComponent ()Lio/github/detekt/sarif4k/ToolComponentReference;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ReportingDescriptorReference$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ReportingDescriptorReference$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ReportingDescriptorReference;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ReportingDescriptorReference$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ReportingDescriptorRelationship {
+	public static final field Companion Lio/github/detekt/sarif4k/ReportingDescriptorRelationship$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;Lio/github/detekt/sarif4k/ReportingDescriptorReference;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun component4 ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun copy-CEu22fA (Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;Lio/github/detekt/sarif4k/ReportingDescriptorReference;)Lio/github/detekt/sarif4k/ReportingDescriptorRelationship;
+	public static synthetic fun copy-CEu22fA$default (Lio/github/detekt/sarif4k/ReportingDescriptorRelationship;Lio/github/detekt/sarif4k/Message;Ljava/util/List;Ljava/util/Map;Lio/github/detekt/sarif4k/ReportingDescriptorReference;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ReportingDescriptorRelationship;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getKinds ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getTarget ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ReportingDescriptorRelationship$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ReportingDescriptorRelationship$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ReportingDescriptorRelationship;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ReportingDescriptorRelationship;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ReportingDescriptorRelationship$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Result {
+	public static final field Companion Lio/github/detekt/sarif4k/Result$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/List;Lio/github/detekt/sarif4k/BaselineState;Ljava/util/List;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ResultKind;Lio/github/detekt/sarif4k/Level;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/lang/Long;Ljava/util/Map;Ljava/util/Map;Lio/github/detekt/sarif4k/ResultProvenance;Ljava/lang/Double;Ljava/util/List;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/lang/String;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/WebResponse;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/List;Lio/github/detekt/sarif4k/BaselineState;Ljava/util/List;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ResultKind;Lio/github/detekt/sarif4k/Level;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/lang/Long;Ljava/util/Map;Ljava/util/Map;Lio/github/detekt/sarif4k/ResultProvenance;Ljava/lang/Double;Ljava/util/List;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/lang/String;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/WebResponse;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component12 ()Lio/github/detekt/sarif4k/ResultKind;
+	public final fun component13 ()Lio/github/detekt/sarif4k/Level;
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component16 ()Ljava/lang/Long;
+	public final fun component17 ()Ljava/util/Map;
+	public final fun component18-yl8_laI ()Ljava/util/Map;
+	public final fun component19 ()Lio/github/detekt/sarif4k/ResultProvenance;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component20 ()Ljava/lang/Double;
+	public final fun component21 ()Ljava/util/List;
+	public final fun component22 ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun component23 ()Ljava/lang/String;
+	public final fun component24 ()Ljava/lang/Long;
+	public final fun component25 ()Ljava/util/List;
+	public final fun component26 ()Ljava/util/List;
+	public final fun component27 ()Ljava/util/List;
+	public final fun component28 ()Lio/github/detekt/sarif4k/WebRequest;
+	public final fun component29 ()Lio/github/detekt/sarif4k/WebResponse;
+	public final fun component3 ()Lio/github/detekt/sarif4k/BaselineState;
+	public final fun component30 ()Ljava/util/List;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/util/Map;
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8 ()Ljava/util/List;
+	public final fun component9 ()Ljava/util/List;
+	public final fun copy-1wQCLzM (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/List;Lio/github/detekt/sarif4k/BaselineState;Ljava/util/List;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ResultKind;Lio/github/detekt/sarif4k/Level;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/lang/Long;Ljava/util/Map;Ljava/util/Map;Lio/github/detekt/sarif4k/ResultProvenance;Ljava/lang/Double;Ljava/util/List;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/lang/String;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/WebResponse;Ljava/util/List;)Lio/github/detekt/sarif4k/Result;
+	public static synthetic fun copy-1wQCLzM$default (Lio/github/detekt/sarif4k/Result;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/List;Lio/github/detekt/sarif4k/BaselineState;Ljava/util/List;Ljava/lang/String;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ResultKind;Lio/github/detekt/sarif4k/Level;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/lang/Long;Ljava/util/Map;Ljava/util/Map;Lio/github/detekt/sarif4k/ResultProvenance;Ljava/lang/Double;Ljava/util/List;Lio/github/detekt/sarif4k/ReportingDescriptorReference;Ljava/lang/String;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/WebResponse;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Result;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAnalysisTarget ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getAttachments ()Ljava/util/List;
+	public final fun getBaselineState ()Lio/github/detekt/sarif4k/BaselineState;
+	public final fun getCodeFlows ()Ljava/util/List;
+	public final fun getCorrelationGUID ()Ljava/lang/String;
+	public final fun getFingerprints ()Ljava/util/Map;
+	public final fun getFixes ()Ljava/util/List;
+	public final fun getGraphTraversals ()Ljava/util/List;
+	public final fun getGraphs ()Ljava/util/List;
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getHostedViewerURI ()Ljava/lang/String;
+	public final fun getKind ()Lio/github/detekt/sarif4k/ResultKind;
+	public final fun getLevel ()Lio/github/detekt/sarif4k/Level;
+	public final fun getLocations ()Ljava/util/List;
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getOccurrenceCount ()Ljava/lang/Long;
+	public final fun getPartialFingerprints ()Ljava/util/Map;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getProvenance ()Lio/github/detekt/sarif4k/ResultProvenance;
+	public final fun getRank ()Ljava/lang/Double;
+	public final fun getRelatedLocations ()Ljava/util/List;
+	public final fun getRule ()Lio/github/detekt/sarif4k/ReportingDescriptorReference;
+	public final fun getRuleID ()Ljava/lang/String;
+	public final fun getRuleIndex ()Ljava/lang/Long;
+	public final fun getStacks ()Ljava/util/List;
+	public final fun getSuppressions ()Ljava/util/List;
+	public final fun getTaxa ()Ljava/util/List;
+	public final fun getWebRequest ()Lio/github/detekt/sarif4k/WebRequest;
+	public final fun getWebResponse ()Lio/github/detekt/sarif4k/WebResponse;
+	public final fun getWorkItemUris ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Result$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Result$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Result;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Result;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Result$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ResultKind : java/lang/Enum {
+	public static final field Companion Lio/github/detekt/sarif4k/ResultKind$Companion;
+	public static final field Fail Lio/github/detekt/sarif4k/ResultKind;
+	public static final field Informational Lio/github/detekt/sarif4k/ResultKind;
+	public static final field NotApplicable Lio/github/detekt/sarif4k/ResultKind;
+	public static final field Open Lio/github/detekt/sarif4k/ResultKind;
+	public static final field Pass Lio/github/detekt/sarif4k/ResultKind;
+	public static final field Review Lio/github/detekt/sarif4k/ResultKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/ResultKind;
+	public static fun values ()[Lio/github/detekt/sarif4k/ResultKind;
+}
+
+public final class io/github/detekt/sarif4k/ResultKind$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ResultKind;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ResultKind;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ResultProvenance {
+	public static final field Companion Lio/github/detekt/sarif4k/ResultProvenance$Companion;
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/Long;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7-yl8_laI ()Ljava/util/Map;
+	public final fun copy-MnbIK2Q (Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lio/github/detekt/sarif4k/ResultProvenance;
+	public static synthetic fun copy-MnbIK2Q$default (Lio/github/detekt/sarif4k/ResultProvenance;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ResultProvenance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getConversionSources ()Ljava/util/List;
+	public final fun getFirstDetectionRunGUID ()Ljava/lang/String;
+	public final fun getFirstDetectionTimeUTC ()Ljava/lang/String;
+	public final fun getInvocationIndex ()Ljava/lang/Long;
+	public final fun getLastDetectionRunGUID ()Ljava/lang/String;
+	public final fun getLastDetectionTimeUTC ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ResultProvenance$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ResultProvenance$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ResultProvenance;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ResultProvenance;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ResultProvenance$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Role : java/lang/Enum {
+	public static final field Added Lio/github/detekt/sarif4k/Role;
+	public static final field AnalysisTarget Lio/github/detekt/sarif4k/Role;
+	public static final field Attachment Lio/github/detekt/sarif4k/Role;
+	public static final field Companion Lio/github/detekt/sarif4k/Role$Companion;
+	public static final field DebugOutputFile Lio/github/detekt/sarif4k/Role;
+	public static final field Deleted Lio/github/detekt/sarif4k/Role;
+	public static final field Directory Lio/github/detekt/sarif4k/Role;
+	public static final field Driver Lio/github/detekt/sarif4k/Role;
+	public static final field Extension Lio/github/detekt/sarif4k/Role;
+	public static final field MemoryContents Lio/github/detekt/sarif4k/Role;
+	public static final field Modified Lio/github/detekt/sarif4k/Role;
+	public static final field Policy Lio/github/detekt/sarif4k/Role;
+	public static final field ReferencedOnCommandLine Lio/github/detekt/sarif4k/Role;
+	public static final field Renamed Lio/github/detekt/sarif4k/Role;
+	public static final field ResponseFile Lio/github/detekt/sarif4k/Role;
+	public static final field ResultFile Lio/github/detekt/sarif4k/Role;
+	public static final field StandardStream Lio/github/detekt/sarif4k/Role;
+	public static final field Taxonomy Lio/github/detekt/sarif4k/Role;
+	public static final field ToolSpecifiedConfiguration Lio/github/detekt/sarif4k/Role;
+	public static final field TracedFile Lio/github/detekt/sarif4k/Role;
+	public static final field Translation Lio/github/detekt/sarif4k/Role;
+	public static final field Uncontrolled Lio/github/detekt/sarif4k/Role;
+	public static final field Unmodified Lio/github/detekt/sarif4k/Role;
+	public static final field UserSpecifiedConfiguration Lio/github/detekt/sarif4k/Role;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/Role;
+	public static fun values ()[Lio/github/detekt/sarif4k/Role;
+}
+
+public final class io/github/detekt/sarif4k/Role$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Role;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Role;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Run {
+	public static final field Companion Lio/github/detekt/sarif4k/Run$Companion;
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/RunAutomationDetails;Ljava/lang/String;Lio/github/detekt/sarif4k/ColumnKind;Lio/github/detekt/sarif4k/Conversion;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/SpecialLocations;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Tool;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/RunAutomationDetails;Ljava/lang/String;Lio/github/detekt/sarif4k/ColumnKind;Lio/github/detekt/sarif4k/Conversion;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/SpecialLocations;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Tool;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component11 ()Ljava/util/List;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Ljava/util/List;
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Ljava/util/Map;
+	public final fun component16 ()Ljava/util/List;
+	public final fun component17-yl8_laI ()Ljava/util/Map;
+	public final fun component18 ()Ljava/util/List;
+	public final fun component19 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component20 ()Ljava/util/List;
+	public final fun component21 ()Lio/github/detekt/sarif4k/SpecialLocations;
+	public final fun component22 ()Ljava/util/List;
+	public final fun component23 ()Ljava/util/List;
+	public final fun component24 ()Lio/github/detekt/sarif4k/Tool;
+	public final fun component25 ()Ljava/util/List;
+	public final fun component26 ()Ljava/util/List;
+	public final fun component27 ()Ljava/util/List;
+	public final fun component28 ()Ljava/util/List;
+	public final fun component3 ()Lio/github/detekt/sarif4k/RunAutomationDetails;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Lio/github/detekt/sarif4k/ColumnKind;
+	public final fun component6 ()Lio/github/detekt/sarif4k/Conversion;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;
+	public final fun copy-6ViWpsI (Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/RunAutomationDetails;Ljava/lang/String;Lio/github/detekt/sarif4k/ColumnKind;Lio/github/detekt/sarif4k/Conversion;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/SpecialLocations;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Tool;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)Lio/github/detekt/sarif4k/Run;
+	public static synthetic fun copy-6ViWpsI$default (Lio/github/detekt/sarif4k/Run;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/RunAutomationDetails;Ljava/lang/String;Lio/github/detekt/sarif4k/ColumnKind;Lio/github/detekt/sarif4k/Conversion;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/SpecialLocations;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/Tool;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Run;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAddresses ()Ljava/util/List;
+	public final fun getArtifacts ()Ljava/util/List;
+	public final fun getAutomationDetails ()Lio/github/detekt/sarif4k/RunAutomationDetails;
+	public final fun getBaselineGUID ()Ljava/lang/String;
+	public final fun getColumnKind ()Lio/github/detekt/sarif4k/ColumnKind;
+	public final fun getConversion ()Lio/github/detekt/sarif4k/Conversion;
+	public final fun getDefaultEncoding ()Ljava/lang/String;
+	public final fun getDefaultSourceLanguage ()Ljava/lang/String;
+	public final fun getExternalPropertyFileReferences ()Lio/github/detekt/sarif4k/ExternalPropertyFileReferences;
+	public final fun getGraphs ()Ljava/util/List;
+	public final fun getInvocations ()Ljava/util/List;
+	public final fun getLanguage ()Ljava/lang/String;
+	public final fun getLogicalLocations ()Ljava/util/List;
+	public final fun getNewlineSequences ()Ljava/util/List;
+	public final fun getOriginalURIBaseIDS ()Ljava/util/Map;
+	public final fun getPolicies ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRedactionTokens ()Ljava/util/List;
+	public final fun getResults ()Ljava/util/List;
+	public final fun getRunAggregates ()Ljava/util/List;
+	public final fun getSpecialLocations ()Lio/github/detekt/sarif4k/SpecialLocations;
+	public final fun getTaxonomies ()Ljava/util/List;
+	public final fun getThreadFlowLocations ()Ljava/util/List;
+	public final fun getTool ()Lio/github/detekt/sarif4k/Tool;
+	public final fun getTranslations ()Ljava/util/List;
+	public final fun getVersionControlProvenance ()Ljava/util/List;
+	public final fun getWebRequests ()Ljava/util/List;
+	public final fun getWebResponses ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Run$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Run$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Run;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Run;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Run$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/RunAutomationDetails {
+	public static final field Companion Lio/github/detekt/sarif4k/RunAutomationDetails$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5-yl8_laI ()Ljava/util/Map;
+	public final fun copy-1hSoAdM (Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lio/github/detekt/sarif4k/RunAutomationDetails;
+	public static synthetic fun copy-1hSoAdM$default (Lio/github/detekt/sarif4k/RunAutomationDetails;Ljava/lang/String;Lio/github/detekt/sarif4k/Message;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/RunAutomationDetails;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCorrelationGUID ()Ljava/lang/String;
+	public final fun getDescription ()Lio/github/detekt/sarif4k/Message;
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/RunAutomationDetails$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/RunAutomationDetails$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/RunAutomationDetails;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/RunAutomationDetails;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/RunAutomationDetails$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/SarifSchema210 {
+	public static final field Companion Lio/github/detekt/sarif4k/SarifSchema210$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/detekt/sarif4k/Version;Ljava/util/List;Ljava/util/Map;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/detekt/sarif4k/Version;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Version;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Ljava/util/List;
+	public final fun copy-hEJh_74 (Ljava/lang/String;Lio/github/detekt/sarif4k/Version;Ljava/util/List;Ljava/util/Map;Ljava/util/List;)Lio/github/detekt/sarif4k/SarifSchema210;
+	public static synthetic fun copy-hEJh_74$default (Lio/github/detekt/sarif4k/SarifSchema210;Ljava/lang/String;Lio/github/detekt/sarif4k/Version;Ljava/util/List;Ljava/util/Map;Ljava/util/List;ILjava/lang/Object;)Lio/github/detekt/sarif4k/SarifSchema210;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getInlineExternalProperties ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRuns ()Ljava/util/List;
+	public final fun getSchema ()Ljava/lang/String;
+	public final fun getVersion ()Lio/github/detekt/sarif4k/Version;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/SarifSchema210$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/SarifSchema210$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/SarifSchema210;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/SarifSchema210;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/SarifSchema210$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/SarifSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/SarifSerializer;
+	public final fun fromJson (Ljava/lang/String;)Lio/github/detekt/sarif4k/SarifSchema210;
+	public final fun toJson (Lio/github/detekt/sarif4k/SarifSchema210;)Ljava/lang/String;
+	public final fun toMinifiedJson (Lio/github/detekt/sarif4k/SarifSchema210;)Ljava/lang/String;
+}
+
+public final class io/github/detekt/sarif4k/SpecialLocations {
+	public static final field Companion Lio/github/detekt/sarif4k/SpecialLocations$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component2-yl8_laI ()Ljava/util/Map;
+	public final fun copy-q5u1-ZE (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;)Lio/github/detekt/sarif4k/SpecialLocations;
+	public static synthetic fun copy-q5u1-ZE$default (Lio/github/detekt/sarif4k/SpecialLocations;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/SpecialLocations;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDisplayBase ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/SpecialLocations$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/SpecialLocations$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/SpecialLocations;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/SpecialLocations;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/SpecialLocations$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Stack {
+	public static final field Companion Lio/github/detekt/sarif4k/Stack$Companion;
+	public synthetic fun <init> (Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun copy-OGo8m-k (Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;)Lio/github/detekt/sarif4k/Stack;
+	public static synthetic fun copy-OGo8m-k$default (Lio/github/detekt/sarif4k/Stack;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Stack;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFrames ()Ljava/util/List;
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Stack$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Stack$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Stack;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Stack;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Stack$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/StackFrame {
+	public static final field Companion Lio/github/detekt/sarif4k/StackFrame$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Location;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/Location;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Ljava/lang/Long;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/Location;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Ljava/lang/Long;
+	public final fun copy-hEJh_74 (Lio/github/detekt/sarif4k/Location;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Ljava/lang/Long;)Lio/github/detekt/sarif4k/StackFrame;
+	public static synthetic fun copy-hEJh_74$default (Lio/github/detekt/sarif4k/StackFrame;Lio/github/detekt/sarif4k/Location;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Ljava/lang/Long;ILjava/lang/Object;)Lio/github/detekt/sarif4k/StackFrame;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLocation ()Lio/github/detekt/sarif4k/Location;
+	public final fun getModule ()Ljava/lang/String;
+	public final fun getParameters ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getThreadID ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/StackFrame$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/StackFrame$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/StackFrame;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/StackFrame;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/StackFrame$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Status : java/lang/Enum {
+	public static final field Accepted Lio/github/detekt/sarif4k/Status;
+	public static final field Companion Lio/github/detekt/sarif4k/Status$Companion;
+	public static final field Rejected Lio/github/detekt/sarif4k/Status;
+	public static final field UnderReview Lio/github/detekt/sarif4k/Status;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/Status;
+	public static fun values ()[Lio/github/detekt/sarif4k/Status;
+}
+
+public final class io/github/detekt/sarif4k/Status$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Status;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Status;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Suppression {
+	public static final field Companion Lio/github/detekt/sarif4k/Suppression$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/SuppressionKind;Lio/github/detekt/sarif4k/Location;Ljava/util/Map;Lio/github/detekt/sarif4k/Status;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/SuppressionKind;Lio/github/detekt/sarif4k/Location;Ljava/util/Map;Lio/github/detekt/sarif4k/Status;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Lio/github/detekt/sarif4k/SuppressionKind;
+	public final fun component4 ()Lio/github/detekt/sarif4k/Location;
+	public final fun component5-yl8_laI ()Ljava/util/Map;
+	public final fun component6 ()Lio/github/detekt/sarif4k/Status;
+	public final fun copy-KBSIjYs (Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/SuppressionKind;Lio/github/detekt/sarif4k/Location;Ljava/util/Map;Lio/github/detekt/sarif4k/Status;)Lio/github/detekt/sarif4k/Suppression;
+	public static synthetic fun copy-KBSIjYs$default (Lio/github/detekt/sarif4k/Suppression;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/SuppressionKind;Lio/github/detekt/sarif4k/Location;Ljava/util/Map;Lio/github/detekt/sarif4k/Status;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Suppression;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getJustification ()Ljava/lang/String;
+	public final fun getKind ()Lio/github/detekt/sarif4k/SuppressionKind;
+	public final fun getLocation ()Lio/github/detekt/sarif4k/Location;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getStatus ()Lio/github/detekt/sarif4k/Status;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Suppression$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Suppression$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Suppression;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Suppression;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Suppression$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/SuppressionKind : java/lang/Enum {
+	public static final field Companion Lio/github/detekt/sarif4k/SuppressionKind$Companion;
+	public static final field External Lio/github/detekt/sarif4k/SuppressionKind;
+	public static final field InSource Lio/github/detekt/sarif4k/SuppressionKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/SuppressionKind;
+	public static fun values ()[Lio/github/detekt/sarif4k/SuppressionKind;
+}
+
+public final class io/github/detekt/sarif4k/SuppressionKind$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/SuppressionKind;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/SuppressionKind;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ThreadFlow {
+	public static final field Companion Lio/github/detekt/sarif4k/ThreadFlow$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Ljava/util/Map;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Lio/github/detekt/sarif4k/Message;
+	public final fun component6-yl8_laI ()Ljava/util/Map;
+	public final fun copy-OP_-IDw (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;)Lio/github/detekt/sarif4k/ThreadFlow;
+	public static synthetic fun copy-OP_-IDw$default (Lio/github/detekt/sarif4k/ThreadFlow;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/Message;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ThreadFlow;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getImmutableState ()Ljava/util/Map;
+	public final fun getInitialState ()Ljava/util/Map;
+	public final fun getLocations ()Ljava/util/List;
+	public final fun getMessage ()Lio/github/detekt/sarif4k/Message;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ThreadFlow$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ThreadFlow$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ThreadFlow;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ThreadFlow;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ThreadFlow$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ThreadFlowLocation {
+	public static final field Companion Lio/github/detekt/sarif4k/ThreadFlowLocation$Companion;
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/String;Lio/github/detekt/sarif4k/Importance;Ljava/lang/Long;Ljava/util/List;Lio/github/detekt/sarif4k/Location;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lio/github/detekt/sarif4k/Stack;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/WebResponse;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/String;Lio/github/detekt/sarif4k/Importance;Ljava/lang/Long;Ljava/util/List;Lio/github/detekt/sarif4k/Location;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lio/github/detekt/sarif4k/Stack;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/WebResponse;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Long;
+	public final fun component10 ()Lio/github/detekt/sarif4k/Stack;
+	public final fun component11 ()Ljava/util/Map;
+	public final fun component12 ()Ljava/util/List;
+	public final fun component13 ()Lio/github/detekt/sarif4k/WebRequest;
+	public final fun component14 ()Lio/github/detekt/sarif4k/WebResponse;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Lio/github/detekt/sarif4k/Importance;
+	public final fun component4 ()Ljava/lang/Long;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Lio/github/detekt/sarif4k/Location;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/Long;
+	public final fun component9-yl8_laI ()Ljava/util/Map;
+	public final fun copy-z4WJEDQ (Ljava/lang/Long;Ljava/lang/String;Lio/github/detekt/sarif4k/Importance;Ljava/lang/Long;Ljava/util/List;Lio/github/detekt/sarif4k/Location;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lio/github/detekt/sarif4k/Stack;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/WebResponse;)Lio/github/detekt/sarif4k/ThreadFlowLocation;
+	public static synthetic fun copy-z4WJEDQ$default (Lio/github/detekt/sarif4k/ThreadFlowLocation;Ljava/lang/Long;Ljava/lang/String;Lio/github/detekt/sarif4k/Importance;Ljava/lang/Long;Ljava/util/List;Lio/github/detekt/sarif4k/Location;Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Lio/github/detekt/sarif4k/Stack;Ljava/util/Map;Ljava/util/List;Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/WebResponse;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ThreadFlowLocation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExecutionOrder ()Ljava/lang/Long;
+	public final fun getExecutionTimeUTC ()Ljava/lang/String;
+	public final fun getImportance ()Lio/github/detekt/sarif4k/Importance;
+	public final fun getIndex ()Ljava/lang/Long;
+	public final fun getKinds ()Ljava/util/List;
+	public final fun getLocation ()Lio/github/detekt/sarif4k/Location;
+	public final fun getModule ()Ljava/lang/String;
+	public final fun getNestingLevel ()Ljava/lang/Long;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getStack ()Lio/github/detekt/sarif4k/Stack;
+	public final fun getState ()Ljava/util/Map;
+	public final fun getTaxa ()Ljava/util/List;
+	public final fun getWebRequest ()Lio/github/detekt/sarif4k/WebRequest;
+	public final fun getWebResponse ()Lio/github/detekt/sarif4k/WebResponse;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ThreadFlowLocation$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ThreadFlowLocation$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ThreadFlowLocation;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ThreadFlowLocation;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ThreadFlowLocation$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Tool {
+	public static final field Companion Lio/github/detekt/sarif4k/Tool$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ToolComponent;Ljava/util/List;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ToolComponent;Ljava/util/List;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ToolComponent;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3-yl8_laI ()Ljava/util/Map;
+	public final fun copy-OGo8m-k (Lio/github/detekt/sarif4k/ToolComponent;Ljava/util/List;Ljava/util/Map;)Lio/github/detekt/sarif4k/Tool;
+	public static synthetic fun copy-OGo8m-k$default (Lio/github/detekt/sarif4k/Tool;Lio/github/detekt/sarif4k/ToolComponent;Ljava/util/List;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/Tool;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDriver ()Lio/github/detekt/sarif4k/ToolComponent;
+	public final fun getExtensions ()Ljava/util/List;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/Tool$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/Tool$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Tool;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Tool;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Tool$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ToolComponent {
+	public static final field Companion Lio/github/detekt/sarif4k/ToolComponent$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ToolComponentReference;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/TranslationMetadata;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ToolComponentReference;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/TranslationMetadata;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ToolComponentReference;
+	public final fun component10 ()Ljava/lang/Boolean;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Ljava/util/List;
+	public final fun component14 ()Ljava/lang/String;
+	public final fun component15 ()Ljava/lang/String;
+	public final fun component16 ()Ljava/util/List;
+	public final fun component17 ()Ljava/lang/String;
+	public final fun component18 ()Ljava/lang/String;
+	public final fun component19 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component20-yl8_laI ()Ljava/util/Map;
+	public final fun component21 ()Ljava/lang/String;
+	public final fun component22 ()Ljava/util/List;
+	public final fun component23 ()Ljava/lang/String;
+	public final fun component24 ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun component25 ()Ljava/util/List;
+	public final fun component26 ()Ljava/util/List;
+	public final fun component27 ()Lio/github/detekt/sarif4k/TranslationMetadata;
+	public final fun component28 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/util/Map;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy-ar_CMTI (Lio/github/detekt/sarif4k/ToolComponentReference;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/TranslationMetadata;Ljava/lang/String;)Lio/github/detekt/sarif4k/ToolComponent;
+	public static synthetic fun copy-ar_CMTI$default (Lio/github/detekt/sarif4k/ToolComponent;Lio/github/detekt/sarif4k/ToolComponentReference;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/util/List;Ljava/util/List;Lio/github/detekt/sarif4k/TranslationMetadata;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ToolComponent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAssociatedComponent ()Lio/github/detekt/sarif4k/ToolComponentReference;
+	public final fun getContents ()Ljava/util/List;
+	public final fun getDottedQuadFileVersion ()Ljava/lang/String;
+	public final fun getDownloadURI ()Ljava/lang/String;
+	public final fun getFullDescription ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun getFullName ()Ljava/lang/String;
+	public final fun getGlobalMessageStrings ()Ljava/util/Map;
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getInformationURI ()Ljava/lang/String;
+	public final fun getLanguage ()Ljava/lang/String;
+	public final fun getLocalizedDataSemanticVersion ()Ljava/lang/String;
+	public final fun getLocations ()Ljava/util/List;
+	public final fun getMinimumRequiredLocalizedDataSemanticVersion ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getNotifications ()Ljava/util/List;
+	public final fun getOrganization ()Ljava/lang/String;
+	public final fun getProduct ()Ljava/lang/String;
+	public final fun getProductSuite ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getReleaseDateUTC ()Ljava/lang/String;
+	public final fun getRules ()Ljava/util/List;
+	public final fun getSemanticVersion ()Ljava/lang/String;
+	public final fun getShortDescription ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun getSupportedTaxonomies ()Ljava/util/List;
+	public final fun getTaxa ()Ljava/util/List;
+	public final fun getTranslationMetadata ()Lio/github/detekt/sarif4k/TranslationMetadata;
+	public final fun getVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isComprehensive ()Ljava/lang/Boolean;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ToolComponent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ToolComponent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ToolComponent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ToolComponent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ToolComponent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ToolComponentReference {
+	public static final field Companion Lio/github/detekt/sarif4k/ToolComponentReference$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun copy-FRlh2n4 (Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;)Lio/github/detekt/sarif4k/ToolComponentReference;
+	public static synthetic fun copy-FRlh2n4$default (Lio/github/detekt/sarif4k/ToolComponentReference;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lio/github/detekt/sarif4k/ToolComponentReference;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGuid ()Ljava/lang/String;
+	public final fun getIndex ()Ljava/lang/Long;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/ToolComponentReference$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/ToolComponentReference$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/ToolComponentReference;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/ToolComponentReference;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/ToolComponentReference$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/TranslationMetadata {
+	public static final field Companion Lio/github/detekt/sarif4k/TranslationMetadata$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/MultiformatMessageString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/MultiformatMessageString;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6-yl8_laI ()Ljava/util/Map;
+	public final fun component7 ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun copy-fA15J0Y (Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/MultiformatMessageString;)Lio/github/detekt/sarif4k/TranslationMetadata;
+	public static synthetic fun copy-fA15J0Y$default (Lio/github/detekt/sarif4k/TranslationMetadata;Ljava/lang/String;Lio/github/detekt/sarif4k/MultiformatMessageString;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lio/github/detekt/sarif4k/MultiformatMessageString;ILjava/lang/Object;)Lio/github/detekt/sarif4k/TranslationMetadata;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDownloadURI ()Ljava/lang/String;
+	public final fun getFullDescription ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public final fun getFullName ()Ljava/lang/String;
+	public final fun getInformationURI ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getShortDescription ()Lio/github/detekt/sarif4k/MultiformatMessageString;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/TranslationMetadata$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/TranslationMetadata$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/TranslationMetadata;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/TranslationMetadata;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/TranslationMetadata$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/Version : java/lang/Enum {
+	public static final field Companion Lio/github/detekt/sarif4k/Version$Companion;
+	public static final field The210 Lio/github/detekt/sarif4k/Version;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/detekt/sarif4k/Version;
+	public static fun values ()[Lio/github/detekt/sarif4k/Version;
+}
+
+public final class io/github/detekt/sarif4k/Version$Companion : kotlinx/serialization/KSerializer {
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/Version;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/Version;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/VersionControlDetails {
+	public static final field Companion Lio/github/detekt/sarif4k/VersionControlDetails$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun component4-yl8_laI ()Ljava/util/Map;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun copy-flqoo2c (Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lio/github/detekt/sarif4k/VersionControlDetails;
+	public static synthetic fun copy-flqoo2c$default (Lio/github/detekt/sarif4k/VersionControlDetails;Ljava/lang/String;Ljava/lang/String;Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/VersionControlDetails;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAsOfTimeUTC ()Ljava/lang/String;
+	public final fun getBranch ()Ljava/lang/String;
+	public final fun getMappedTo ()Lio/github/detekt/sarif4k/ArtifactLocation;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getRepositoryURI ()Ljava/lang/String;
+	public final fun getRevisionID ()Ljava/lang/String;
+	public final fun getRevisionTag ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/VersionControlDetails$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/VersionControlDetails$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/VersionControlDetails;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/VersionControlDetails;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/VersionControlDetails$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/WebRequest {
+	public static final field Companion Lio/github/detekt/sarif4k/WebRequest$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/util/Map;
+	public final fun component6-yl8_laI ()Ljava/util/Map;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy-ifGhjgc (Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lio/github/detekt/sarif4k/WebRequest;
+	public static synthetic fun copy-ifGhjgc$default (Lio/github/detekt/sarif4k/WebRequest;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/WebRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBody ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun getHeaders ()Ljava/util/Map;
+	public final fun getIndex ()Ljava/lang/Long;
+	public final fun getMethod ()Ljava/lang/String;
+	public final fun getParameters ()Ljava/util/Map;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getProtocol ()Ljava/lang/String;
+	public final fun getTarget ()Ljava/lang/String;
+	public final fun getVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/WebRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/WebRequest$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/WebRequest;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/WebRequest;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/WebRequest$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/WebResponse {
+	public static final field Companion Lio/github/detekt/sarif4k/WebResponse$Companion;
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Ljava/lang/Boolean;
+	public final fun component5-yl8_laI ()Ljava/util/Map;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/Long;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy-aYH8YbA (Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;)Lio/github/detekt/sarif4k/WebResponse;
+	public static synthetic fun copy-aYH8YbA$default (Lio/github/detekt/sarif4k/WebResponse;Lio/github/detekt/sarif4k/ArtifactContent;Ljava/util/Map;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/Object;)Lio/github/detekt/sarif4k/WebResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBody ()Lio/github/detekt/sarif4k/ArtifactContent;
+	public final fun getHeaders ()Ljava/util/Map;
+	public final fun getIndex ()Ljava/lang/Long;
+	public final fun getNoResponseReceived ()Ljava/lang/Boolean;
+	public final fun getProperties-yl8_laI ()Ljava/util/Map;
+	public final fun getProtocol ()Ljava/lang/String;
+	public final fun getReasonPhrase ()Ljava/lang/String;
+	public final fun getStatusCode ()Ljava/lang/Long;
+	public final fun getVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/github/detekt/sarif4k/WebResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/detekt/sarif4k/WebResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/detekt/sarif4k/WebResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/detekt/sarif4k/WebResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/detekt/sarif4k/WebResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+

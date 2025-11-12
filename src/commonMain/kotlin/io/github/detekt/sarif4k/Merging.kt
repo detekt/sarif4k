@@ -4,7 +4,7 @@ package io.github.detekt.sarif4k
 
 import kotlin.jvm.JvmName
 
-fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
+public fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
     require(schema == other.schema) { "Cannot merge sarifs with different schemas: '$schema' or '${other.schema}'" }
     require(version == other.version) { "Cannot merge sarifs with different versions: '$version' or '${other.version}'" }
 
