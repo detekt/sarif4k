@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
     `maven-publish`
@@ -17,9 +18,16 @@ repositories {
 }
 
 kotlin {
+    coreLibrariesVersion = "2.2.0"
+    compilerOptions {
+        apiVersion = KotlinVersion.KOTLIN_2_2
+        languageVersion = KotlinVersion.KOTLIN_2_2
+    }
+    jvmToolchain(21)
     jvm {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_1_8
+            freeCompilerArgs.add("-Xjdk-release=8")
         }
     }
     linuxX64()
