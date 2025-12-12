@@ -1,9 +1,7 @@
 package io.github.detekt.sarif4k.util
 
-import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
-import java.net.URL
 
 internal object Resources
 

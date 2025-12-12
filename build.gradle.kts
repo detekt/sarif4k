@@ -20,10 +20,17 @@ repositories {
 kotlin {
     coreLibrariesVersion = "2.2.0"
     compilerOptions {
+        explicitApi()
+        allWarningsAsErrors = true
+        extraWarnings = true
         apiVersion = KotlinVersion.KOTLIN_2_2
         languageVersion = KotlinVersion.KOTLIN_2_2
     }
     jvmToolchain(21)
+    @OptIn(org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation::class)
+    abiValidation {
+        enabled = true
+    }
     jvm {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_1_8
@@ -63,6 +70,9 @@ tasks {
         group = JavaBasePlugin.DOCUMENTATION_GROUP
         archiveClassifier.set("javadoc")
         from(dokka.dokkaPublications.named("html").map { it.outputDirectory })
+    }
+    named("check") {
+        dependsOn("checkLegacyAbi")
     }
 }
 
