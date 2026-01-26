@@ -1297,6 +1297,15 @@ final class io.github.detekt.sarif4k/LogicalLocation { // io.github.detekt.sarif
     }
 }
 
+final class io.github.detekt.sarif4k/MergingConfig { // io.github.detekt.sarif4k/MergingConfig|null[0]
+    constructor <init>(kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.detekt.sarif4k/MergingConfig.<init>|<init>(kotlin.Boolean;kotlin.Boolean){}[0]
+
+    final val allowMismatchedSchema // io.github.detekt.sarif4k/MergingConfig.allowMismatchedSchema|{}allowMismatchedSchema[0]
+        final fun <get-allowMismatchedSchema>(): kotlin/Boolean // io.github.detekt.sarif4k/MergingConfig.allowMismatchedSchema.<get-allowMismatchedSchema>|<get-allowMismatchedSchema>(){}[0]
+    final val allowMismatchedVersion // io.github.detekt.sarif4k/MergingConfig.allowMismatchedVersion|{}allowMismatchedVersion[0]
+        final fun <get-allowMismatchedVersion>(): kotlin/Boolean // io.github.detekt.sarif4k/MergingConfig.allowMismatchedVersion.<get-allowMismatchedVersion>|<get-allowMismatchedVersion>(){}[0]
+}
+
 final class io.github.detekt.sarif4k/Message { // io.github.detekt.sarif4k/Message|null[0]
     constructor <init>(kotlin.collections/List<kotlin/String>? = ..., kotlin/String? = ..., kotlin/String? = ..., io.github.detekt.sarif4k/PropertyBag? = ..., kotlin/String? = ...) // io.github.detekt.sarif4k/Message.<init>|<init>(kotlin.collections.List<kotlin.String>?;kotlin.String?;kotlin.String?;io.github.detekt.sarif4k.PropertyBag?;kotlin.String?){}[0]
 
@@ -2823,3 +2832,4 @@ final object io.github.detekt.sarif4k/SarifSerializer { // io.github.detekt.sari
 }
 
 final fun (io.github.detekt.sarif4k/SarifSchema210).io.github.detekt.sarif4k/merge(io.github.detekt.sarif4k/SarifSchema210): io.github.detekt.sarif4k/SarifSchema210 // io.github.detekt.sarif4k/merge|merge@io.github.detekt.sarif4k.SarifSchema210(io.github.detekt.sarif4k.SarifSchema210){}[0]
+final fun (io.github.detekt.sarif4k/SarifSchema210).io.github.detekt.sarif4k/merge(io.github.detekt.sarif4k/SarifSchema210, io.github.detekt.sarif4k/MergingConfig): io.github.detekt.sarif4k/SarifSchema210 // io.github.detekt.sarif4k/merge|merge@io.github.detekt.sarif4k.SarifSchema210(io.github.detekt.sarif4k.SarifSchema210;io.github.detekt.sarif4k.MergingConfig){}[0]

@@ -4,9 +4,13 @@ package io.github.detekt.sarif4k
 
 import kotlin.jvm.JvmName
 
-public fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
-    require(schema == other.schema) { "Cannot merge sarifs with different schemas: '$schema' or '${other.schema}'" }
-    require(version == other.version) { "Cannot merge sarifs with different versions: '$version' or '${other.version}'" }
+public fun SarifSchema210.merge(other: SarifSchema210, config: MergingConfig): SarifSchema210 {
+    require(config.allowMismatchedSchema || schema == other.schema) {
+        "Cannot merge sarifs with different schemas: '$schema' or '${other.schema}'"
+    }
+    require(config.allowMismatchedVersion || version == other.version) {
+        "Cannot merge sarifs with different versions: '$version' or '${other.version}'"
+    }
 
     val mergedExternalProperties = (inlineExternalProperties.orEmpty() + other.inlineExternalProperties.orEmpty())
         .takeIf { it.isNotEmpty() }
@@ -27,6 +31,10 @@ public fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
         mergedProperties,
         mergedRuns
     )
+}
+
+public fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
+    return merge(other, MergingConfig())
 }
 
 private fun PropertyBag.merge(other: PropertyBag): PropertyBag {
@@ -83,6 +91,7 @@ private fun mergeOriginalURIBaseIDs(runs: List<Run>): Pair<Map<String, ArtifactL
                     mergedMap[key] = artifactLocation
                     key
                 }
+
                 artifactLocation -> key
                 else -> {
                     val newKey = generateSequence("${key}_${keyCounter}") { "${key}_${++keyCounter}" }
@@ -117,3 +126,8 @@ private fun Result.updateArtifactLocationBaseIds(keyMappings: Map<String, String
 
     return copy(locations = updatedLocations)
 }
+
+public class MergingConfig(
+    public val allowMismatchedSchema: Boolean = false,
+    public val allowMismatchedVersion: Boolean = false,
+)
