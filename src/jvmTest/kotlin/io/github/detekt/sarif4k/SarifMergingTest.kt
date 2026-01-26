@@ -3,7 +3,6 @@ package io.github.detekt.sarif4k
 import io.github.detekt.sarif4k.util.resourceAsTextContent
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.assertThrows
 
 class SarifMergingTest {
