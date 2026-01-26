@@ -4,9 +4,7 @@ package io.github.detekt.sarif4k
 
 import kotlin.jvm.JvmName
 
-public fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
-    require(schema == other.schema) { "Cannot merge sarifs with different schemas: '$schema' or '${other.schema}'" }
-    require(version == other.version) { "Cannot merge sarifs with different versions: '$version' or '${other.version}'" }
+public fun SarifSchema210.merge(other: SarifSchema210, config: MergingConfig): SarifSchema210 {
 
     val mergedExternalProperties = (inlineExternalProperties.orEmpty() + other.inlineExternalProperties.orEmpty())
         .takeIf { it.isNotEmpty() }
@@ -21,12 +19,16 @@ public fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
     val mergedRuns = runs.merge(other.runs)
 
     return SarifSchema210(
-        schema,
-        version,
+        config.selectSchema(schema, other.schema),
+        config.selectVersion(version, other.version),
         mergedExternalProperties,
         mergedProperties,
         mergedRuns
     )
+}
+
+public fun SarifSchema210.merge(other: SarifSchema210): SarifSchema210 {
+    return merge(other, MergingConfig())
 }
 
 private fun PropertyBag.merge(other: PropertyBag): PropertyBag {
@@ -83,6 +85,7 @@ private fun mergeOriginalURIBaseIDs(runs: List<Run>): Pair<Map<String, ArtifactL
                     mergedMap[key] = artifactLocation
                     key
                 }
+
                 artifactLocation -> key
                 else -> {
                     val newKey = generateSequence("${key}_${keyCounter}") { "${key}_${++keyCounter}" }
@@ -117,3 +120,28 @@ private fun Result.updateArtifactLocationBaseIds(keyMappings: Map<String, String
 
     return copy(locations = updatedLocations)
 }
+
+public class MergingConfig(
+    /**
+     * Select the schema of the merged sarif. Function receives schemas of both sarifs as an input and must return
+     * a valid schema that gets outputted into the merged sarif.
+     */
+    public val selectSchema: (String?, String?) -> String? = { first, second ->
+        if (first != second) {
+            throw IllegalArgumentException("Cannot merge sarifs with different schemas: '$first' or '${second}'")
+        } else {
+            first
+        }
+    },
+    /**
+     * Select the version of the merged sarif. Function receives versions of both sarifs as an input and must return
+     * a valid version that gets outputted into the merged sarif.
+     */
+    public val selectVersion: (Version, Version) -> Version = { first, second ->
+        if (first != second) {
+            throw IllegalArgumentException("Cannot merge sarifs with different versions: '$first' or '${second}'")
+        } else {
+            first
+        }
+    },
+)
