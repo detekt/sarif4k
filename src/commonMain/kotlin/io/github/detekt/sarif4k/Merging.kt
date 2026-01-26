@@ -123,7 +123,7 @@ private fun Result.updateArtifactLocationBaseIds(keyMappings: Map<String, String
 
 public class MergingConfig(
     /**
-     * Select schema of the merged sarif. Function receives schemas of both sarifs as an input and must return
+     * Select the schema of the merged sarif. Function receives schemas of both sarifs as an input and must return
      * a valid schema that gets outputted into the merged sarif.
      */
     public val selectSchema: (String?, String?) -> String? = { first, second ->
@@ -134,8 +134,8 @@ public class MergingConfig(
         }
     },
     /**
-     * Select schema of the merged sarif. Function receives schemas of both sarifs as an input and must return
-     * a valid schema that gets outputted into the merged sarif.
+     * Select the version of the merged sarif. Function receives versions of both sarifs as an input and must return
+     * a valid version that gets outputted into the merged sarif.
      */
     public val selectVersion: (Version, Version) -> Version = { first, second ->
         if (first != second) {
