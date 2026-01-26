@@ -5,12 +5,6 @@ package io.github.detekt.sarif4k
 import kotlin.jvm.JvmName
 
 public fun SarifSchema210.merge(other: SarifSchema210, config: MergingConfig): SarifSchema210 {
-    require(config.allowMismatchedSchema || schema == other.schema) {
-        "Cannot merge sarifs with different schemas: '$schema' or '${other.schema}'"
-    }
-    require(config.allowMismatchedVersion || version == other.version) {
-        "Cannot merge sarifs with different versions: '$version' or '${other.version}'"
-    }
 
     val mergedExternalProperties = (inlineExternalProperties.orEmpty() + other.inlineExternalProperties.orEmpty())
         .takeIf { it.isNotEmpty() }
@@ -25,8 +19,8 @@ public fun SarifSchema210.merge(other: SarifSchema210, config: MergingConfig): S
     val mergedRuns = runs.merge(other.runs)
 
     return SarifSchema210(
-        schema,
-        version,
+        config.selectSchema(schema, other.schema),
+        config.selectVersion(version, other.version),
         mergedExternalProperties,
         mergedProperties,
         mergedRuns
@@ -128,6 +122,26 @@ private fun Result.updateArtifactLocationBaseIds(keyMappings: Map<String, String
 }
 
 public class MergingConfig(
-    public val allowMismatchedSchema: Boolean = false,
-    public val allowMismatchedVersion: Boolean = false,
+    /**
+     * Select schema of the merged sarif. Function receives schemas of both sarifs as an input and must return
+     * a valid schema that gets outputted into the merged sarif.
+     */
+    public val selectSchema: (String?, String?) -> String? = { first, second ->
+        if (first != second) {
+            throw IllegalArgumentException("Cannot merge sarifs with different schemas: '$first' or '${second}'")
+        } else {
+            first
+        }
+    },
+    /**
+     * Select schema of the merged sarif. Function receives schemas of both sarifs as an input and must return
+     * a valid schema that gets outputted into the merged sarif.
+     */
+    public val selectVersion: (Version, Version) -> Version = { first, second ->
+        if (first != second) {
+            throw IllegalArgumentException("Cannot merge sarifs with different versions: '$first' or '${second}'")
+        } else {
+            first
+        }
+    },
 )

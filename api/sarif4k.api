@@ -1007,10 +1007,10 @@ public final class io/github/detekt/sarif4k/Merging {
 
 public final class io/github/detekt/sarif4k/MergingConfig {
 	public fun <init> ()V
-	public fun <init> (ZZ)V
-	public synthetic fun <init> (ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun getAllowMismatchedSchema ()Z
-	public final fun getAllowMismatchedVersion ()Z
+	public fun <init> (Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getSelectSchema ()Lkotlin/jvm/functions/Function2;
+	public final fun getSelectVersion ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class io/github/detekt/sarif4k/Message {

@@ -58,15 +58,29 @@ class SarifMergingTest {
 
     @Test
     fun `allow mismatched schema when specified in the config`() {
-            testMerge(
-                "output.sarif.json",
-                "input_1.sarif.json",
-                "input_2_different_schema.sarif.json",
-                config = MergingConfig(allowMismatchedSchema = true)
-            )
+        testMerge(
+            "output.sarif.json",
+            "input_1.sarif.json",
+            "input_2_different_schema.sarif.json",
+            config = MergingConfig(selectSchema = { a, _ -> a })
+        )
     }
 
-    private fun testMerge(expectedOutputFile: String, vararg inputFiles: String, config: MergingConfig = MergingConfig()) {
+    @Test
+    fun `select schema of the second sarif file via config`() {
+        testMerge(
+            "output_different_schema.sarif.json",
+            "input_1.sarif.json",
+            "input_2_different_schema.sarif.json",
+            config = MergingConfig(selectSchema = { _, b -> b })
+        )
+    }
+
+    private fun testMerge(
+        expectedOutputFile: String,
+        vararg inputFiles: String,
+        config: MergingConfig = MergingConfig()
+    ) {
         val inputs = inputFiles.map {
             SarifSerializer.fromJson(resourceAsTextContent(it))
         }

@@ -1298,12 +1298,12 @@ final class io.github.detekt.sarif4k/LogicalLocation { // io.github.detekt.sarif
 }
 
 final class io.github.detekt.sarif4k/MergingConfig { // io.github.detekt.sarif4k/MergingConfig|null[0]
-    constructor <init>(kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.detekt.sarif4k/MergingConfig.<init>|<init>(kotlin.Boolean;kotlin.Boolean){}[0]
+    constructor <init>(kotlin/Function2<kotlin/String?, kotlin/String?, kotlin/String?> = ..., kotlin/Function2<io.github.detekt.sarif4k/Version, io.github.detekt.sarif4k/Version, io.github.detekt.sarif4k/Version> = ...) // io.github.detekt.sarif4k/MergingConfig.<init>|<init>(kotlin.Function2<kotlin.String?,kotlin.String?,kotlin.String?>;kotlin.Function2<io.github.detekt.sarif4k.Version,io.github.detekt.sarif4k.Version,io.github.detekt.sarif4k.Version>){}[0]
 
-    final val allowMismatchedSchema // io.github.detekt.sarif4k/MergingConfig.allowMismatchedSchema|{}allowMismatchedSchema[0]
-        final fun <get-allowMismatchedSchema>(): kotlin/Boolean // io.github.detekt.sarif4k/MergingConfig.allowMismatchedSchema.<get-allowMismatchedSchema>|<get-allowMismatchedSchema>(){}[0]
-    final val allowMismatchedVersion // io.github.detekt.sarif4k/MergingConfig.allowMismatchedVersion|{}allowMismatchedVersion[0]
-        final fun <get-allowMismatchedVersion>(): kotlin/Boolean // io.github.detekt.sarif4k/MergingConfig.allowMismatchedVersion.<get-allowMismatchedVersion>|<get-allowMismatchedVersion>(){}[0]
+    final val selectSchema // io.github.detekt.sarif4k/MergingConfig.selectSchema|{}selectSchema[0]
+        final fun <get-selectSchema>(): kotlin/Function2<kotlin/String?, kotlin/String?, kotlin/String?> // io.github.detekt.sarif4k/MergingConfig.selectSchema.<get-selectSchema>|<get-selectSchema>(){}[0]
+    final val selectVersion // io.github.detekt.sarif4k/MergingConfig.selectVersion|{}selectVersion[0]
+        final fun <get-selectVersion>(): kotlin/Function2<io.github.detekt.sarif4k/Version, io.github.detekt.sarif4k/Version, io.github.detekt.sarif4k/Version> // io.github.detekt.sarif4k/MergingConfig.selectVersion.<get-selectVersion>|<get-selectVersion>(){}[0]
 }
 
 final class io.github.detekt.sarif4k/Message { // io.github.detekt.sarif4k/Message|null[0]
