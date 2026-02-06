@@ -1002,6 +1002,15 @@ public final class io/github/detekt/sarif4k/LogicalLocation$Companion {
 
 public final class io/github/detekt/sarif4k/Merging {
 	public static final fun merge (Lio/github/detekt/sarif4k/SarifSchema210;Lio/github/detekt/sarif4k/SarifSchema210;)Lio/github/detekt/sarif4k/SarifSchema210;
+	public static final fun merge (Lio/github/detekt/sarif4k/SarifSchema210;Lio/github/detekt/sarif4k/SarifSchema210;Lio/github/detekt/sarif4k/MergingConfig;)Lio/github/detekt/sarif4k/SarifSchema210;
+}
+
+public final class io/github/detekt/sarif4k/MergingConfig {
+	public fun <init> ()V
+	public fun <init> (Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getSelectSchema ()Lkotlin/jvm/functions/Function2;
+	public final fun getSelectVersion ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class io/github/detekt/sarif4k/Message {
