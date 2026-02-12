@@ -4,8 +4,8 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 plugins {
     `maven-publish`
     signing
-    kotlin("multiplatform") version "2.2.21"
-    kotlin("plugin.serialization") version "2.2.21"
+    kotlin("multiplatform") version "2.3.10"
+    kotlin("plugin.serialization") version "2.3.10"
     id("org.jetbrains.dokka") version "2.1.0"
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
 }
@@ -48,7 +48,7 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
-                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0")
             }
         }
         val jvmTest by getting {
