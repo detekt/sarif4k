@@ -1895,6 +1895,11 @@ public final class io/github/detekt/sarif4k/SarifSerializer {
 	public final fun toMinifiedJson (Lio/github/detekt/sarif4k/SarifSchema210;)Ljava/lang/String;
 }
 
+public final class io/github/detekt/sarif4k/SarifSerializerJvmKt {
+	public static final fun toJson (Lio/github/detekt/sarif4k/SarifSerializer;Lio/github/detekt/sarif4k/SarifSchema210;Ljava/io/OutputStream;)V
+	public static final fun toMinifiedJson (Lio/github/detekt/sarif4k/SarifSerializer;Lio/github/detekt/sarif4k/SarifSchema210;Ljava/io/OutputStream;)V
+}
+
 public final class io/github/detekt/sarif4k/SpecialLocations {
 	public static final field Companion Lio/github/detekt/sarif4k/SpecialLocations$Companion;
 	public synthetic fun <init> (Lio/github/detekt/sarif4k/ArtifactLocation;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V

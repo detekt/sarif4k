@@ -3,7 +3,7 @@ package io.github.detekt.sarif4k
 import kotlinx.serialization.json.Json
 
 public object SarifSerializer {
-    private val json = Json {
+    internal val json = Json {
         prettyPrint = true
         prettyPrintIndent = "  "
     }
