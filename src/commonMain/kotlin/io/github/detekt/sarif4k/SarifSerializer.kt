@@ -7,7 +7,7 @@ import kotlinx.serialization.json.io.decodeFromSource
 import kotlinx.serialization.json.io.encodeToSink
 
 public object SarifSerializer {
-    internal val json = Json {
+    private val json = Json {
         prettyPrint = true
         prettyPrintIndent = "  "
     }
