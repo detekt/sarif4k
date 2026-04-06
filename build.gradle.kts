@@ -53,6 +53,11 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.10.0")
             }
         }
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
         val jvmTest by getting {
             dependencies {
                 implementation(kotlin("stdlib"))
