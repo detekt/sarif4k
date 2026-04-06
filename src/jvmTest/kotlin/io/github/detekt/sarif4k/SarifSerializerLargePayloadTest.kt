@@ -9,6 +9,14 @@ import kotlin.test.assertContains
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 
+/**
+ * This regression is intentionally exercised in a forked JVM with a tiny heap instead of inside
+ * the JUnit worker process.
+ *
+ * We need deterministic memory limits to prove that string serialization can run out of heap while
+ * streaming still succeeds. Doing that in-process would depend on the Gradle test worker's heap
+ * size and could leave the worker unstable after an [OutOfMemoryError].
+ */
 class SarifSerializerLargePayloadTest {
 
     @Test
