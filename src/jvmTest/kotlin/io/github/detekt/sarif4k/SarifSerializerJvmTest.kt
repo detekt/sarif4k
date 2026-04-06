@@ -4,6 +4,8 @@ import kotlinx.io.Buffer
 import kotlinx.io.readString
 import kotlinx.io.writeString
 import org.junit.jupiter.api.Test
+import java.io.ByteArrayInputStream
+import java.io.ByteArrayOutputStream
 import kotlin.test.assertEquals
 
 class SarifSerializerJvmTest {
@@ -111,6 +113,22 @@ class SarifSerializerJvmTest {
             SarifSerializer.toMinifiedJson(sarifSchema210, it)
         }
         val deserialized = SarifSerializer.fromJson(buffer)
+        assertEquals(sarifSchema210, deserialized)
+    }
+
+    @Test
+    fun `output stream adapter matches string minified json`() {
+        val stringResult = SarifSerializer.toMinifiedJson(sarifSchema210)
+        val streamResult = ByteArrayOutputStream().also {
+            SarifSerializer.toMinifiedJson(sarifSchema210, it)
+        }.toString(Charsets.UTF_8.name())
+        assertEquals(stringResult, streamResult)
+    }
+
+    @Test
+    fun `input stream adapter can deserialize back`() {
+        val input = ByteArrayInputStream(SarifSerializer.toMinifiedJson(sarifSchema210).toByteArray(Charsets.UTF_8))
+        val deserialized = SarifSerializer.fromJson(input)
         assertEquals(sarifSchema210, deserialized)
     }
 }
