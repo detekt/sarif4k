@@ -1891,13 +1891,11 @@ public final class io/github/detekt/sarif4k/SarifSchema210$Companion {
 public final class io/github/detekt/sarif4k/SarifSerializer {
 	public static final field INSTANCE Lio/github/detekt/sarif4k/SarifSerializer;
 	public final fun fromJson (Ljava/lang/String;)Lio/github/detekt/sarif4k/SarifSchema210;
+	public final fun fromJson (Lkotlinx/io/Source;)Lio/github/detekt/sarif4k/SarifSchema210;
 	public final fun toJson (Lio/github/detekt/sarif4k/SarifSchema210;)Ljava/lang/String;
+	public final fun toJson (Lio/github/detekt/sarif4k/SarifSchema210;Lkotlinx/io/Sink;)V
 	public final fun toMinifiedJson (Lio/github/detekt/sarif4k/SarifSchema210;)Ljava/lang/String;
-}
-
-public final class io/github/detekt/sarif4k/SarifSerializerJvmKt {
-	public static final fun toJson (Lio/github/detekt/sarif4k/SarifSerializer;Lio/github/detekt/sarif4k/SarifSchema210;Ljava/io/OutputStream;)V
-	public static final fun toMinifiedJson (Lio/github/detekt/sarif4k/SarifSerializer;Lio/github/detekt/sarif4k/SarifSchema210;Ljava/io/OutputStream;)V
+	public final fun toMinifiedJson (Lio/github/detekt/sarif4k/SarifSchema210;Lkotlinx/io/Sink;)V
 }
 
 public final class io/github/detekt/sarif4k/SpecialLocations {
