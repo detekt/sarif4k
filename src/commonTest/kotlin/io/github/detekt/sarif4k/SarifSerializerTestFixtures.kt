@@ -1,0 +1,100 @@
+package io.github.detekt.sarif4k
+
+internal fun sampleSarifSchema210(
+    messageText: String = "TestMessage",
+    additionalResults: Int = 0,
+): SarifSchema210 = SarifSchema210(
+    schema = "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+    version = Version.The210,
+    runs = listOf(
+        Run(
+            tool = Tool(
+                driver = ToolComponent(
+                    guid = "022ca8c2-f6a2-4c95-b107-bb72c43263f3",
+                    name = "detekt",
+                    organization = "detekt",
+                    fullName = "detekt",
+                    version = "1.0.0",
+                    semanticVersion = "1.0.0",
+                    downloadURI = "https://github.com/detekt/detekt/releases/download/v1.0.0/detekt",
+                    informationURI = "https://detekt.github.io/detekt",
+                    rules = emptyList(),
+                    language = "en"
+                )
+            ),
+            originalURIBaseIDS = mapOf(
+                "%SRCROOT%" to ArtifactLocation(uri = "file:///Users/tester/detekt/")
+            ),
+            results = buildList {
+                add(
+                    Result(
+                        ruleID = "detekt.TestSmellA.TestSmellA",
+                        message = Message(text = messageText),
+                        locations = listOf(
+                            Location(
+                                physicalLocation = PhysicalLocation(
+                                    artifactLocation = ArtifactLocation(
+                                        uri = "TestFile.kt",
+                                        uriBaseID = "%SRCROOT%"
+                                    ),
+                                    region = Region(
+                                        startLine = 1,
+                                        startColumn = 1
+                                    )
+                                ),
+                                properties = PropertyBag(
+                                    mapOf(
+                                        "tags" to listOf("tag"),
+                                        "foo" to mapOf("bar" to "buz")
+                                    )
+                                ),
+                            )
+                        )
+                    )
+                )
+                add(
+                    Result(
+                        ruleID = "detekt.TestSmellB.TestSmellB",
+                        message = Message(text = messageText),
+                        locations = listOf(
+                            Location(
+                                physicalLocation = PhysicalLocation(
+                                    artifactLocation = ArtifactLocation(
+                                        uri = "TestFile.kt",
+                                        uriBaseID = "%SRCROOT%"
+                                    ),
+                                    region = Region(
+                                        startLine = 1,
+                                        startColumn = 1
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+                repeat(additionalResults) { index ->
+                    add(
+                        Result(
+                            ruleID = "detekt.GeneratedRule.$index",
+                            message = Message(text = messageText),
+                            locations = listOf(
+                                Location(
+                                    physicalLocation = PhysicalLocation(
+                                        artifactLocation = ArtifactLocation(
+                                            uri = "GeneratedFile$index.kt",
+                                            uriBaseID = "%SRCROOT%"
+                                        ),
+                                        region = Region(
+                                            startLine = (index + 2).toLong(),
+                                            startColumn = 1
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                }
+            }
+        )
+    )
+)

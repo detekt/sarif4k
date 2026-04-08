@@ -2827,8 +2827,11 @@ final value class io.github.detekt.sarif4k/PropertyBag : kotlin.collections/Map<
 
 final object io.github.detekt.sarif4k/SarifSerializer { // io.github.detekt.sarif4k/SarifSerializer|null[0]
     final fun fromJson(kotlin/String): io.github.detekt.sarif4k/SarifSchema210 // io.github.detekt.sarif4k/SarifSerializer.fromJson|fromJson(kotlin.String){}[0]
+    final fun fromJson(kotlinx.io/Source): io.github.detekt.sarif4k/SarifSchema210 // io.github.detekt.sarif4k/SarifSerializer.fromJson|fromJson(kotlinx.io.Source){}[0]
     final fun toJson(io.github.detekt.sarif4k/SarifSchema210): kotlin/String // io.github.detekt.sarif4k/SarifSerializer.toJson|toJson(io.github.detekt.sarif4k.SarifSchema210){}[0]
+    final fun toJson(io.github.detekt.sarif4k/SarifSchema210, kotlinx.io/Sink) // io.github.detekt.sarif4k/SarifSerializer.toJson|toJson(io.github.detekt.sarif4k.SarifSchema210;kotlinx.io.Sink){}[0]
     final fun toMinifiedJson(io.github.detekt.sarif4k/SarifSchema210): kotlin/String // io.github.detekt.sarif4k/SarifSerializer.toMinifiedJson|toMinifiedJson(io.github.detekt.sarif4k.SarifSchema210){}[0]
+    final fun toMinifiedJson(io.github.detekt.sarif4k/SarifSchema210, kotlinx.io/Sink) // io.github.detekt.sarif4k/SarifSerializer.toMinifiedJson|toMinifiedJson(io.github.detekt.sarif4k.SarifSchema210;kotlinx.io.Sink){}[0]
 }
 
 final fun (io.github.detekt.sarif4k/SarifSchema210).io.github.detekt.sarif4k/merge(io.github.detekt.sarif4k/SarifSchema210): io.github.detekt.sarif4k/SarifSchema210 // io.github.detekt.sarif4k/merge|merge@io.github.detekt.sarif4k.SarifSchema210(io.github.detekt.sarif4k.SarifSchema210){}[0]
