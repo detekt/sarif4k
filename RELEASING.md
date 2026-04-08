@@ -11,9 +11,9 @@
    - publish the artifacts to Sonatype and close/release the staging repository using the repository secrets
    - create the GitHub release entry for the tag
 5. Verify the version is published.
-   - https://oss.sonatype.org/content/groups/public/io/github/detekt/sarif4k/sarif4k
+   - https://central.sonatype.com/artifact/io.github.detekt.sarif4k/sarif4k
    - https://repo.maven.apache.org/maven2/io/github/detekt/sarif4k/sarif4k/
    - https://repo1.maven.org/maven2/io/github/detekt/sarif4k/sarif4k/
-6. Visit [Sonatype Nexus](https://oss.sonatype.org/) to debug if anything goes wrong.
+6. Visit [Sonatype Central Portal](https://central.sonatype.com/) to debug if anything goes wrong.
 
 Pushes to `main` continue to publish the snapshot version via the same [Release workflow](.github/workflows/release.yml).
