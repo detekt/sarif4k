@@ -1,3 +1,4 @@
+import org.gradle.api.publish.maven.tasks.PublishToMavenLocal
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
@@ -113,19 +114,35 @@ publishing {
     }
 }
 
-if (findProperty("signing.keyId") != null) {
-    signing {
+val inMemorySigningKey = providers.gradleProperty("SIGNING_KEY").orNull
+val inMemorySigningPassword = providers.gradleProperty("SIGNING_PWD").orNull
+val hasInMemorySigning = !inMemorySigningKey.isNullOrBlank() && !inMemorySigningPassword.isNullOrBlank()
+val hasKeyringSigning = findProperty("signing.keyId") != null
+
+signing {
+    when {
+        hasInMemorySigning -> {
+            useInMemoryPgpKeys(inMemorySigningKey, inMemorySigningPassword)
+        }
+
+        hasKeyringSigning -> Unit
+
+        else -> logger.lifecycle("Signing disabled as no PGP key was configured")
+    }
+
+    if (hasInMemorySigning || hasKeyringSigning) {
         publishing.publications.withType(MavenPublication::class).configureEach {
             sign(this)
         }
     }
-} else {
-    logger.lifecycle("Signing Disabled as the PGP key was not found")
 }
 
 // https://github.com/gradle-nexus/publish-plugin/issues/208
 val signingTasks: TaskCollection<Sign> = tasks.withType<Sign>()
 tasks.withType<PublishToMavenRepository>().configureEach {
+    mustRunAfter(signingTasks)
+}
+tasks.withType<PublishToMavenLocal>().configureEach {
     mustRunAfter(signingTasks)
 }
 
