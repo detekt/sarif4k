@@ -51,7 +51,7 @@ kotlin {
             dependencies {
                 api("org.jetbrains.kotlinx:kotlinx-io-core:0.9.0")
                 api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.10.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.11.0")
             }
         }
         val commonTest by getting {
