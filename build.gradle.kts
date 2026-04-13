@@ -91,9 +91,9 @@ mavenPublishing {
         }
         developers {
             developer {
-                id = "Chao Zhang"
-                name = "Chao Zhang"
-                email = "zhangchao6865@gmail.com"
+                id = "Detekt Maintainers"
+                name = "Detekt Maintainers"
+                email = "info@detekt.dev"
             }
         }
         scm {
