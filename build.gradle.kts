@@ -1,14 +1,11 @@
-import org.gradle.api.publish.maven.tasks.PublishToMavenLocal
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
-    `maven-publish`
-    signing
     kotlin("multiplatform") version "2.3.20"
     kotlin("plugin.serialization") version "2.3.20"
     id("org.jetbrains.dokka") version "2.2.0"
-    id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
+    id("com.vanniktech.maven.publish") version "0.36.0"
 }
 
 group = property("GROUP")!!
@@ -74,77 +71,33 @@ tasks {
     withType<Test>().configureEach {
         useJUnitPlatform()
     }
-    register<Jar>("dokkaJar") {
-        group = JavaBasePlugin.DOCUMENTATION_GROUP
-        archiveClassifier.set("javadoc")
-        from(dokka.dokkaPublications.named("html").map { it.outputDirectory })
-    }
 }
 
-publishing {
-    publications {
-        withType<MavenPublication> {
-            artifact(tasks.findByName("dokkaJar"))
-            pom {
-                description.set("SARIF data models for Kotlinx serialization")
-                name.set(rootProject.name)
-                url.set("https://detekt.github.io/detekt")
-                licenses {
-                    license {
-                        name.set("The Apache Software License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                        distribution.set("repo")
-                    }
-                }
-                developers {
-                    developer {
-                        id.set("Chao Zhang")
-                        name.set("Chao Zhang")
-                        email.set("zhangchao6865@gmail.com")
-                    }
-                }
-                scm {
-                    url.set("https://github.com/detekt/sarif4k")
-                }
+mavenPublishing {
+    publishToMavenCentral(automaticRelease = true)
+
+    coordinates(artifactId = rootProject.name)
+
+    pom {
+        name = rootProject.name
+        description = "SARIF data models for Kotlinx serialization"
+        url = "https://detekt.github.io/detekt"
+        licenses {
+            license {
+                name = "The Apache Software License, Version 2.0"
+                url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "repo"
             }
         }
-    }
-}
-
-val inMemorySigningKey = providers.gradleProperty("SIGNING_KEY").orNull
-val inMemorySigningPassword = providers.gradleProperty("SIGNING_PWD").orNull
-val hasInMemorySigning = !inMemorySigningKey.isNullOrBlank() && !inMemorySigningPassword.isNullOrBlank()
-val hasKeyringSigning = findProperty("signing.keyId") != null
-
-signing {
-    when {
-        hasInMemorySigning -> {
-            useInMemoryPgpKeys(inMemorySigningKey, inMemorySigningPassword)
+        developers {
+            developer {
+                id = "Detekt Maintainers"
+                name = "Detekt Maintainers"
+                email = "info@detekt.dev"
+            }
         }
-
-        hasKeyringSigning -> Unit
-
-        else -> logger.lifecycle("Signing disabled as no PGP key was configured")
-    }
-
-    if (hasInMemorySigning || hasKeyringSigning) {
-        publishing.publications.withType(MavenPublication::class).configureEach {
-            sign(this)
+        scm {
+            url = "https://github.com/detekt/sarif4k"
         }
-    }
-}
-
-// https://github.com/gradle-nexus/publish-plugin/issues/208
-val signingTasks: TaskCollection<Sign> = tasks.withType<Sign>()
-tasks.withType<PublishToMavenRepository>().configureEach {
-    mustRunAfter(signingTasks)
-}
-tasks.withType<PublishToMavenLocal>().configureEach {
-    mustRunAfter(signingTasks)
-}
-
-nexusPublishing {
-    repositories {
-        sonatype()
     }
 }
