@@ -46,9 +46,14 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
-                api("org.jetbrains.kotlinx:kotlinx-io-core:0.9.0")
-                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.11.0")
+                // These api-exposed dependencies are intentionally held back to their
+                // last Kotlin 2.2-built releases. Newer versions (kotlinx-io 0.9.x,
+                // kotlinx-serialization 1.10.x+) are compiled at language version 2.3,
+                // whose metadata cannot be read by consumers still on Kotlin 2.1 — e.g.
+                // the Detekt Gradle Plugin's report-merge task. See detekt/detekt#9330.
+                api("org.jetbrains.kotlinx:kotlinx-io-core:0.8.2")
+                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.9.0")
             }
         }
         val commonTest by getting {

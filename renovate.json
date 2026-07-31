@@ -6,5 +6,22 @@
   "extends": [
     "config:recommended",
     "helpers:pinGitHubActionDigests"
+  ],
+  "packageRules": [
+    {
+      "description": "Hold kotlinx-io at its last Kotlin 2.2-built release. 0.9.x is compiled at language version 2.3, whose metadata cannot be read by consumers still on Kotlin 2.1 (e.g. the Detekt Gradle Plugin). See detekt/detekt#9330.",
+      "matchPackageNames": [
+        "org.jetbrains.kotlinx:kotlinx-io-core"
+      ],
+      "allowedVersions": "<0.9.0"
+    },
+    {
+      "description": "Hold kotlinx-serialization at its last Kotlin 2.2-built release. 1.10.x+ is compiled at language version 2.3, whose metadata cannot be read by consumers still on Kotlin 2.1 (e.g. the Detekt Gradle Plugin). See detekt/detekt#9330.",
+      "matchPackageNames": [
+        "org.jetbrains.kotlinx:kotlinx-serialization-json",
+        "org.jetbrains.kotlinx:kotlinx-serialization-json-io"
+      ],
+      "allowedVersions": "<1.10.0"
+    }
   ]
 }
