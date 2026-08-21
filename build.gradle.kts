@@ -44,7 +44,7 @@ kotlin {
         all {
             languageSettings.optIn("kotlinx.serialization.ExperimentalSerializationApi")
         }
-        val commonMain by getting {
+        getByName("commonMain") {
             dependencies {
                 // These api-exposed dependencies are intentionally held back to their
                 // last Kotlin 2.2-built releases. Newer versions (kotlinx-io 0.9.x,
@@ -56,12 +56,12 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.9.0")
             }
         }
-        val commonTest by getting {
+        getByName("commonTest") {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
-        val jvmTest by getting {
+        getByName("jvmTest") {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
