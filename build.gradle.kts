@@ -26,7 +26,6 @@ kotlin {
     jvm()
     linuxX64()
     mingwX64()
-    macosX64()
     macosArm64()
 
     sourceSets {
