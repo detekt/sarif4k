@@ -33,19 +33,19 @@ kotlin {
         all {
             languageSettings.optIn("kotlinx.serialization.ExperimentalSerializationApi")
         }
-        val commonMain by getting {
+        getByName("commonMain") {
             dependencies {
                 api("org.jetbrains.kotlinx:kotlinx-io-core:0.8.2")
                 api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.9.0")
             }
         }
-        val commonTest by getting {
+        getByName("commonTest") {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
-        val jvmTest by getting {
+        getByName("jvmTest") {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
