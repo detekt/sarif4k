@@ -1,11 +1,9 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
-
 plugins {
     kotlin("multiplatform") version "2.3.20"
     kotlin("plugin.serialization") version "2.3.20"
     id("org.jetbrains.dokka") version "2.2.0"
     id("com.vanniktech.maven.publish") version "0.37.0"
+    id("com.gradleup.tapmoc") version "0.4.2"
 }
 
 group = property("GROUP")!!
@@ -16,53 +14,38 @@ repositories {
 }
 
 kotlin {
-    coreLibrariesVersion = "2.2.0"
     compilerOptions {
         explicitApi()
         allWarningsAsErrors = true
         extraWarnings = true
-        apiVersion = KotlinVersion.KOTLIN_2_2
-        languageVersion = KotlinVersion.KOTLIN_2_2
     }
-    jvmToolchain(21)
     @OptIn(org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation::class)
     abiValidation {
         enabled = true
     }
-    jvm {
-        compilerOptions {
-            jvmTarget = JvmTarget.JVM_1_8
-            freeCompilerArgs.add("-Xjdk-release=8")
-        }
-    }
+    jvm()
     linuxX64()
     linuxArm64()
     mingwX64()
-    macosX64()
     macosArm64()
 
     sourceSets {
         all {
             languageSettings.optIn("kotlinx.serialization.ExperimentalSerializationApi")
         }
-        val commonMain by getting {
+        getByName("commonMain") {
             dependencies {
-                // These api-exposed dependencies are intentionally held back to their
-                // last Kotlin 2.2-built releases. Newer versions (kotlinx-io 0.9.x,
-                // kotlinx-serialization 1.10.x+) are compiled at language version 2.3,
-                // whose metadata cannot be read by consumers still on Kotlin 2.1 — e.g.
-                // the Detekt Gradle Plugin's report-merge task. See detekt/detekt#9330.
                 api("org.jetbrains.kotlinx:kotlinx-io-core:0.8.2")
                 api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.9.0")
             }
         }
-        val commonTest by getting {
+        getByName("commonTest") {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
-        val jvmTest by getting {
+        getByName("jvmTest") {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
@@ -106,4 +89,11 @@ mavenPublishing {
             url = "https://github.com/detekt/sarif4k"
         }
     }
+}
+
+tapmoc {
+    java(8)
+    kotlin("2.2.0")
+
+    checkDependencies()
 }
