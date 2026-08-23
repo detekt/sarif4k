@@ -1,6 +1,6 @@
 plugins {
     kotlin("multiplatform") version "2.3.20"
-    kotlin("plugin.serialization") version "2.3.20"
+    kotlin("plugin.serialization") version "2.4.10"
     id("org.jetbrains.dokka") version "2.2.0"
     id("com.vanniktech.maven.publish") version "0.37.0"
     id("com.gradleup.tapmoc") version "0.4.2"
