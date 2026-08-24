@@ -1,9 +1,9 @@
 plugins {
-    kotlin("multiplatform") version "2.3.20"
-    kotlin("plugin.serialization") version "2.3.20"
-    id("org.jetbrains.dokka") version "2.2.0"
-    id("com.vanniktech.maven.publish") version "0.37.0"
-    id("com.gradleup.tapmoc") version "0.4.2"
+    alias(libs.plugins.kotlin)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.vanniktechPublish)
+    alias(libs.plugins.tapmoc)
 }
 
 group = property("GROUP")!!
@@ -35,9 +35,9 @@ kotlin {
         }
         getByName("commonMain") {
             dependencies {
-                api("org.jetbrains.kotlinx:kotlinx-io-core:0.8.2")
-                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-io:1.9.0")
+                api(libs.kotlinx.io)
+                api(libs.kotlinx.serialization.json)
+                api(libs.kotlinx.serialization.json.io)
             }
         }
         getByName("commonTest") {
@@ -49,8 +49,8 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib"))
                 implementation(kotlin("test"))
-                runtimeOnly("org.junit.platform:junit-platform-launcher")
-                implementation("org.junit.jupiter:junit-jupiter:5.14.4")
+                runtimeOnly(libs.junit.launcher)
+                implementation(libs.junit)
             }
         }
     }
