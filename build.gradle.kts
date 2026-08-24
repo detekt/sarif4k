@@ -19,10 +19,6 @@ kotlin {
         allWarningsAsErrors = true
         extraWarnings = true
     }
-    @OptIn(org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation::class)
-    abiValidation {
-        enabled = true
-    }
     jvm()
     linuxX64()
     linuxArm64()
