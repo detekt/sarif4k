@@ -1,3 +1,5 @@
+import tapmoc.Severity
+
 plugins {
     kotlin("multiplatform") version "2.3.20"
     kotlin("plugin.serialization") version "2.3.20"
@@ -95,5 +97,6 @@ tapmoc {
     java(8)
     kotlin("2.2.0")
 
+    checkKotlinStdlibs(Severity.ERROR)
     checkDependencies()
 }
