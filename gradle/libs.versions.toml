@@ -12,6 +12,6 @@ junit-launcher = { module = "org.junit.platform:junit-platform-launcher" }
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin-gradle-plugin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-gradle-plugin" }
-dokka = { id = "org.jetbrains.dokka", version = "2.2.0" }
+dokka = { id = "org.jetbrains.dokka", version = "2.3.0" }
 vanniktechPublish = { id = "com.vanniktech.maven.publish", version = "0.37.0" }
 tapmoc = { id = "com.gradleup.tapmoc", version = "0.4.2" }
